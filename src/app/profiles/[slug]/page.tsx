@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { Calendar, MapPin, Link as LinkIcon, BookOpen, Quote } from 'lucide-react';
 
+import ShareButtons from '@/components/ui/ShareButtons';
+
 export async function generateStaticParams() {
   const figures = await getFigures();
   return figures.map((figure) => ({
@@ -111,6 +113,11 @@ export default async function ProfileDetailPage({ params }: { params: { slug: st
                   ))}
                 </div>
               </div>
+
+              <ShareButtons 
+                title={`Learn about the legacy of ${figure.name}`} 
+                url={`https://caribbeanlegacyarchive.com/profiles/${figure.slug}`} 
+              />
 
               <div className="mb-12 pt-12 border-t border-gold/10">
                 <h2 className="font-serif text-3xl text-navy mb-6">Major Contributions</h2>
