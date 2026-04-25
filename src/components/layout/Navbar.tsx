@@ -12,9 +12,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
           <div className="flex-shrink-0 flex items-center">
-            <Link href="/" className="flex flex-col">
-              <span className="font-serif text-2xl tracking-tight text-gold">Caribbean Legacy</span>
-              <span className="text-[10px] uppercase tracking-[0.2em] text-ivory/60 -mt-1 ml-0.5">Digital Archive</span>
+            <Link href="/" className="flex items-center">
+              <img src="/logo.png" alt="Caribbean Legacy Archive" className="h-12 w-auto brightness-110 hover:opacity-80 transition-opacity" />
             </Link>
           </div>
           
