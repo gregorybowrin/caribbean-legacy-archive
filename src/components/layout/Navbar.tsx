@@ -10,10 +10,10 @@ export default function Navbar() {
   return (
     <nav className="bg-navy text-ivory sticky top-0 z-50 border-b border-gold/20 shadow-xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-24 items-center">
+        <div className="flex justify-between h-32 items-center">
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="flex items-center group">
-              <img src="/logo.png" alt="Caribbean Legacy Archive" className="h-20 w-auto brightness-110 group-hover:scale-105 transition-transform duration-300" />
+              <img src="/logo.png" alt="Caribbean Legacy Archive" className="h-24 w-auto brightness-110 group-hover:scale-105 transition-transform duration-300" />
             </Link>
           </div>
           

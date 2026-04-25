@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="col-span-1 md:col-span-2">
             <Link href="/" className="flex items-center mb-4">
-              <img src="/logo.png" alt="Caribbean Legacy Archive" className="h-24 w-auto brightness-110" />
+              <img src="/logo.png" alt="Caribbean Legacy Archive" className="h-32 w-auto brightness-110" />
             </Link>
             <p className="text-ivory/60 text-sm max-w-md leading-relaxed">
               Dedicated to the preservation and dissemination of Caribbean history through the lives and contributions 
