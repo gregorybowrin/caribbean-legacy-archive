@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Search, Landmark, Globe } from 'lucide-react';
 import { getFigures, getIslands, getAreas } from '@/lib/api';
+import HomeSearch from '@/components/home/HomeSearch';
 
 export default async function Home() {
   const [figures, islands, areas] = await Promise.all([
@@ -31,17 +32,7 @@ export default async function Home() {
             who shaped the Caribbean's political, social, and cultural landscape.
           </p>
           
-          <div className="relative max-w-2xl mx-auto">
-            <input 
-              type="text" 
-              placeholder="Search by name, island, or area of influence..." 
-              className="w-full bg-ivory text-navy py-5 px-14 rounded-sm shadow-2xl focus:outline-none focus:ring-2 focus:ring-gold text-lg"
-            />
-            <Search className="absolute left-5 top-5.5 h-6 w-6 text-navy/40" />
-            <button className="absolute right-2 top-2 bottom-2 px-6 bg-navy text-gold uppercase text-xs tracking-widest font-bold hover:bg-navy-light transition-colors rounded-sm">
-              Search
-            </button>
-          </div>
+          <HomeSearch />
         </div>
       </section>
 
