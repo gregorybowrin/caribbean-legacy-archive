@@ -6,8 +6,9 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="col-span-1 md:col-span-2">
-            <Link href="/" className="flex items-center mb-4">
-              <img src="/logo.png" alt="Caribbean Legacy Archive" className="h-32 w-auto brightness-110" />
+            <Link href="/" className="flex flex-col mb-4 group">
+              <span className="font-serif text-2xl tracking-tight text-gold group-hover:text-ivory transition-colors">Caribbean Legacy</span>
+              <span className="text-[10px] uppercase tracking-[0.2em] text-ivory/60 -mt-1 ml-0.5">Digital Archive</span>
             </Link>
             <p className="text-ivory/60 text-sm max-w-md leading-relaxed">
               Dedicated to the preservation and dissemination of Caribbean history through the lives and contributions 
