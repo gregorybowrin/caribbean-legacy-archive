@@ -9,7 +9,7 @@ export default async function Home() {
     getAreas()
   ]);
 
-  const featuredFigures = figures.slice(0, 4);
+  const featuredFigures = figures.slice(0, 8);
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
