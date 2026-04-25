@@ -10,6 +10,15 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-playfair);
+
+  --color-navy: #001f3f;
+  --color-navy-light: #002d5c;
+  --color-sand: #f5f5dc;
+  --color-ivory: #fffff0;
+  --color-gold: #d4af37;
+  --color-gold-muted: #b8860b;
+  --color-tropical-green: #2e8b57;
 }
 
 @media (prefers-color-scheme: dark) {
