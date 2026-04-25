@@ -13,7 +13,7 @@ export default function Navbar() {
         <div className="flex justify-between h-20 items-center">
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="flex items-center">
-              <img src="/logo.png" alt="Caribbean Legacy Archive" className="h-12 w-auto brightness-110 hover:opacity-80 transition-opacity" />
+              <img src="/logo.png" alt="Caribbean Legacy Archive" className="h-16 w-auto brightness-110 hover:opacity-80 transition-opacity" />
             </Link>
           </div>
           
