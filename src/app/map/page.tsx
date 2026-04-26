@@ -236,18 +236,18 @@ export default function GlobalMap() {
       <AnimatePresence>
         {hoveredIsland && !selectedIsland && (
           <motion.div
-            initial={{ opacity: 0, scale: 0.3, y: 10 }}
+            initial={{ opacity: 0, scale: 0.3, y: 0 }}
             animate={{ 
               opacity: 1, 
               scale: 1, 
-              y: -55, // Higher clearance from the circle/mouse
-              x: projection([hoveredIsland.longitude, hoveredIsland.latitude])![0] - 100
+              y: -55, // Rise in place
             }}
-            exit={{ opacity: 0, scale: 0.3, y: 10 }}
+            exit={{ opacity: 0, scale: 0.3, y: 0 }}
             style={{ 
               position: 'absolute',
               top: projection([hoveredIsland.longitude, hoveredIsland.latitude])![1],
-              left: 0,
+              left: projection([hoveredIsland.longitude, hoveredIsland.latitude])![0],
+              x: '-50%', // Center horizontally relative to its own width
               pointerEvents: 'none'
             }}
             className="w-[200px] flex flex-col items-center gap-1 z-50"
