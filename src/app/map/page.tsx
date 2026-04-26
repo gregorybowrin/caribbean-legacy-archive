@@ -70,11 +70,18 @@ export default function GlobalMap() {
   const [dimensions, setDimensions] = useState({ width: 1200, height: 800 });
   const [panOffset, setPanOffset] = useState({ x: 0, y: 0 });
   const [isHoveringFlyout, setIsHoveringFlyout] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const flyoutRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      setDimensions({ width: window.innerWidth, height: window.innerHeight });
+      const handleResize = () => {
+        setDimensions({ width: window.innerWidth, height: window.innerHeight });
+        setIsMobile(window.innerWidth < 768);
+      };
+      handleResize();
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
     }
   }, []);
 
@@ -193,6 +200,9 @@ export default function GlobalMap() {
           x: targetX,
           y: targetY,
         }}
+        drag={!selectedIsland} // Enable free-drag when not zoomed in
+        dragConstraints={{ left: -1000, right: 1000, top: -1000, bottom: 1000 }}
+        dragElastic={0.1}
         transition={{ type: 'spring', damping: 25, stiffness: 60 }}
         style={{ transformOrigin: '0 0' }}
       >
@@ -291,21 +301,36 @@ export default function GlobalMap() {
       </motion.div>
 
       {/* Navigation Overlay */}
-      <div className="absolute top-[180px] left-0 right-0 z-20 pointer-events-none flex justify-center">
+      <div className="absolute top-[120px] md:top-[180px] left-0 right-0 z-20 pointer-events-none flex justify-center">
         <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 flex justify-start">
-          <div className="flex flex-col gap-4 pointer-events-auto items-start -ml-[7px]">
+          <div className="flex flex-col gap-2 md:gap-4 pointer-events-auto items-start -ml-[7px]">
             <Link href="/" className="group flex items-center gap-3 text-white/50 hover:text-white transition-colors">
               <ArrowLeft size={18} />
-              <span className="text-xs uppercase tracking-[0.2em] font-light">Exit Map</span>
+              <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] font-light">Exit Map</span>
             </Link>
-            <h1 className="text-4xl font-serif text-white/90">Caribbean Archive Map</h1>
-            <div className="flex items-center gap-2 text-amber-500/70 text-[10px] uppercase tracking-[0.3em]">
+            <h1 className="text-2xl md:text-4xl font-serif text-white/90">Caribbean Archive Map</h1>
+            <div className="flex items-center gap-2 text-amber-500/70 text-[9px] md:text-[10px] uppercase tracking-[0.3em]">
               <Globe size={12} />
               <span>{islands.length} Territories Documented</span>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Mobile Quick-Jump Selector */}
+      {!selectedIsland && isMobile && (
+        <div className="absolute bottom-8 left-0 right-0 z-30 px-4 overflow-x-auto no-scrollbar flex gap-3 pb-4 pointer-events-auto">
+          {islands.sort((a, b) => a.name.localeCompare(b.name)).map(island => (
+            <button
+              key={`jump-${island.id}`}
+              onClick={() => handleIslandClick(island)}
+              className="whitespace-nowrap px-4 py-2 rounded-full bg-slate-900/80 backdrop-blur-md border border-white/10 text-white/80 text-[10px] uppercase tracking-widest hover:bg-amber-500 hover:text-slate-950 transition-all"
+            >
+              {island.name}
+            </button>
+          ))}
+        </div>
+      )}
 
       {/* Persistent Global View Button (Bottom Left) */}
       <AnimatePresence>
@@ -363,24 +388,24 @@ export default function GlobalMap() {
         )}
       </AnimatePresence>
 
-      {/* Island Detail Fly-out */}
-      <AnimatePresence>
+      {/* Island Detail Fly-out / Bottom Sheet */}
+      <AnimatePresence mode="wait">
         {selectedIsland && (
           <motion.div
-            initial={{ x: '100%' }}
-            animate={{ x: 0 }}
-            exit={{ x: '100%' }}
+            initial={isMobile ? { y: '100%' } : { x: '100%' }}
+            animate={isMobile ? { y: 0 } : { x: 0 }}
+            exit={isMobile ? { y: '100%' } : { x: '100%' }}
             transition={{ type: 'spring', damping: 30, stiffness: 100 }}
             ref={flyoutRef}
             onMouseEnter={() => setIsHoveringFlyout(true)}
             onMouseLeave={() => setIsHoveringFlyout(false)}
             onWheel={(e) => e.stopPropagation()}
-            className="absolute top-0 right-0 w-[400px] h-full bg-[#020617]/95 backdrop-blur-3xl border-l border-white/10 px-0 pb-12 overflow-y-auto z-50"
+            className="absolute top-auto md:top-0 bottom-0 md:bottom-auto right-0 w-full md:w-[400px] h-[75vh] md:h-full bg-[#020617]/95 backdrop-blur-3xl border-t md:border-t-0 md:border-l border-white/10 px-0 pb-12 overflow-y-auto z-50 rounded-t-[32px] md:rounded-t-none"
           >
-            <div className="sticky top-0 z-10 pt-32 px-12 pb-8 bg-[#020617]/10 backdrop-blur-3xl border-b border-white/5">
+            <div className="sticky top-0 z-10 pt-12 md:pt-32 px-8 md:px-12 pb-6 md:pb-8 bg-[#020617]/10 backdrop-blur-3xl border-b border-white/5">
               <button 
                 onClick={resetView}
-                className="mb-12 flex items-center gap-2 text-amber-500 hover:text-amber-400 transition-colors text-xs uppercase tracking-widest"
+                className="mb-8 md:mb-12 flex items-center gap-2 text-amber-500 hover:text-amber-400 transition-colors text-xs uppercase tracking-widest"
               >
                 <Minimize2 size={16} />
                 <span>Zoom Out</span>
@@ -391,48 +416,48 @@ export default function GlobalMap() {
                   <img 
                     src={`https://flagcdn.com/w80/${ISLAND_FLAGS[selectedIsland.slug]}.png`}
                     alt={`${selectedIsland.name} Flag`}
-                    className="w-10 h-auto rounded shadow-sm border border-white/10"
+                    className="w-8 md:w-10 h-auto rounded shadow-sm border border-white/10"
                   />
                 )}
-                <h2 className="text-4xl font-serif text-white leading-tight">{selectedIsland.name}</h2>
+                <h2 className="text-2xl md:text-4xl font-serif text-white leading-tight">{selectedIsland.name}</h2>
               </div>
             </div>
 
-            <div className="px-12 pt-12">
-            <p className="text-white/50 text-sm font-light leading-relaxed mb-12">
-              {selectedIsland.description}
-            </p>
+            <div className="px-8 md:px-12 pt-8 md:pt-12">
+              <p className="text-white/50 text-xs md:text-sm font-light leading-relaxed mb-12">
+                {selectedIsland.description}
+              </p>
 
-            <div className="space-y-8">
-              <div className="text-[10px] uppercase tracking-[0.3em] text-white/30 border-b border-white/5 pb-4">
-                Documented Figures
-              </div>
-              {islandFigures.map((figure) => (
+              <div className="space-y-6 md:space-y-8">
+                <div className="text-[9px] md:text-[10px] uppercase tracking-[0.3em] text-white/30 border-b border-white/5 pb-4">
+                  Documented Figures
+                </div>
+                {islandFigures.map((figure) => (
+                  <Link 
+                    key={figure.id} 
+                    href={`/profiles/${figure.slug}`}
+                    className="block group"
+                  >
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-base md:text-lg text-white/80 group-hover:text-amber-500 transition-colors">
+                        {figure.name}
+                      </span>
+                      <ArrowLeft size={14} className="rotate-180 text-amber-500/0 group-hover:text-amber-500 transition-all" />
+                    </div>
+                    <div className="text-[9px] md:text-[10px] text-white/30 uppercase tracking-widest">
+                      {figure.areas?.join(' • ') || 'Historical Figure'}
+                    </div>
+                  </Link>
+                ))}
                 <Link 
-                  key={figure.id} 
-                  href={`/profiles/${figure.slug}`}
-                  className="block group"
+                  href={`/islands/${selectedIsland.slug}`}
+                  className="mt-8 block text-center py-4 border border-amber-500/20 text-amber-500 text-[10px] uppercase tracking-widest hover:bg-amber-500/5 transition-colors"
                 >
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-lg text-white/80 group-hover:text-amber-500 transition-colors">
-                      {figure.name}
-                    </span>
-                    <ArrowLeft size={14} className="rotate-180 text-amber-500/0 group-hover:text-amber-500 transition-all" />
-                  </div>
-                  <div className="text-[10px] text-white/30 uppercase tracking-widest">
-                    {figure.areas?.join(' • ') || 'Historical Figure'}
-                  </div>
+                  View Full Collection
                 </Link>
-              ))}
-              <Link 
-                href={`/islands/${selectedIsland.slug}`}
-                className="mt-8 block text-center py-4 border border-amber-500/20 text-amber-500 text-xs uppercase tracking-widest hover:bg-amber-500/5 transition-colors"
-              >
-                View Full Collection
-              </Link>
+              </div>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
         )}
       </AnimatePresence>
     </div>
