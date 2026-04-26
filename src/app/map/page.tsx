@@ -188,20 +188,21 @@ export default function GlobalMap() {
                 />
 
                 {/* Pulsing Active Halo */}
-                <AnimatePresence>
+                <AnimatePresence mode="wait">
                   {isSelected && (
                     <motion.circle
+                      key={`pulse-${island.id}`}
                       cx={x}
                       cy={y}
                       initial={{ r: 10, opacity: 0.8 }}
                       animate={{ 
-                        r: 35, 
+                        r: 22, 
                         opacity: 0,
                       }}
                       exit={{ opacity: 0 }}
                       transition={{ 
                         repeat: Infinity, 
-                        duration: 2,
+                        duration: 1.5,
                         ease: "easeOut"
                       }}
                       fill="none"
