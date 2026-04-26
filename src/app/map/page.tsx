@@ -375,26 +375,30 @@ export default function GlobalMap() {
             onMouseEnter={() => setIsHoveringFlyout(true)}
             onMouseLeave={() => setIsHoveringFlyout(false)}
             onWheel={(e) => e.stopPropagation()}
-            className="absolute top-0 right-0 w-[400px] h-full bg-[#020617]/95 backdrop-blur-3xl border-l border-white/10 pt-32 px-12 pb-12 overflow-y-auto z-50"
+            className="absolute top-0 right-0 w-[400px] h-full bg-[#020617]/95 backdrop-blur-3xl border-l border-white/10 px-0 pb-12 overflow-y-auto z-50"
           >
-            <button 
-              onClick={resetView}
-              className="mb-12 flex items-center gap-2 text-amber-500 hover:text-amber-400 transition-colors text-xs uppercase tracking-widest"
-            >
-              <Minimize2 size={16} />
-              <span>Zoom Out</span>
-            </button>
+            <div className="sticky top-0 z-10 pt-32 px-12 pb-8 bg-[#020617]/10 backdrop-blur-3xl border-b border-white/5">
+              <button 
+                onClick={resetView}
+                className="mb-12 flex items-center gap-2 text-amber-500 hover:text-amber-400 transition-colors text-xs uppercase tracking-widest"
+              >
+                <Minimize2 size={16} />
+                <span>Zoom Out</span>
+              </button>
 
-            <div className="flex items-center gap-4 mb-4">
-              {ISLAND_FLAGS[selectedIsland.slug] && (
-                <img 
-                  src={`https://flagcdn.com/w80/${ISLAND_FLAGS[selectedIsland.slug]}.png`}
-                  alt={`${selectedIsland.name} Flag`}
-                  className="w-10 h-auto rounded shadow-sm border border-white/10"
-                />
-              )}
-              <h2 className="text-4xl font-serif text-white leading-tight">{selectedIsland.name}</h2>
+              <div className="flex items-center gap-4">
+                {ISLAND_FLAGS[selectedIsland.slug] && (
+                  <img 
+                    src={`https://flagcdn.com/w80/${ISLAND_FLAGS[selectedIsland.slug]}.png`}
+                    alt={`${selectedIsland.name} Flag`}
+                    className="w-10 h-auto rounded shadow-sm border border-white/10"
+                  />
+                )}
+                <h2 className="text-4xl font-serif text-white leading-tight">{selectedIsland.name}</h2>
+              </div>
             </div>
+
+            <div className="px-12 pt-12">
             <p className="text-white/50 text-sm font-light leading-relaxed mb-12">
               {selectedIsland.description}
             </p>
@@ -427,7 +431,8 @@ export default function GlobalMap() {
                 View Full Collection
               </Link>
             </div>
-          </motion.div>
+          </div>
+        </motion.div>
         )}
       </AnimatePresence>
     </div>
