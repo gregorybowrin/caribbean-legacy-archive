@@ -101,13 +101,13 @@ export default function GlobalMap() {
   }
 
   // Calculate transformation logic
-  const zoomFactor = selectedIsland ? 5 : (hoveredIsland ? 1.1 : 1);
+  const zoomFactor = selectedIsland ? 5 : 1;
   const targetX = selectedIsland 
     ? (dimensions.width / 2 - projection([selectedIsland.longitude, selectedIsland.latitude])![0] * zoomFactor)
-    : (hoveredIsland ? (dimensions.width / 2 - projection([hoveredIsland.longitude, hoveredIsland.latitude])![0] * zoomFactor) * 0.1 : 0);
+    : 0;
   const targetY = selectedIsland 
     ? (dimensions.height / 2 - projection([selectedIsland.longitude, selectedIsland.latitude])![1] * zoomFactor)
-    : (hoveredIsland ? (dimensions.height / 2 - projection([hoveredIsland.longitude, hoveredIsland.latitude])![1] * zoomFactor) * 0.1 : 0);
+    : 0;
 
   return (
     <div className="fixed inset-0 bg-[#020617] overflow-hidden select-none">
@@ -152,14 +152,17 @@ export default function GlobalMap() {
                 <motion.circle
                   cx={x}
                   cy={y}
-                  r={isSelected ? 10 : (isHovered ? 6 : 4)}
+                  r={isSelected ? 10 : (isHovered ? 8 : 4)}
                   fill={isSelected ? '#f59e0b' : (isHovered ? '#fbbf24' : '#d97706')}
                   initial={{ opacity: 0.3 }}
                   animate={{ 
-                    opacity: isSelected ? 0.8 : (isHovered ? 0.7 : [0.3, 0.6, 0.3]),
-                    scale: isHovered ? 1.2 : 1
+                    opacity: isSelected ? 0.8 : (isHovered ? 0.9 : [0.3, 0.6, 0.3]),
+                    scale: isHovered ? 1.5 : 1
                   }}
-                  transition={{ repeat: Infinity, duration: 2 }}
+                  transition={{ 
+                    opacity: { repeat: Infinity, duration: 2 },
+                    scale: { type: 'spring', stiffness: 300, damping: 20 }
+                  }}
                 />
                 <circle
                   cx={x}
