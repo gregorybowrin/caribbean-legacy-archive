@@ -21,12 +21,29 @@ export default function GlobalMap() {
   const [worldData, setWorldData] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [dimensions, setDimensions] = useState({ width: 1200, height: 800 });
+  const [panOffset, setPanOffset] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
       setDimensions({ width: window.innerWidth, height: window.innerHeight });
     }
   }, []);
+
+  // Handle Trackpad Panning
+  useEffect(() => {
+    const handleWheel = (e: WheelEvent) => {
+      if (selectedIsland) {
+        e.preventDefault();
+        setPanOffset(prev => ({
+          x: prev.x - e.deltaX,
+          y: prev.y - e.deltaY
+        }));
+      }
+    };
+
+    window.addEventListener('wheel', handleWheel, { passive: false });
+    return () => window.removeEventListener('wheel', handleWheel);
+  }, [selectedIsland]);
 
   // Map Projection
   const projection = geoMercator()
@@ -38,7 +55,6 @@ export default function GlobalMap() {
 
   useEffect(() => {
     async function fetchData() {
-      // Fetch islands with counts
       const { data: islandsData } = await supabase
         .from('islands')
         .select(`
@@ -50,7 +66,6 @@ export default function GlobalMap() {
         setIslands(islandsData);
       }
 
-      // Fetch World Map Data
       try {
         const response = await fetch('https://unpkg.com/world-atlas@2.0.2/countries-110m.json');
         const data = await response.json();
@@ -72,8 +87,8 @@ export default function GlobalMap() {
     }
     
     setSelectedIsland(island);
+    setPanOffset({ x: 0, y: 0 }); // Reset pan on new selection
 
-    // Fetch figures for this island
     const { data: figures } = await supabase
       .from('figures')
       .select('*')
@@ -88,6 +103,7 @@ export default function GlobalMap() {
   const resetView = () => {
     setSelectedIsland(null);
     setIslandFigures([]);
+    setPanOffset({ x: 0, y: 0 });
   };
 
   if (loading) {
@@ -103,10 +119,10 @@ export default function GlobalMap() {
   // Calculate transformation logic
   const zoomFactor = selectedIsland ? 5 : 1;
   const targetX = selectedIsland 
-    ? (dimensions.width / 2 - projection([selectedIsland.longitude, selectedIsland.latitude])![0] * zoomFactor)
+    ? (dimensions.width / 2 - projection([selectedIsland.longitude, selectedIsland.latitude])![0] * zoomFactor) + panOffset.x
     : 0;
   const targetY = selectedIsland 
-    ? (dimensions.height / 2 - projection([selectedIsland.longitude, selectedIsland.latitude])![1] * zoomFactor)
+    ? (dimensions.height / 2 - projection([selectedIsland.longitude, selectedIsland.latitude])![1] * zoomFactor) + panOffset.y
     : 0;
 
   return (
@@ -118,14 +134,6 @@ export default function GlobalMap() {
       {/* Map Engine */}
       <motion.div 
         className="w-full h-full cursor-grab active:cursor-grabbing"
-        drag={selectedIsland ? true : false} // Only drag when zoomed
-        dragConstraints={{
-          left: -dimensions.width * 2,
-          right: dimensions.width * 2,
-          top: -dimensions.height * 2,
-          bottom: dimensions.height * 2
-        }}
-        dragElastic={0.1}
         animate={{
           scale: zoomFactor,
           x: targetX,
@@ -138,20 +146,17 @@ export default function GlobalMap() {
           viewBox={`0 0 ${dimensions.width} ${dimensions.height}`} 
           className="w-full h-full"
           onClick={(e) => {
-            // Only reset if clicking the background SVG, not an island
             if (e.target === e.currentTarget) resetView();
           }}
         >
-          {/* World Landmasses */}
           <path
             d={pathGenerator(worldData) || ''}
             fill="#0f172a"
             stroke="#1e293b"
             strokeWidth="0.5"
-            onClick={resetView} // Clicking landmass also resets
+            onClick={resetView}
           />
 
-          {/* Legacy Beacons */}
           {islands.map((island) => {
             const [x, y] = projection([island.longitude, island.latitude]) || [0, 0];
             const isSelected = selectedIsland?.id === island.id;
@@ -163,11 +168,10 @@ export default function GlobalMap() {
                  onMouseEnter={() => !selectedIsland && setHoveredIsland(island)}
                  onMouseLeave={() => setHoveredIsland(null)}
                  onClick={(e) => {
-                   e.stopPropagation(); // Prevent background click from firing
+                   e.stopPropagation();
                    handleIslandClick(island);
                  }}
               >
-                {/* Glow Pulse */}
                 <motion.circle
                   cx={x}
                   cy={y}
@@ -207,6 +211,26 @@ export default function GlobalMap() {
           <span>{islands.length} Territories Documented</span>
         </div>
       </div>
+
+      {/* Persistent Global View Button (Bottom Left) */}
+      <AnimatePresence>
+        {selectedIsland && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            className="absolute bottom-8 left-8"
+          >
+            <button
+              onClick={resetView}
+              className="bg-amber-500 text-slate-950 px-6 py-3 rounded-full flex items-center gap-3 shadow-2xl hover:bg-amber-400 transition-all group"
+            >
+              <Minimize2 size={18} className="group-hover:scale-110 transition-transform" />
+              <span className="text-[10px] uppercase tracking-[0.2em] font-bold">Return to Global View</span>
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Island Tooltip */}
       <AnimatePresence>
