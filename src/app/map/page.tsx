@@ -172,7 +172,7 @@ export default function GlobalMap() {
             return (
               <g key={island.id} 
                  className="cursor-pointer"
-                 onMouseEnter={() => !selectedIsland && setHoveredIsland(island)}
+                 onMouseEnter={() => setHoveredIsland(island)}
                  onMouseLeave={() => setHoveredIsland(null)}
                  onClick={(e) => {
                    e.stopPropagation();
@@ -284,7 +284,7 @@ export default function GlobalMap() {
 
       {/* Floating Island Label */}
       <AnimatePresence>
-        {hoveredIsland && !selectedIsland && (
+        {hoveredIsland && (
           <motion.div
             initial={{ opacity: 0, scale: 0.3, y: 0 }}
             animate={{ 
@@ -295,9 +295,9 @@ export default function GlobalMap() {
             exit={{ opacity: 0, scale: 0.3, y: 0 }}
             style={{ 
               position: 'absolute',
-              top: projection([hoveredIsland.longitude, hoveredIsland.latitude])![1],
-              left: projection([hoveredIsland.longitude, hoveredIsland.latitude])![0],
-              x: '-50%', // Center horizontally relative to its own width
+              top: (projection([hoveredIsland.longitude, hoveredIsland.latitude])![1] * zoomFactor) + targetY,
+              left: (projection([hoveredIsland.longitude, hoveredIsland.latitude])![0] * zoomFactor) + targetX,
+              x: '-50%',
               pointerEvents: 'none'
             }}
             className="w-[200px] flex flex-col items-center gap-1 z-50"
