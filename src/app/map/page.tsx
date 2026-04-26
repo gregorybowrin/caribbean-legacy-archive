@@ -117,7 +117,15 @@ export default function GlobalMap() {
 
       {/* Map Engine */}
       <motion.div 
-        className="w-full h-full"
+        className="w-full h-full cursor-grab active:cursor-grabbing"
+        drag={selectedIsland ? true : false} // Only drag when zoomed
+        dragConstraints={{
+          left: -dimensions.width * 2,
+          right: dimensions.width * 2,
+          top: -dimensions.height * 2,
+          bottom: dimensions.height * 2
+        }}
+        dragElastic={0.1}
         animate={{
           scale: zoomFactor,
           x: targetX,
@@ -126,13 +134,21 @@ export default function GlobalMap() {
         transition={{ type: 'spring', damping: 25, stiffness: 60 }}
         style={{ transformOrigin: '0 0' }}
       >
-        <svg viewBox={`0 0 ${dimensions.width} ${dimensions.height}`} className="w-full h-full">
+        <svg 
+          viewBox={`0 0 ${dimensions.width} ${dimensions.height}`} 
+          className="w-full h-full"
+          onClick={(e) => {
+            // Only reset if clicking the background SVG, not an island
+            if (e.target === e.currentTarget) resetView();
+          }}
+        >
           {/* World Landmasses */}
           <path
             d={pathGenerator(worldData) || ''}
             fill="#0f172a"
             stroke="#1e293b"
             strokeWidth="0.5"
+            onClick={resetView} // Clicking landmass also resets
           />
 
           {/* Legacy Beacons */}
@@ -146,7 +162,10 @@ export default function GlobalMap() {
                  className="cursor-pointer"
                  onMouseEnter={() => !selectedIsland && setHoveredIsland(island)}
                  onMouseLeave={() => setHoveredIsland(null)}
-                 onClick={() => handleIslandClick(island)}
+                 onClick={(e) => {
+                   e.stopPropagation(); // Prevent background click from firing
+                   handleIslandClick(island);
+                 }}
               >
                 {/* Glow Pulse */}
                 <motion.circle
