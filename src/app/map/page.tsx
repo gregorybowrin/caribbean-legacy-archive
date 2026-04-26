@@ -22,6 +22,8 @@ export default function GlobalMap() {
   const [loading, setLoading] = useState(true);
   const [dimensions, setDimensions] = useState({ width: 1200, height: 800 });
   const [panOffset, setPanOffset] = useState({ x: 0, y: 0 });
+  const [isHoveringFlyout, setIsHoveringFlyout] = useState(false);
+  const flyoutRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -33,6 +35,11 @@ export default function GlobalMap() {
   useEffect(() => {
     const handleWheel = (e: WheelEvent) => {
       if (selectedIsland) {
+        // If hovering inside the flyout, let it scroll normally and don't pan the map
+        if (isHoveringFlyout) {
+          return;
+        }
+
         e.preventDefault();
         setPanOffset(prev => ({
           x: prev.x - e.deltaX,
@@ -43,7 +50,7 @@ export default function GlobalMap() {
 
     window.addEventListener('wheel', handleWheel, { passive: false });
     return () => window.removeEventListener('wheel', handleWheel);
-  }, [selectedIsland]);
+  }, [selectedIsland, isHoveringFlyout]);
 
   // Map Projection
   const projection = geoMercator()
@@ -172,6 +179,13 @@ export default function GlobalMap() {
                    handleIslandClick(island);
                  }}
               >
+                {/* Large Invisible Hit-box */}
+                <circle
+                  cx={x}
+                  cy={y}
+                  r={20}
+                  fill="transparent"
+                />
                 <motion.circle
                   cx={x}
                   cy={y}
@@ -200,15 +214,19 @@ export default function GlobalMap() {
       </motion.div>
 
       {/* Navigation Overlay */}
-      <div className="absolute top-8 left-8 flex flex-col gap-4">
-        <Link href="/" className="group flex items-center gap-3 text-white/50 hover:text-white transition-colors">
-          <ArrowLeft size={18} />
-          <span className="text-xs uppercase tracking-[0.2em] font-light">Exit Map</span>
-        </Link>
-        <h1 className="text-2xl font-serif text-white/90">Caribbean Archive Map</h1>
-        <div className="flex items-center gap-2 text-amber-500/70 text-[10px] uppercase tracking-[0.3em]">
-          <Globe size={12} />
-          <span>{islands.length} Territories Documented</span>
+      <div className="absolute top-[180px] left-0 right-0 z-20 pointer-events-none flex justify-center">
+        <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 flex justify-start">
+          <div className="flex flex-col gap-4 pointer-events-auto items-start -ml-[7px]">
+            <Link href="/" className="group flex items-center gap-3 text-white/50 hover:text-white transition-colors">
+              <ArrowLeft size={18} />
+              <span className="text-xs uppercase tracking-[0.2em] font-light">Exit Map</span>
+            </Link>
+            <h1 className="text-4xl font-serif text-white/90">Caribbean Archive Map</h1>
+            <div className="flex items-center gap-2 text-amber-500/70 text-[10px] uppercase tracking-[0.3em]">
+              <Globe size={12} />
+              <span>{islands.length} Territories Documented</span>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -219,15 +237,17 @@ export default function GlobalMap() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
-            className="absolute bottom-8 left-8"
+            className="absolute bottom-8 left-0 right-0 pointer-events-none flex justify-center"
           >
-            <button
-              onClick={resetView}
-              className="bg-amber-500 text-slate-950 px-6 py-3 rounded-full flex items-center gap-3 shadow-2xl hover:bg-amber-400 transition-all group"
-            >
-              <Minimize2 size={18} className="group-hover:scale-110 transition-transform" />
-              <span className="text-[10px] uppercase tracking-[0.2em] font-bold">Return to Global View</span>
-            </button>
+            <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 flex justify-start">
+              <button
+                onClick={resetView}
+                className="bg-amber-500 text-slate-950 px-6 py-3 rounded-full flex items-center gap-3 shadow-2xl hover:bg-amber-400 transition-all group pointer-events-auto"
+              >
+                <Minimize2 size={18} className="group-hover:scale-110 transition-transform" />
+                <span className="text-[10px] uppercase tracking-[0.2em] font-bold">Return to Global View</span>
+              </button>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -274,7 +294,11 @@ export default function GlobalMap() {
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'spring', damping: 30, stiffness: 100 }}
-            className="absolute top-0 right-0 w-[400px] h-full bg-[#020617]/95 backdrop-blur-3xl border-l border-white/10 p-12 overflow-y-auto"
+            ref={flyoutRef}
+            onMouseEnter={() => setIsHoveringFlyout(true)}
+            onMouseLeave={() => setIsHoveringFlyout(false)}
+            onWheel={(e) => e.stopPropagation()}
+            className="absolute top-0 right-0 w-[400px] h-full bg-[#020617]/95 backdrop-blur-3xl border-l border-white/10 pt-32 px-12 pb-12 overflow-y-auto z-50"
           >
             <button 
               onClick={resetView}
