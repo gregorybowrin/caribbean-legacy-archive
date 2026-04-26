@@ -236,14 +236,14 @@ export default function GlobalMap() {
       <AnimatePresence>
         {hoveredIsland && !selectedIsland && (
           <motion.div
-            initial={{ opacity: 0, scale: 0.9, y: 0 }}
+            initial={{ opacity: 0, scale: 0.3, y: 10 }}
             animate={{ 
               opacity: 1, 
               scale: 1, 
-              y: -40, // Rise above the circle
-              x: projection([hoveredIsland.longitude, hoveredIsland.latitude])![0] - 100 // Center horizontally
+              y: -55, // Higher clearance from the circle/mouse
+              x: projection([hoveredIsland.longitude, hoveredIsland.latitude])![0] - 100
             }}
-            exit={{ opacity: 0, scale: 0.9, y: 0 }}
+            exit={{ opacity: 0, scale: 0.3, y: 10 }}
             style={{ 
               position: 'absolute',
               top: projection([hoveredIsland.longitude, hoveredIsland.latitude])![1],
@@ -252,14 +252,16 @@ export default function GlobalMap() {
             }}
             className="w-[200px] flex flex-col items-center gap-1 z-50"
           >
-            <div className="bg-slate-900/90 backdrop-blur-md border border-amber-500/30 px-4 py-2 rounded-lg shadow-[0_0_20px_rgba(245,158,11,0.2)]">
-              <div className="text-amber-500 font-serif text-sm text-center whitespace-nowrap">{hoveredIsland.name}</div>
-              <div className="text-[8px] text-white/40 uppercase tracking-[0.2em] text-center mt-1">
-                {hoveredIsland.figures?.[0]?.count || 0} Profiles
+            <div className="bg-slate-950/90 backdrop-blur-md border border-amber-500/40 px-5 py-3 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+              <div className="text-[#fbbf24] font-serif text-base text-center whitespace-nowrap tracking-wide">
+                {hoveredIsland.name}
+              </div>
+              <div className="text-[9px] text-white font-medium uppercase tracking-[0.2em] text-center mt-1.5 opacity-90">
+                {hoveredIsland.figures?.[0]?.count || 0} Profiles Documented
               </div>
             </div>
             {/* Tooltip Arrow */}
-            <div className="w-2 h-2 bg-slate-900 border-r border-b border-amber-500/30 rotate-45 -mt-1" />
+            <div className="w-2.5 h-2.5 bg-slate-950 border-r border-b border-amber-500/40 rotate-45 -mt-1.5" />
           </motion.div>
         )}
       </AnimatePresence>
