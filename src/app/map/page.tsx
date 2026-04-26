@@ -213,7 +213,7 @@ export default function GlobalMap() {
           })}
 
           {/* Single Global Pulsing Active Halo */}
-          <AnimatePresence>
+          <AnimatePresence mode="wait">
             {selectedIsland && (
               <motion.circle
                 key={`global-pulse-${selectedIsland.id}`}
@@ -224,7 +224,11 @@ export default function GlobalMap() {
                   r: 20, 
                   opacity: 0,
                 }}
-                exit={{ opacity: 0 }}
+                exit={{ 
+                  opacity: 0,
+                  scale: 0,
+                  transition: { duration: 0.2 } 
+                }}
                 transition={{ 
                   repeat: Infinity, 
                   duration: 1.2,

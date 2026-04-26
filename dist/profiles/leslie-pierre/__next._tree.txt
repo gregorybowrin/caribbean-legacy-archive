@@ -1,7 +1,7 @@
-:HL["/_next/static/chunks/06r9sym9b~oe4.css","style"]
+:HL["/_next/static/chunks/0bjt96bvsr.fv.css","style"]
 :HL["/_next/static/media/2a65768255d6b625-s.p.14by5b4al-y~f.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/797e433ab948586e-s.p.0.q-h669a_dqa.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/caa3a2e1cccd8315-s.p.16t1db8_9y2o~.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Paul_Southwell.jpg/220px-Paul_Southwell.jpg","image"]
 :HL["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz9vL-X9z9-X9z9-X9z9-X9z9-X9z9-X9z9&s","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"leslie-pierre","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"zidOVNJjWA7_jeTfQbusN"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"leslie-pierre","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"j5MF0xIO1p9EWfbhaED8h"}
