@@ -232,21 +232,34 @@ export default function GlobalMap() {
         )}
       </AnimatePresence>
 
-      {/* Island Tooltip */}
+      {/* Floating Island Label */}
       <AnimatePresence>
         {hoveredIsland && !selectedIsland && (
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 10 }}
-            className="absolute bottom-12 left-1/2 -translate-x-1/2 bg-slate-900/80 backdrop-blur-xl border border-white/10 px-6 py-4 rounded-full flex items-center gap-4 shadow-2xl"
+            initial={{ opacity: 0, scale: 0.9, y: 0 }}
+            animate={{ 
+              opacity: 1, 
+              scale: 1, 
+              y: -40, // Rise above the circle
+              x: projection([hoveredIsland.longitude, hoveredIsland.latitude])![0] - 100 // Center horizontally
+            }}
+            exit={{ opacity: 0, scale: 0.9, y: 0 }}
+            style={{ 
+              position: 'absolute',
+              top: projection([hoveredIsland.longitude, hoveredIsland.latitude])![1],
+              left: 0,
+              pointerEvents: 'none'
+            }}
+            className="w-[200px] flex flex-col items-center gap-1 z-50"
           >
-            <div className="text-amber-500 font-serif text-lg">{hoveredIsland.name}</div>
-            <div className="w-px h-4 bg-white/10" />
-            <div className="flex items-center gap-2 text-white/60 text-xs uppercase tracking-widest">
-              <Users size={14} className="text-amber-500/50" />
-              <span>{hoveredIsland.figures?.[0]?.count || 0} Profiles</span>
+            <div className="bg-slate-900/90 backdrop-blur-md border border-amber-500/30 px-4 py-2 rounded-lg shadow-[0_0_20px_rgba(245,158,11,0.2)]">
+              <div className="text-amber-500 font-serif text-sm text-center whitespace-nowrap">{hoveredIsland.name}</div>
+              <div className="text-[8px] text-white/40 uppercase tracking-[0.2em] text-center mt-1">
+                {hoveredIsland.figures?.[0]?.count || 0} Profiles
+              </div>
             </div>
+            {/* Tooltip Arrow */}
+            <div className="w-2 h-2 bg-slate-900 border-r border-b border-amber-500/30 rotate-45 -mt-1" />
           </motion.div>
         )}
       </AnimatePresence>
