@@ -186,18 +186,43 @@ export default function GlobalMap() {
                   r={20}
                   fill="transparent"
                 />
+
+                {/* Pulsing Active Halo */}
+                <AnimatePresence>
+                  {isSelected && (
+                    <motion.circle
+                      cx={x}
+                      cy={y}
+                      initial={{ r: 10, opacity: 0.8 }}
+                      animate={{ 
+                        r: 35, 
+                        opacity: 0,
+                      }}
+                      exit={{ opacity: 0 }}
+                      transition={{ 
+                        repeat: Infinity, 
+                        duration: 2,
+                        ease: "easeOut"
+                      }}
+                      fill="none"
+                      stroke="#fbbf24"
+                      strokeWidth="2"
+                    />
+                  )}
+                </AnimatePresence>
+
                 <motion.circle
                   cx={x}
                   cy={y}
                   r={isSelected ? 10 : (isHovered ? 8 : 4)}
-                  fill={isSelected ? '#f59e0b' : (isHovered ? '#fbbf24' : '#d97706')}
+                  fill={isSelected ? '#0ea5e9' : (isHovered ? '#fbbf24' : '#d97706')}
                   initial={{ opacity: 0.3 }}
                   animate={{ 
-                    opacity: isSelected ? 0.8 : (isHovered ? 0.9 : [0.3, 0.6, 0.3]),
-                    scale: isHovered ? 1.5 : 1
+                    opacity: isSelected ? 0.9 : (isHovered ? 0.9 : [0.3, 0.6, 0.3]),
+                    scale: isHovered ? 1.5 : 1,
                   }}
                   transition={{ 
-                    opacity: { repeat: Infinity, duration: 2 },
+                    opacity: { repeat: isSelected ? 0 : Infinity, duration: 2 },
                     scale: { type: 'spring', stiffness: 300, damping: 20 }
                   }}
                 />
@@ -205,7 +230,7 @@ export default function GlobalMap() {
                   cx={x}
                   cy={y}
                   r={isSelected ? 3 : 2}
-                  fill="#fbbf24"
+                  fill={isSelected ? '#ffffff' : '#fbbf24'}
                 />
               </g>
             );
