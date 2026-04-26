@@ -19,14 +19,20 @@ export default function GlobalMap() {
   const [islandFigures, setIslandFigures] = useState<any[]>([]);
   const [hoveredIsland, setHoveredIsland] = useState<any>(null);
   const [worldData, setWorldData] = useState<any>(null);
-  const [viewState, setViewState] = useState({ zoom: 1, x: 0, y: 0 });
   const [loading, setLoading] = useState(true);
+  const [dimensions, setDimensions] = useState({ width: 1200, height: 800 });
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setDimensions({ width: window.innerWidth, height: window.innerHeight });
+    }
+  }, []);
 
   // Map Projection
   const projection = geoMercator()
     .center([-75, 18]) // Centered on the Caribbean
     .scale(1500)
-    .translate([typeof window !== 'undefined' ? window.innerWidth / 2 : 500, typeof window !== 'undefined' ? window.innerHeight / 2 : 400]);
+    .translate([dimensions.width / 2, dimensions.height / 2]);
 
   const pathGenerator = geoPath().projection(projection);
 
@@ -44,7 +50,7 @@ export default function GlobalMap() {
         setIslands(islandsData);
       }
 
-      // Fetch World Map Data (Natural Earth simplified)
+      // Fetch World Map Data
       try {
         const response = await fetch('https://unpkg.com/world-atlas@2.0.2/countries-110m.json');
         const data = await response.json();
@@ -60,12 +66,12 @@ export default function GlobalMap() {
   }, []);
 
   const handleIslandClick = async (island: any) => {
+    if (selectedIsland?.id === island.id) {
+      resetView();
+      return;
+    }
+    
     setSelectedIsland(island);
-    setViewState({
-      zoom: 6,
-      x: island.longitude,
-      y: island.latitude
-    });
 
     // Fetch figures for this island
     const { data: figures } = await supabase
@@ -81,13 +87,12 @@ export default function GlobalMap() {
 
   const resetView = () => {
     setSelectedIsland(null);
-    setViewState({ zoom: 1, x: 0, y: 0 });
     setIslandFigures([]);
   };
 
   if (loading) {
     return (
-      <div className="fixed inset-0 bg-[#0a0a0a] flex items-center justify-center">
+      <div className="fixed inset-0 bg-[#020617] flex items-center justify-center">
         <div className="text-amber-500/50 animate-pulse text-sm font-light tracking-[0.2em] uppercase">
           Initializing Archive Map...
         </div>
@@ -95,28 +100,38 @@ export default function GlobalMap() {
     );
   }
 
+  // Calculate transformation logic
+  const zoomFactor = selectedIsland ? 5 : (hoveredIsland ? 1.1 : 1);
+  const targetX = selectedIsland 
+    ? (dimensions.width / 2 - projection([selectedIsland.longitude, selectedIsland.latitude])![0] * zoomFactor)
+    : (hoveredIsland ? (dimensions.width / 2 - projection([hoveredIsland.longitude, hoveredIsland.latitude])![0] * zoomFactor) * 0.1 : 0);
+  const targetY = selectedIsland 
+    ? (dimensions.height / 2 - projection([selectedIsland.longitude, selectedIsland.latitude])![1] * zoomFactor)
+    : (hoveredIsland ? (dimensions.height / 2 - projection([hoveredIsland.longitude, hoveredIsland.latitude])![1] * zoomFactor) * 0.1 : 0);
+
   return (
-    <div className="fixed inset-0 bg-[#0a0a0a] overflow-hidden select-none">
+    <div className="fixed inset-0 bg-[#020617] overflow-hidden select-none">
       {/* Immersive Background Grid */}
-      <div className="absolute inset-0 opacity-[0.03] pointer-events-none" 
-           style={{ backgroundImage: 'radial-gradient(#amber-500 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+      <div className="absolute inset-0 opacity-[0.05] pointer-events-none" 
+           style={{ backgroundImage: 'radial-gradient(#amber-500 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
 
       {/* Map Engine */}
       <motion.div 
-        className="w-full h-full cursor-grab active:cursor-grabbing"
+        className="w-full h-full"
         animate={{
-          scale: selectedIsland ? 4 : 1,
-          x: selectedIsland ? (window.innerWidth / 2 - projection([selectedIsland.longitude, selectedIsland.latitude])![0] * 4) : 0,
-          y: selectedIsland ? (window.innerHeight / 2 - projection([selectedIsland.longitude, selectedIsland.latitude])![1] * 4) : 0,
+          scale: zoomFactor,
+          x: targetX,
+          y: targetY,
         }}
         transition={{ type: 'spring', damping: 25, stiffness: 60 }}
+        style={{ transformOrigin: '0 0' }}
       >
-        <svg viewBox={`0 0 ${window.innerWidth} ${window.innerHeight}`} className="w-full h-full">
+        <svg viewBox={`0 0 ${dimensions.width} ${dimensions.height}`} className="w-full h-full">
           {/* World Landmasses */}
           <path
             d={pathGenerator(worldData) || ''}
-            fill="#151515"
-            stroke="#222"
+            fill="#0f172a"
+            stroke="#1e293b"
             strokeWidth="0.5"
           />
 
@@ -124,6 +139,7 @@ export default function GlobalMap() {
           {islands.map((island) => {
             const [x, y] = projection([island.longitude, island.latitude]) || [0, 0];
             const isSelected = selectedIsland?.id === island.id;
+            const isHovered = hoveredIsland?.id === island.id;
             
             return (
               <g key={island.id} 
@@ -136,10 +152,13 @@ export default function GlobalMap() {
                 <motion.circle
                   cx={x}
                   cy={y}
-                  r={isSelected ? 10 : 4}
-                  fill={isSelected ? '#f59e0b' : '#d97706'}
+                  r={isSelected ? 10 : (isHovered ? 6 : 4)}
+                  fill={isSelected ? '#f59e0b' : (isHovered ? '#fbbf24' : '#d97706')}
                   initial={{ opacity: 0.3 }}
-                  animate={{ opacity: isSelected ? 0.8 : [0.3, 0.6, 0.3] }}
+                  animate={{ 
+                    opacity: isSelected ? 0.8 : (isHovered ? 0.7 : [0.3, 0.6, 0.3]),
+                    scale: isHovered ? 1.2 : 1
+                  }}
                   transition={{ repeat: Infinity, duration: 2 }}
                 />
                 <circle
@@ -174,7 +193,7 @@ export default function GlobalMap() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 10 }}
-            className="absolute bottom-12 left-1/2 -translate-x-1/2 bg-black/80 backdrop-blur-xl border border-white/10 px-6 py-4 rounded-full flex items-center gap-4"
+            className="absolute bottom-12 left-1/2 -translate-x-1/2 bg-slate-900/80 backdrop-blur-xl border border-white/10 px-6 py-4 rounded-full flex items-center gap-4 shadow-2xl"
           >
             <div className="text-amber-500 font-serif text-lg">{hoveredIsland.name}</div>
             <div className="w-px h-4 bg-white/10" />
@@ -194,7 +213,7 @@ export default function GlobalMap() {
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'spring', damping: 30, stiffness: 100 }}
-            className="absolute top-0 right-0 w-[400px] h-full bg-[#0d0d0d]/95 backdrop-blur-3xl border-l border-white/10 p-12 overflow-y-auto"
+            className="absolute top-0 right-0 w-[400px] h-full bg-[#020617]/95 backdrop-blur-3xl border-l border-white/10 p-12 overflow-y-auto"
           >
             <button 
               onClick={resetView}
@@ -216,7 +235,7 @@ export default function GlobalMap() {
               {islandFigures.map((figure) => (
                 <Link 
                   key={figure.id} 
-                  href={`/figures/${figure.slug}`}
+                  href={`/profiles/${figure.slug}`}
                   className="block group"
                 >
                   <div className="flex items-center justify-between mb-2">
