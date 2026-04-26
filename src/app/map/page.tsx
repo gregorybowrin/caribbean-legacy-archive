@@ -187,30 +187,6 @@ export default function GlobalMap() {
                   fill="transparent"
                 />
 
-                {/* Pulsing Active Halo */}
-                <AnimatePresence mode="wait">
-                  {isSelected && (
-                    <motion.circle
-                      key={`pulse-${island.id}`}
-                      cx={x}
-                      cy={y}
-                      initial={{ r: 10, opacity: 0.8 }}
-                      animate={{ 
-                        r: 22, 
-                        opacity: 0,
-                      }}
-                      exit={{ opacity: 0 }}
-                      transition={{ 
-                        repeat: Infinity, 
-                        duration: 1.5,
-                        ease: "easeOut"
-                      }}
-                      fill="none"
-                      stroke="#fbbf24"
-                      strokeWidth="2"
-                    />
-                  )}
-                </AnimatePresence>
 
                 <motion.circle
                   cx={x}
@@ -219,11 +195,10 @@ export default function GlobalMap() {
                   fill={isSelected ? '#0ea5e9' : (isHovered ? '#fbbf24' : '#d97706')}
                   initial={{ opacity: 0.3 }}
                   animate={{ 
-                    opacity: isSelected ? 0.9 : (isHovered ? 0.9 : [0.3, 0.6, 0.3]),
+                    opacity: isSelected ? 0.9 : (isHovered ? 0.9 : 0.4),
                     scale: isHovered ? 1.5 : 1,
                   }}
                   transition={{ 
-                    opacity: { repeat: isSelected ? 0 : Infinity, duration: 2 },
                     scale: { type: 'spring', stiffness: 300, damping: 20 }
                   }}
                 />
@@ -236,6 +211,31 @@ export default function GlobalMap() {
               </g>
             );
           })}
+
+          {/* Single Global Pulsing Active Halo */}
+          <AnimatePresence>
+            {selectedIsland && (
+              <motion.circle
+                key={`global-pulse-${selectedIsland.id}`}
+                cx={projection([selectedIsland.longitude, selectedIsland.latitude])![0]}
+                cy={projection([selectedIsland.longitude, selectedIsland.latitude])![1]}
+                initial={{ r: 10, opacity: 0.8 }}
+                animate={{ 
+                  r: 20, 
+                  opacity: 0,
+                }}
+                exit={{ opacity: 0 }}
+                transition={{ 
+                  repeat: Infinity, 
+                  duration: 1.2,
+                  ease: "easeOut"
+                }}
+                fill="none"
+                stroke="#fbbf24"
+                strokeWidth="2"
+              />
+            )}
+          </AnimatePresence>
         </svg>
       </motion.div>
 
