@@ -364,6 +364,20 @@ export default function GlobalMap() {
                     setIsSearchOpen(true);
                   }}
                   onFocus={() => setIsSearchOpen(true)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter') {
+                        const query = searchQuery.toLowerCase().replace(/\bst\.?\s*/g, 'saint ').trim();
+                      const filtered = islands.filter(i => 
+                        i.name.toLowerCase().includes(query) || 
+                        i.name.toLowerCase().includes(searchQuery.toLowerCase())
+                      );
+                      if (filtered.length > 0) {
+                        handleIslandClick(filtered[0]);
+                        setSearchQuery('');
+                        setIsSearchOpen(false);
+                      }
+                    }
+                  }}
                   className="bg-transparent border-none outline-none text-[11px] text-white placeholder:text-white/30 uppercase tracking-widest w-full"
                 />
               </div>
@@ -377,7 +391,11 @@ export default function GlobalMap() {
                     className="absolute top-full mt-2 left-0 w-[320px] max-h-[300px] overflow-y-auto bg-slate-900/95 backdrop-blur-2xl border border-white/10 rounded-2xl shadow-2xl z-40 p-1.5"
                   >
                     {islands
-                      .filter(i => i.name.toLowerCase().includes(searchQuery.toLowerCase()))
+                      .filter(i => {
+                          const query = searchQuery.toLowerCase().replace(/\bst\.?\s*/g, 'saint ').trim();
+                        return i.name.toLowerCase().includes(query) || 
+                               i.name.toLowerCase().includes(searchQuery.toLowerCase());
+                      })
                       .map(island => (
                         <button
                           key={island.id}
@@ -392,7 +410,11 @@ export default function GlobalMap() {
                           <ArrowLeft size={12} className="rotate-180 text-amber-500 opacity-0 group-hover:opacity-100 transition-all" />
                         </button>
                       ))}
-                    {islands.filter(i => i.name.toLowerCase().includes(searchQuery.toLowerCase())).length === 0 && (
+                    {islands.filter(i => {
+                        const query = searchQuery.toLowerCase().replace(/\bst\.?\s*/g, 'saint ').trim();
+                      return i.name.toLowerCase().includes(query) || 
+                             i.name.toLowerCase().includes(searchQuery.toLowerCase());
+                    }).length === 0 && (
                       <div className="px-4 py-8 text-center text-white/20 text-[10px] uppercase tracking-widest font-light">
                         No territories found
                       </div>
