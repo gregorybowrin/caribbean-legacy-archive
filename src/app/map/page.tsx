@@ -81,7 +81,6 @@ export default function GlobalMap() {
   const [loading, setLoading] = useState(true);
   const [dimensions, setDimensions] = useState({ width: 1200, height: 800 });
   const [panOffset, setPanOffset] = useState({ x: 0, y: 0 });
-  const [isHoveringFlyout, setIsHoveringFlyout] = useState(false);
   const flyoutRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -94,11 +93,6 @@ export default function GlobalMap() {
   useEffect(() => {
     const handleWheel = (e: WheelEvent) => {
       if (selectedIsland) {
-        // If hovering inside the flyout, let it scroll normally and don't pan the map
-        if (isHoveringFlyout) {
-          return;
-        }
-
         e.preventDefault();
         setPanOffset(prev => ({
           x: prev.x - e.deltaX,
@@ -109,7 +103,7 @@ export default function GlobalMap() {
 
     window.addEventListener('wheel', handleWheel, { passive: false });
     return () => window.removeEventListener('wheel', handleWheel);
-  }, [selectedIsland, isHoveringFlyout]);
+  }, [selectedIsland]);
 
   // Map Projection
   const projection = geoMercator()
@@ -384,60 +378,63 @@ export default function GlobalMap() {
             exit={{ x: '100%' }}
             transition={{ type: 'spring', damping: 30, stiffness: 100 }}
             ref={flyoutRef}
-            onMouseEnter={() => setIsHoveringFlyout(true)}
-            onMouseLeave={() => setIsHoveringFlyout(false)}
             onWheel={(e) => e.stopPropagation()}
-            className="absolute top-0 right-0 w-[400px] h-full bg-[#020617]/95 backdrop-blur-3xl border-l border-white/10 pt-32 px-12 pb-12 overflow-y-auto z-50"
+            className="absolute top-0 right-0 w-[400px] h-full bg-[#020617]/95 backdrop-blur-3xl border-l border-white/10 px-0 pb-12 overflow-y-auto z-50"
           >
-            <button 
-              onClick={resetView}
-              className="mb-12 flex items-center gap-2 text-amber-500 hover:text-amber-400 transition-colors text-xs uppercase tracking-widest"
-            >
-              <Minimize2 size={16} />
-              <span>Zoom Out</span>
-            </button>
-
-            <div className="flex items-center gap-4 mb-4">
-              {ISLAND_FLAGS[selectedIsland.slug] && (
-                <img 
-                  src={`https://flagcdn.com/w80/${ISLAND_FLAGS[selectedIsland.slug]}.png`}
-                  alt={`${selectedIsland.name} Flag`}
-                  className="w-10 h-auto rounded shadow-sm border border-white/10"
-                />
-              )}
-              <h2 className="text-4xl font-serif text-white leading-tight">{selectedIsland.name}</h2>
-            </div>
-            <p className="text-white/50 text-sm font-light leading-relaxed mb-12">
-              {selectedIsland.description}
-            </p>
-
-            <div className="space-y-8">
-              <div className="text-[10px] uppercase tracking-[0.3em] text-white/30 border-b border-white/5 pb-4">
-                Documented Figures
-              </div>
-              {islandFigures.map((figure) => (
-                <Link 
-                  key={figure.id} 
-                  href={`/profiles/${figure.slug}`}
-                  className="block group"
-                >
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-lg text-white/80 group-hover:text-amber-500 transition-colors">
-                      {figure.name}
-                    </span>
-                    <ArrowLeft size={14} className="rotate-180 text-amber-500/0 group-hover:text-amber-500 transition-all" />
-                  </div>
-                  <div className="text-[10px] text-white/30 uppercase tracking-widest">
-                    {figure.areas?.join(' • ') || 'Historical Figure'}
-                  </div>
-                </Link>
-              ))}
-              <Link 
-                href={`/islands/${selectedIsland.slug}`}
-                className="mt-8 block text-center py-4 border border-amber-500/20 text-amber-500 text-xs uppercase tracking-widest hover:bg-amber-500/5 transition-colors"
+            <div className="sticky top-0 z-20 bg-[#020617] backdrop-blur-3xl pt-32 px-12 pb-8 border-b border-white/10">
+              <button 
+                onClick={resetView}
+                className="mb-8 flex items-center gap-2 text-amber-500 hover:text-amber-400 transition-colors text-xs uppercase tracking-widest"
               >
-                View Full Collection
-              </Link>
+                <Minimize2 size={16} />
+                <span>Zoom Out</span>
+              </button>
+
+              <div className="flex items-center gap-4">
+                {ISLAND_FLAGS[selectedIsland.slug] && (
+                  <img 
+                    src={`https://flagcdn.com/w80/${ISLAND_FLAGS[selectedIsland.slug]}.png`}
+                    alt={`${selectedIsland.name} Flag`}
+                    className="w-10 h-auto rounded shadow-sm border border-white/10"
+                  />
+                )}
+                <h2 className="text-4xl font-serif text-white leading-tight">{selectedIsland.name}</h2>
+              </div>
+            </div>
+
+            <div className="px-12 pt-12 pb-12">
+              <p className="text-white/50 text-sm font-light leading-relaxed mb-12">
+                {selectedIsland.description}
+              </p>
+
+              <div className="space-y-8">
+                <div className="text-[10px] uppercase tracking-[0.3em] text-white/30 border-b border-white/5 pb-4">
+                  Documented Figures
+                </div>
+                {islandFigures.map((figure) => (
+                  <Link 
+                    key={figure.id} 
+                    href={`/profiles/${figure.slug}`}
+                    className="block group"
+                  >
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-lg text-white/80 group-hover:text-amber-500 transition-colors">
+                        {figure.name}
+                      </span>
+                      <ArrowLeft size={14} className="rotate-180 text-amber-500/0 group-hover:text-amber-500 transition-all" />
+                    </div>
+                    <div className="text-[10px] text-white/30 uppercase tracking-widest">
+                      {figure.areas?.join(' • ') || 'Historical Figure'}
+                    </div>
+                  </Link>
+                ))}
+                <Link 
+                  href={`/islands/${selectedIsland.slug}`}
+                  className="mt-8 block text-center py-4 border border-amber-500/20 text-amber-500 text-xs uppercase tracking-widest hover:bg-amber-500/5 transition-colors"
+                >
+                  View Full Collection
+                </Link>
+              </div>
             </div>
           </motion.div>
         )}
