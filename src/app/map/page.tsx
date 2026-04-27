@@ -102,12 +102,13 @@ export default function GlobalMap() {
   }, [selectedIsland, isHoveringFlyout]);
 
   // Map Projection
-  const projection = geoMercator()
+  const projection = React.useMemo(() => geoMercator()
     .center([-75, 18]) // Centered on the Caribbean
     .scale(1500)
-    .translate([dimensions.width / 2, dimensions.height / 2]);
+    .translate([dimensions.width / 2, dimensions.height / 2]),
+  [dimensions.width, dimensions.height]);
 
-  const pathGenerator = geoPath().projection(projection);
+  const pathGenerator = React.useMemo(() => geoPath().projection(projection), [projection]);
 
   useEffect(() => {
     async function fetchData() {
@@ -174,22 +175,22 @@ export default function GlobalMap() {
   }
 
   // Calculate transformation logic
-  const zoomFactor = selectedIsland ? 7 : 1;
+  const zoomFactor = selectedIsland ? 12 : 1; // Deep zoom (12x)
   
   // The "Camera" position - Account for sidebar on desktop
-  // On desktop (width > 768), the flyout is 400px wide. 
-  // We want to center the island in the remaining visible map area.
   const sidebarWidth = 400;
   const horizontalCenter = (selectedIsland && !isMobile) 
     ? (dimensions.width - sidebarWidth) / 2 
     : dimensions.width / 2;
 
-  const targetX = selectedIsland 
-    ? (horizontalCenter - projection([selectedIsland.longitude, selectedIsland.latitude])![0] * zoomFactor) + panOffset.x
+  const islandPos = selectedIsland ? projection([selectedIsland.longitude, selectedIsland.latitude]) : null;
+
+  const targetX = (selectedIsland && islandPos) 
+    ? (horizontalCenter - islandPos[0] * zoomFactor) + panOffset.x
     : panOffset.x;
     
-  const targetY = selectedIsland 
-    ? (dimensions.height / 2 - projection([selectedIsland.longitude, selectedIsland.latitude])![1] * zoomFactor) + panOffset.y
+  const targetY = (selectedIsland && islandPos) 
+    ? (dimensions.height / 2 - islandPos[1] * zoomFactor) + panOffset.y
     : panOffset.y;
 
   return (
@@ -221,7 +222,7 @@ export default function GlobalMap() {
               x: targetX,
               y: targetY,
             }}
-            transition={{ type: 'spring', damping: 25, stiffness: 60 }}
+            transition={{ type: 'spring', damping: 20, stiffness: 80 }}
             style={{ transformOrigin: '0 0' }}
           >
             <path
