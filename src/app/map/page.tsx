@@ -144,8 +144,8 @@ export default function GlobalMap() {
   // Trigger Intro Animation
   useEffect(() => {
     if (!loading) {
-      // Start zoom while the loading screen is fading out
-      const timer = setTimeout(() => setIntroFinished(true), 400);
+      // Allow a moment for the global view to be seen before diving in
+      const timer = setTimeout(() => setIntroFinished(true), 1200);
       return () => clearTimeout(timer);
     }
   }, [loading]);
@@ -177,7 +177,7 @@ export default function GlobalMap() {
   };
 
   // Calculate transformation logic
-  const introScale = 0.15;
+  const introScale = 0.18; // World view fills more of the screen
   const zoomFactor = selectedIsland ? 5 : (introFinished ? 1 : introScale);
   
   const introX = (dimensions.width / 2) * (1 - introScale);
@@ -236,10 +236,11 @@ export default function GlobalMap() {
         >
           <path
             d={pathGenerator(worldData) || ''}
-            fill="#0f172a"
-            stroke="#1e293b"
+            fill={introFinished ? "#0f172a" : "#1e293b"}
+            stroke={introFinished ? "#1e293b" : "#475569"} // Brighter stroke for intro visibility
             strokeWidth="0.5"
             onClick={resetView}
+            className="transition-colors duration-1000"
           />
 
           {islands.map((island) => {
@@ -273,7 +274,7 @@ export default function GlobalMap() {
                   fill={isSelected ? '#0ea5e9' : (isHovered ? '#fbbf24' : '#d97706')}
                   initial={{ opacity: 0.3 }}
                   animate={{ 
-                    opacity: isSelected ? 0.9 : (isHovered ? 0.9 : 0.4),
+                    opacity: isSelected ? 0.9 : (isHovered ? 0.9 : (introFinished ? 0.4 : 0.8)),
                     scale: isHovered ? 1.5 : 1,
                   }}
                   transition={{ 
