@@ -82,11 +82,18 @@ export default function GlobalMap() {
   const [dimensions, setDimensions] = useState({ width: 1200, height: 800 });
   const [panOffset, setPanOffset] = useState({ x: 0, y: 0 });
   const [isHoveringFlyout, setIsHoveringFlyout] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const flyoutRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      setDimensions({ width: window.innerWidth, height: window.innerHeight });
+      const handleResize = () => {
+        setDimensions({ width: window.innerWidth, height: window.innerHeight });
+        setIsMobile(window.innerWidth < 768);
+      };
+      handleResize();
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
     }
   }, []);
 
@@ -176,14 +183,14 @@ export default function GlobalMap() {
     return (
       <div className="fixed inset-0 bg-[#020617] flex items-center justify-center">
         <div className="text-amber-500/50 animate-pulse text-sm font-light tracking-[0.2em] uppercase">
-          Initializing Archive Map v1.1-centered...
+          Initializing Archive Map v1.2-polished...
         </div>
       </div>
     );
   }
 
   // Calculate transformation logic
-  const zoomFactor = selectedIsland ? 5 : 1;
+  const zoomFactor = selectedIsland ? 7 : 1;
   
   // The "Camera" position - Account for sidebar on desktop
   const sidebarWidth = 400;
