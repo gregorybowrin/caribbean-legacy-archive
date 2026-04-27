@@ -85,30 +85,40 @@ export default function GlobalMap() {
     }
   }, []);
 
-  // Handle Wheel Panning (Keep for mouse wheel users, but make it optional/simpler)
+  // Handle Trackpad Panning
   useEffect(() => {
     const handleWheel = (e: WheelEvent) => {
-      if (isHoveringFlyout) return;
-      
-      // Allow panning via wheel regardless of zoom state
-      setPanOffset(prev => ({
-        x: prev.x - e.deltaX,
-        y: prev.y - e.deltaY
-      }));
+      if (selectedIsland) {
+        // If hovering inside the flyout, let it scroll normally and don't pan the map
+        if (isHoveringFlyout) {
+          return;
+        }
+
+        e.preventDefault();
+        setPanOffset(prev => ({
+          x: prev.x - e.deltaX,
+          y: prev.y - e.deltaY
+        }));
+      } else {
+        // Allow panning even when zoomed out
+        setPanOffset(prev => ({
+          x: prev.x - e.deltaX,
+          y: prev.y - e.deltaY
+        }));
+      }
     };
 
-    window.addEventListener('wheel', handleWheel, { passive: true });
+    window.addEventListener('wheel', handleWheel, { passive: false });
     return () => window.removeEventListener('wheel', handleWheel);
   }, [selectedIsland, isHoveringFlyout]);
 
   // Map Projection
-  const projection = React.useMemo(() => geoMercator()
+  const projection = geoMercator()
     .center([-75, 18]) // Centered on the Caribbean
     .scale(1500)
-    .translate([dimensions.width / 2, dimensions.height / 2]),
-  [dimensions.width, dimensions.height]);
+    .translate([dimensions.width / 2, dimensions.height / 2]);
 
-  const pathGenerator = React.useMemo(() => geoPath().projection(projection), [projection]);
+  const pathGenerator = geoPath().projection(projection);
 
   useEffect(() => {
     async function fetchData() {
@@ -168,29 +178,22 @@ export default function GlobalMap() {
     return (
       <div className="fixed inset-0 bg-[#020617] flex items-center justify-center">
         <div className="text-amber-500/50 animate-pulse text-sm font-light tracking-[0.2em] uppercase">
-          Initializing Archive Map v1.2...
+          Initializing Archive Map v1.0-restored...
         </div>
       </div>
     );
   }
 
   // Calculate transformation logic
-  const zoomFactor = selectedIsland ? 12 : 1; // Deep zoom (12x)
+  const zoomFactor = selectedIsland ? 5 : 1;
   
-  // The "Camera" position - Account for sidebar on desktop
-  const sidebarWidth = 400;
-  const horizontalCenter = (selectedIsland && !isMobile) 
-    ? (dimensions.width - sidebarWidth) / 2 
-    : dimensions.width / 2;
-
-  const islandPos = selectedIsland ? projection([selectedIsland.longitude, selectedIsland.latitude]) : null;
-
-  const targetX = (selectedIsland && islandPos) 
-    ? (horizontalCenter - islandPos[0] * zoomFactor) + panOffset.x
+  // The "Camera" position
+  const targetX = selectedIsland 
+    ? (dimensions.width / 2 - projection([selectedIsland.longitude, selectedIsland.latitude])![0] * zoomFactor) + panOffset.x
     : panOffset.x;
     
-  const targetY = (selectedIsland && islandPos) 
-    ? (dimensions.height / 2 - islandPos[1] * zoomFactor) + panOffset.y
+  const targetY = selectedIsland 
+    ? (dimensions.height / 2 - projection([selectedIsland.longitude, selectedIsland.latitude])![1] * zoomFactor) + panOffset.y
     : panOffset.y;
 
   return (
@@ -203,7 +206,7 @@ export default function GlobalMap() {
       <div className="w-full h-full cursor-grab active:cursor-grabbing">
         <motion.svg 
           viewBox={`0 0 ${dimensions.width} ${dimensions.height}`} 
-          className="w-full h-full touch-none overflow-visible"
+          className="w-full h-full touch-none"
           onPan={(e, info) => {
             if (isHoveringFlyout && selectedIsland) return;
             setPanOffset(prev => ({
@@ -222,7 +225,7 @@ export default function GlobalMap() {
               x: targetX,
               y: targetY,
             }}
-            transition={{ type: 'spring', damping: 20, stiffness: 80 }}
+            transition={{ type: 'spring', damping: 25, stiffness: 60 }}
             style={{ transformOrigin: '0 0' }}
           >
             <path
