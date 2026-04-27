@@ -259,7 +259,7 @@ export default function GlobalMap() {
             onClick={resetView}
           />
 
-          {islands.filter(i => i.longitude !== null && i.latitude !== null).map((island) => {
+          {islands.filter(i => i.longitude !== null && i.latitude !== null && i.latitude < 35).map((island) => {
             const [x, y] = projection([island.longitude, island.latitude]) || [0, 0];
             const isSelected = selectedIsland?.id === island.id;
             const isHovered = hoveredIsland?.id === island.id;
