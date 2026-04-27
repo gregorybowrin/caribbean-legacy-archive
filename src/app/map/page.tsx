@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState, useRef } from 'react';
 import { createClient } from '@supabase/supabase-js';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, animate } from 'framer-motion';
 import { geoMercator, geoPath } from 'd3-geo';
 import { feature } from 'topojson-client';
 import { Maximize2, Minimize2, ArrowLeft, Users, Globe } from 'lucide-react';
@@ -81,6 +81,8 @@ export default function GlobalMap() {
   const [loading, setLoading] = useState(true);
   const [dimensions, setDimensions] = useState({ width: 1200, height: 800 });
   const [panOffset, setPanOffset] = useState({ x: 0, y: 0 });
+  const [mapCenter, setMapCenter] = useState<[number, number]>([11, 0]); // Global center (approx Prime Meridian)
+  const [mapScale, setMapScale] = useState(180); // Global scale
   const [introFinished, setIntroFinished] = useState(false);
   const flyoutRef = useRef<HTMLDivElement>(null);
 
@@ -108,8 +110,8 @@ export default function GlobalMap() {
 
   // Map Projection
   const projection = geoMercator()
-    .center([-75, 18]) // Centered on the Caribbean
-    .scale(1500)
+    .center(mapCenter)
+    .scale(mapScale)
     .translate([dimensions.width / 2, dimensions.height / 2]);
 
   const pathGenerator = geoPath().projection(projection);
@@ -143,12 +145,30 @@ export default function GlobalMap() {
 
   // Trigger Intro Animation
   useEffect(() => {
-    if (!loading) {
-      // Allow a moment for the global view to be seen before diving in
-      const timer = setTimeout(() => setIntroFinished(true), 1200);
+    if (!loading && !introFinished) {
+      const timer = setTimeout(() => {
+        // Smoothly animate the projection parameters
+        const startCenter: [number, number] = [11, 0];
+        const endCenter: [number, number] = [-75, 18];
+        const startScale = 180;
+        const endScale = 1500;
+        
+        animate(0, 1, {
+          duration: 2.5,
+          ease: "easeInOut",
+          onUpdate: (latest) => {
+            setMapCenter([
+              startCenter[0] + (endCenter[0] - startCenter[0]) * latest,
+              startCenter[1] + (endCenter[1] - startCenter[1]) * latest
+            ]);
+            setMapScale(startScale + (endScale - startScale) * latest);
+          },
+          onComplete: () => setIntroFinished(true)
+        });
+      }, 1000); // 1s pause at the global view
       return () => clearTimeout(timer);
     }
-  }, [loading]);
+  }, [loading, introFinished]);
 
   const handleIslandClick = async (island: any) => {
     if (selectedIsland?.id === island.id) {
@@ -177,18 +197,13 @@ export default function GlobalMap() {
   };
 
   // Calculate transformation logic
-  const introScale = 0.18; // World view fills more of the screen
-  const zoomFactor = selectedIsland ? 5 : (introFinished ? 1 : introScale);
-  
-  const introX = (dimensions.width / 2) * (1 - introScale);
-  const introY = (dimensions.height / 2) * (1 - introScale);
-
+  const zoomFactor = selectedIsland ? 5 : 1;
   const targetX = selectedIsland 
     ? (dimensions.width / 2 - projection([selectedIsland.longitude, selectedIsland.latitude])![0] * zoomFactor) + panOffset.x
-    : (introFinished ? 0 : introX);
+    : 0;
   const targetY = selectedIsland 
     ? (dimensions.height / 2 - projection([selectedIsland.longitude, selectedIsland.latitude])![1] * zoomFactor) + panOffset.y
-    : (introFinished ? 0 : introY);
+    : 0;
 
   return (
     <div className="fixed inset-0 bg-[#020617] overflow-hidden select-none">
@@ -222,7 +237,7 @@ export default function GlobalMap() {
         transition={{ 
           type: 'spring', 
           damping: 25, 
-          stiffness: introFinished ? 60 : 30, // Softer stiffness during intro
+          stiffness: 60,
           restDelta: 0.001 
         }}
         style={{ transformOrigin: '0 0' }}
@@ -236,11 +251,10 @@ export default function GlobalMap() {
         >
           <path
             d={pathGenerator(worldData) || ''}
-            fill={introFinished ? "#0f172a" : "#1e293b"}
-            stroke={introFinished ? "#1e293b" : "#475569"} // Brighter stroke for intro visibility
+            fill="#0f172a"
+            stroke="#1e293b"
             strokeWidth="0.5"
             onClick={resetView}
-            className="transition-colors duration-1000"
           />
 
           {islands.map((island) => {
