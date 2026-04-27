@@ -84,6 +84,8 @@ export default function GlobalMap() {
   const [mapCenter, setMapCenter] = useState<[number, number]>([11, 30]); // Further north to crop Antarctica
   const [mapScale, setMapScale] = useState(240); // Larger scale to fill screen better
   const [introFinished, setIntroFinished] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const flyoutRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -272,11 +274,11 @@ export default function GlobalMap() {
                    handleIslandClick(island);
                  }}
               >
-                {/* Large Invisible Hit-box */}
+                {/* Large Invisible Hit-box (Smart-sized based on zoom) */}
                 <circle
                   cx={x}
                   cy={y}
-                  r={20}
+                  r={selectedIsland ? 8 : 12} // Reduced from 20 to prevent overlap
                   fill="transparent"
                 />
 
@@ -349,9 +351,60 @@ export default function GlobalMap() {
               <Globe size={12} />
               <span>{islands.length} Territories Documented</span>
             </div>
+
+            <div className="relative mt-8 group pointer-events-auto">
+              <div className={`flex items-center gap-3 bg-white/5 backdrop-blur-md border border-white/10 rounded-full px-4 py-2.5 transition-all duration-300 ${isSearchOpen || searchQuery ? 'w-[320px] border-amber-500/30 bg-white/10' : 'w-[200px]'}`}>
+                <Globe size={14} className="text-amber-500/50" />
+                <input 
+                  type="text"
+                  placeholder="Find Territory..."
+                  value={searchQuery}
+                  onChange={(e) => {
+                    setSearchQuery(e.target.value);
+                    setIsSearchOpen(true);
+                  }}
+                  onFocus={() => setIsSearchOpen(true)}
+                  className="bg-transparent border-none outline-none text-[11px] text-white placeholder:text-white/30 uppercase tracking-widest w-full"
+                />
+              </div>
+
+              <AnimatePresence>
+                {isSearchOpen && searchQuery.length > 0 && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                    className="absolute top-full mt-2 left-0 w-[320px] max-h-[300px] overflow-y-auto bg-slate-900/95 backdrop-blur-2xl border border-white/10 rounded-2xl shadow-2xl z-40 p-1.5"
+                  >
+                    {islands
+                      .filter(i => i.name.toLowerCase().includes(searchQuery.toLowerCase()))
+                      .map(island => (
+                        <button
+                          key={island.id}
+                          onClick={() => {
+                            handleIslandClick(island);
+                            setSearchQuery('');
+                            setIsSearchOpen(false);
+                          }}
+                          className="w-full text-left px-4 py-3 hover:bg-white/5 rounded-xl transition-colors group flex items-center justify-between"
+                        >
+                          <span className="text-[11px] text-white/60 group-hover:text-white transition-colors uppercase tracking-wider">{island.name}</span>
+                          <ArrowLeft size={12} className="rotate-180 text-amber-500 opacity-0 group-hover:opacity-100 transition-all" />
+                        </button>
+                      ))}
+                    {islands.filter(i => i.name.toLowerCase().includes(searchQuery.toLowerCase())).length === 0 && (
+                      <div className="px-4 py-8 text-center text-white/20 text-[10px] uppercase tracking-widest font-light">
+                        No territories found
+                      </div>
+                    )}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
           </div>
         </div>
       </div>
+
 
       {/* Persistent Global View Button (Bottom Left) */}
       <AnimatePresence>
