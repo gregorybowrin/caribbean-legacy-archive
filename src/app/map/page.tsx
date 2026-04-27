@@ -202,10 +202,17 @@ export default function GlobalMap() {
            style={{ backgroundImage: 'radial-gradient(#amber-500 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
 
       {/* Map Engine - Static Container */}
-      <div className="w-full h-full">
-        <svg 
+      <div className="w-full h-full cursor-grab active:cursor-grabbing">
+        <motion.svg 
           viewBox={`0 0 ${dimensions.width} ${dimensions.height}`} 
           className="w-full h-full touch-none"
+          onPan={(e, info) => {
+            if (isHoveringFlyout) return;
+            setPanOffset(prev => ({
+              x: prev.x + info.delta.x,
+              y: prev.y + info.delta.y
+            }));
+          }}
           onClick={(e) => {
             if (e.target === e.currentTarget) resetView();
           }}
@@ -305,7 +312,7 @@ export default function GlobalMap() {
             )}
           </AnimatePresence>
           </motion.g>
-        </svg>
+        </motion.svg>
       </div>
 
       {/* Navigation Overlay */}
