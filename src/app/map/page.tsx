@@ -166,16 +166,6 @@ export default function GlobalMap() {
     setPanOffset({ x: 0, y: 0 });
   };
 
-  if (loading) {
-    return (
-      <div className="fixed inset-0 bg-[#020617] flex items-center justify-center">
-        <div className="text-amber-500/50 animate-pulse text-sm font-light tracking-[0.2em] uppercase">
-          Initializing Archive Map v0.2-flags...
-        </div>
-      </div>
-    );
-  }
-
   // Calculate transformation logic
   const zoomFactor = selectedIsland ? 5 : 1;
   const targetX = selectedIsland 
@@ -187,6 +177,21 @@ export default function GlobalMap() {
 
   return (
     <div className="fixed inset-0 bg-[#020617] overflow-hidden select-none">
+      <AnimatePresence>
+        {loading && (
+          <motion.div 
+            key="loading-screen"
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+            className="fixed inset-0 bg-[#020617] flex items-center justify-center z-[100]"
+          >
+            <div className="text-amber-500/50 animate-pulse text-sm font-light tracking-[0.2em] uppercase">
+              Initializing Archive Map v0.2-flags...
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Immersive Background Grid */}
       <div className="absolute inset-0 opacity-[0.05] pointer-events-none" 
            style={{ backgroundImage: 'radial-gradient(#amber-500 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
@@ -194,13 +199,18 @@ export default function GlobalMap() {
       {/* Map Engine */}
       <motion.div 
         className="w-full h-full cursor-grab active:cursor-grabbing"
+        initial={{ scale: 0.15, x: 0, y: 0 }}
         animate={{
           scale: zoomFactor,
           x: targetX,
           y: targetY,
         }}
-        transition={{ type: 'spring', damping: 25, stiffness: 60 }}
-        style={{ transformOrigin: '0 0' }}
+        transition={{ 
+          scale: { type: 'spring', damping: 30, stiffness: 25, restDelta: 0.001 },
+          x: { type: 'spring', damping: 25, stiffness: 60 },
+          y: { type: 'spring', damping: 25, stiffness: 60 }
+        }}
+        style={{ transformOrigin: '50% 50%' }}
       >
         <svg 
           viewBox={`0 0 ${dimensions.width} ${dimensions.height}`} 
