@@ -176,11 +176,18 @@ export default function GlobalMap() {
   }
 
   // Calculate transformation logic
-  const zoomFactor = selectedIsland ? 5 : 1;
+  const zoomFactor = selectedIsland ? 7 : 1;
   
-  // The "Camera" position
+  // The "Camera" position - Account for sidebar on desktop
+  // On desktop (width > 768), the flyout is 400px wide. 
+  // We want to center the island in the remaining visible map area.
+  const sidebarWidth = 400;
+  const horizontalCenter = (selectedIsland && !isMobile) 
+    ? (dimensions.width - sidebarWidth) / 2 
+    : dimensions.width / 2;
+
   const targetX = selectedIsland 
-    ? (dimensions.width / 2 - projection([selectedIsland.longitude, selectedIsland.latitude])![0] * zoomFactor)
+    ? (horizontalCenter - projection([selectedIsland.longitude, selectedIsland.latitude])![0] * zoomFactor)
     : panOffset.x;
     
   const targetY = selectedIsland 
@@ -210,7 +217,12 @@ export default function GlobalMap() {
               y: targetY,
             }}
             drag={!selectedIsland}
-            dragConstraints={{ left: -dimensions.width, right: dimensions.width, top: -dimensions.height, bottom: dimensions.height }}
+            dragConstraints={{ 
+              left: -dimensions.width * (zoomFactor + 1), 
+              right: dimensions.width * (zoomFactor + 1), 
+              top: -dimensions.height * (zoomFactor + 1), 
+              bottom: dimensions.height * (zoomFactor + 1) 
+            }}
             dragElastic={0.05}
             dragMomentum={true}
             onDragEnd={(e, info) => {
