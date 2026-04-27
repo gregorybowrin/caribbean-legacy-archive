@@ -168,7 +168,7 @@ export default function GlobalMap() {
     return (
       <div className="fixed inset-0 bg-[#020617] flex items-center justify-center">
         <div className="text-amber-500/50 animate-pulse text-sm font-light tracking-[0.2em] uppercase">
-          Initializing Archive Map v1.1...
+          Initializing Archive Map v1.2...
         </div>
       </div>
     );
