@@ -23,7 +23,7 @@ export default function Navbar() {
             <Link href="/islands" className="text-sm font-medium hover:text-gold transition-colors">Islands</Link>
             <Link href="/map" className="text-sm font-medium text-gold hover:text-ivory transition-colors flex items-center gap-2">
               <span className="w-1.5 h-1.5 bg-gold rounded-full animate-pulse"></span>
-              Global Map
+              Legacy Map
             </Link>
             <Link href="/areas" className="text-sm font-medium hover:text-gold transition-colors">Areas of Influence</Link>
             <div className="relative group">
