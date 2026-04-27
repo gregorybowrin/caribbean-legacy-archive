@@ -128,7 +128,8 @@ export default function GlobalMap() {
         `);
       
       if (islandsData) {
-        setIslands(islandsData);
+        // Filter out northern territories (Bermuda, SPM) globally
+        setIslands(islandsData.filter(i => i.latitude !== null && i.latitude < 28));
       }
 
       try {
@@ -259,7 +260,7 @@ export default function GlobalMap() {
             onClick={resetView}
           />
 
-          {islands.filter(i => i.longitude !== null && i.latitude !== null && i.latitude < 35).map((island) => {
+          {islands.map((island) => {
             const [x, y] = projection([island.longitude, island.latitude]) || [0, 0];
             const isSelected = selectedIsland?.id === island.id;
             const isHovered = hoveredIsland?.id === island.id;
@@ -338,22 +339,26 @@ export default function GlobalMap() {
         </svg>
       </motion.div>
 
-      {/* Navigation Overlay */}
-      <div className="absolute top-[180px] left-0 right-0 z-20 pointer-events-none flex justify-center">
+      {/* Global Navigation - Top Left */}
+      <div className="absolute top-12 left-12 z-20">
+        <Link href="/" className="group flex items-center gap-3 text-white/50 hover:text-white transition-colors">
+          <ArrowLeft size={18} />
+          <span className="text-xs uppercase tracking-[0.2em] font-light">Exit Map</span>
+        </Link>
+      </div>
+
+      {/* Map Identity & Controls - Relocated to Lower Left */}
+      <div className="absolute bottom-12 left-0 right-0 z-20 pointer-events-none flex justify-center">
         <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 flex justify-start">
           <div className="flex flex-col gap-4 pointer-events-auto items-start -ml-[7px]">
-            <Link href="/" className="group flex items-center gap-3 text-white/50 hover:text-white transition-colors">
-              <ArrowLeft size={18} />
-              <span className="text-xs uppercase tracking-[0.2em] font-light">Exit Map</span>
-            </Link>
-            <h1 className="text-4xl font-serif text-white/90">Caribbean Archive Map</h1>
-            <div className="flex items-center gap-2 text-amber-500/70 text-[10px] uppercase tracking-[0.3em]">
+            <h1 className="text-4xl font-serif text-white/90">Caribbean Legacy Map</h1>
+            <div className="flex items-center gap-2 text-amber-500/70 text-[10px] uppercase tracking-[0.3em] mb-4">
               <Globe size={12} />
               <span>{islands.length} Territories Documented</span>
             </div>
 
-            <div className="relative mt-8 group pointer-events-auto">
-              <div className={`flex items-center gap-3 bg-white/5 backdrop-blur-md border border-white/10 rounded-full px-4 py-2.5 transition-all duration-300 ${isSearchOpen || searchQuery ? 'w-[320px] border-amber-500/30 bg-white/10' : 'w-[200px]'}`}>
+            <div className="relative group pointer-events-auto">
+              <div className={`flex items-center gap-3 bg-white/5 backdrop-blur-md border-2 border-amber-500 rounded-full px-4 py-2.5 transition-all duration-300 ${isSearchOpen || searchQuery ? 'w-[320px] bg-white/10' : 'w-[200px]'}`}>
                 <Globe size={14} className="text-amber-500/50" />
                 <input 
                   type="text"
@@ -440,7 +445,7 @@ export default function GlobalMap() {
             <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 flex justify-start">
               <button
                 onClick={resetView}
-                className="bg-amber-500 text-slate-950 px-6 py-3 rounded-full flex items-center gap-3 shadow-2xl hover:bg-amber-400 transition-all group pointer-events-auto"
+                className="bg-amber-500 text-slate-950 px-6 py-3 rounded-full flex items-center gap-3 shadow-2xl hover:bg-amber-400 transition-all group pointer-events-auto mb-[320px]"
               >
                 <Minimize2 size={18} className="group-hover:scale-110 transition-transform" />
                 <span className="text-[10px] uppercase tracking-[0.2em] font-bold">Return to Global View</span>
