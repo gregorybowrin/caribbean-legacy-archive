@@ -176,7 +176,7 @@ export default function GlobalMap() {
     return (
       <div className="fixed inset-0 bg-[#020617] flex items-center justify-center">
         <div className="text-amber-500/50 animate-pulse text-sm font-light tracking-[0.2em] uppercase">
-          Initializing Archive Map v0.2-flags...
+          Initializing Archive Map v1.1-centered...
         </div>
       </div>
     );
@@ -184,9 +184,17 @@ export default function GlobalMap() {
 
   // Calculate transformation logic
   const zoomFactor = selectedIsland ? 5 : 1;
+  
+  // The "Camera" position - Account for sidebar on desktop
+  const sidebarWidth = 400;
+  const horizontalCenter = (selectedIsland && !isMobile) 
+    ? (dimensions.width - sidebarWidth) / 2 
+    : dimensions.width / 2;
+
   const targetX = selectedIsland 
-    ? (dimensions.width / 2 - projection([selectedIsland.longitude, selectedIsland.latitude])![0] * zoomFactor) + panOffset.x
+    ? (horizontalCenter - projection([selectedIsland.longitude, selectedIsland.latitude])![0] * zoomFactor) + panOffset.x
     : 0;
+  
   const targetY = selectedIsland 
     ? (dimensions.height / 2 - projection([selectedIsland.longitude, selectedIsland.latitude])![1] * zoomFactor) + panOffset.y
     : 0;
