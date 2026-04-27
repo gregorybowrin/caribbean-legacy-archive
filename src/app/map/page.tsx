@@ -99,6 +99,12 @@ export default function GlobalMap() {
           x: prev.x - e.deltaX,
           y: prev.y - e.deltaY
         }));
+      } else {
+        // Allow panning even when zoomed out
+        setPanOffset(prev => ({
+          x: prev.x - e.deltaX,
+          y: prev.y - e.deltaY
+        }));
       }
     };
 
@@ -179,12 +185,15 @@ export default function GlobalMap() {
 
   // Calculate transformation logic
   const zoomFactor = selectedIsland ? 5 : 1;
+  
+  // The "Camera" position
   const targetX = selectedIsland 
     ? (dimensions.width / 2 - projection([selectedIsland.longitude, selectedIsland.latitude])![0] * zoomFactor) + panOffset.x
-    : 0;
+    : panOffset.x;
+    
   const targetY = selectedIsland 
     ? (dimensions.height / 2 - projection([selectedIsland.longitude, selectedIsland.latitude])![1] * zoomFactor) + panOffset.y
-    : 0;
+    : panOffset.y;
 
   return (
     <div className="fixed inset-0 bg-[#020617] overflow-hidden select-none">
@@ -192,34 +201,32 @@ export default function GlobalMap() {
       <div className="absolute inset-0 opacity-[0.05] pointer-events-none" 
            style={{ backgroundImage: 'radial-gradient(#amber-500 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
 
-      {/* Map Engine */}
-      <motion.div 
-        className="w-full h-full cursor-grab active:cursor-grabbing"
-        animate={{
-          scale: zoomFactor,
-          x: targetX,
-          y: targetY,
-        }}
-        drag={!selectedIsland} // Enable free-drag when not zoomed in
-        dragConstraints={{ left: -1000, right: 1000, top: -1000, bottom: 1000 }}
-        dragElastic={0.1}
-        transition={{ type: 'spring', damping: 25, stiffness: 60 }}
-        style={{ transformOrigin: '0 0' }}
-      >
+      {/* Map Engine - Static Container */}
+      <div className="w-full h-full">
         <svg 
           viewBox={`0 0 ${dimensions.width} ${dimensions.height}`} 
-          className="w-full h-full"
+          className="w-full h-full touch-none"
           onClick={(e) => {
             if (e.target === e.currentTarget) resetView();
           }}
         >
-          <path
-            d={pathGenerator(worldData) || ''}
-            fill="#0f172a"
-            stroke="#1e293b"
-            strokeWidth="0.5"
-            onClick={resetView}
-          />
+          {/* Transforming Group Layer */}
+          <motion.g
+            animate={{
+              scale: zoomFactor,
+              x: targetX,
+              y: targetY,
+            }}
+            transition={{ type: 'spring', damping: 25, stiffness: 60 }}
+            style={{ transformOrigin: '0 0' }}
+          >
+            <path
+              d={pathGenerator(worldData) || ''}
+              fill="#0f172a"
+              stroke="#1e293b"
+              strokeWidth={0.5 / zoomFactor} // Adjust stroke for zoom level
+              onClick={resetView}
+            />
 
           {islands.map((island) => {
             const [x, y] = projection([island.longitude, island.latitude]) || [0, 0];
@@ -297,8 +304,9 @@ export default function GlobalMap() {
               />
             )}
           </AnimatePresence>
+          </motion.g>
         </svg>
-      </motion.div>
+      </div>
 
       {/* Navigation Overlay */}
       <div className="absolute top-[120px] md:top-[180px] left-0 right-0 z-20 pointer-events-none flex justify-center">
