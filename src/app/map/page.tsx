@@ -171,6 +171,7 @@ export default function GlobalMap() {
     setSelectedIsland(null);
     setIslandFigures([]);
     setPanOffset({ x: 0, y: 0 });
+    setIsHoveringFlyout(false);
   };
 
   if (loading) {
@@ -207,7 +208,7 @@ export default function GlobalMap() {
           viewBox={`0 0 ${dimensions.width} ${dimensions.height}`} 
           className="w-full h-full touch-none"
           onPan={(e, info) => {
-            if (isHoveringFlyout) return;
+            if (isHoveringFlyout && selectedIsland) return;
             setPanOffset(prev => ({
               x: prev.x + info.delta.x,
               y: prev.y + info.delta.y
