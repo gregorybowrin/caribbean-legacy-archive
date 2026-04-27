@@ -90,13 +90,11 @@ export default function GlobalMap() {
     const handleWheel = (e: WheelEvent) => {
       if (isHoveringFlyout) return;
       
-      // Only allow wheel panning if not zoomed in, or if we want to allow nudging
-      if (!selectedIsland) {
-        setPanOffset(prev => ({
-          x: prev.x - e.deltaX,
-          y: prev.y - e.deltaY
-        }));
-      }
+      // Allow panning via wheel regardless of zoom state
+      setPanOffset(prev => ({
+        x: prev.x - e.deltaX,
+        y: prev.y - e.deltaY
+      }));
     };
 
     window.addEventListener('wheel', handleWheel, { passive: true });
@@ -187,11 +185,11 @@ export default function GlobalMap() {
     : dimensions.width / 2;
 
   const targetX = selectedIsland 
-    ? (horizontalCenter - projection([selectedIsland.longitude, selectedIsland.latitude])![0] * zoomFactor)
+    ? (horizontalCenter - projection([selectedIsland.longitude, selectedIsland.latitude])![0] * zoomFactor) + panOffset.x
     : panOffset.x;
     
   const targetY = selectedIsland 
-    ? (dimensions.height / 2 - projection([selectedIsland.longitude, selectedIsland.latitude])![1] * zoomFactor)
+    ? (dimensions.height / 2 - projection([selectedIsland.longitude, selectedIsland.latitude])![1] * zoomFactor) + panOffset.y
     : panOffset.y;
 
   return (
@@ -205,6 +203,13 @@ export default function GlobalMap() {
         <motion.svg 
           viewBox={`0 0 ${dimensions.width} ${dimensions.height}`} 
           className="w-full h-full touch-none overflow-visible"
+          onPan={(e, info) => {
+            if (isHoveringFlyout && selectedIsland) return;
+            setPanOffset(prev => ({
+              x: prev.x + info.delta.x,
+              y: prev.y + info.delta.y
+            }));
+          }}
           onClick={(e) => {
             if (e.target === e.currentTarget) resetView();
           }}
@@ -215,21 +220,6 @@ export default function GlobalMap() {
               scale: zoomFactor,
               x: targetX,
               y: targetY,
-            }}
-            drag={!selectedIsland}
-            dragConstraints={{ 
-              left: -dimensions.width * (zoomFactor + 1), 
-              right: dimensions.width * (zoomFactor + 1), 
-              top: -dimensions.height * (zoomFactor + 1), 
-              bottom: dimensions.height * (zoomFactor + 1) 
-            }}
-            dragElastic={0.05}
-            dragMomentum={true}
-            onDragEnd={(e, info) => {
-              setPanOffset(prev => ({
-                x: prev.x + info.offset.x,
-                y: prev.y + info.offset.y
-              }));
             }}
             transition={{ type: 'spring', damping: 25, stiffness: 60 }}
             style={{ transformOrigin: '0 0' }}
