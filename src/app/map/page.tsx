@@ -81,6 +81,7 @@ export default function GlobalMap() {
   const [loading, setLoading] = useState(true);
   const [dimensions, setDimensions] = useState({ width: 1200, height: 800 });
   const [panOffset, setPanOffset] = useState({ x: 0, y: 0 });
+  const [introFinished, setIntroFinished] = useState(false);
   const flyoutRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -140,6 +141,15 @@ export default function GlobalMap() {
     fetchData();
   }, []);
 
+  // Trigger Intro Animation
+  useEffect(() => {
+    if (!loading) {
+      // Start zoom while the loading screen is fading out
+      const timer = setTimeout(() => setIntroFinished(true), 400);
+      return () => clearTimeout(timer);
+    }
+  }, [loading]);
+
   const handleIslandClick = async (island: any) => {
     if (selectedIsland?.id === island.id) {
       resetView();
@@ -167,13 +177,18 @@ export default function GlobalMap() {
   };
 
   // Calculate transformation logic
-  const zoomFactor = selectedIsland ? 5 : 1;
+  const introScale = 0.15;
+  const zoomFactor = selectedIsland ? 5 : (introFinished ? 1 : introScale);
+  
+  const introX = (dimensions.width / 2) * (1 - introScale);
+  const introY = (dimensions.height / 2) * (1 - introScale);
+
   const targetX = selectedIsland 
     ? (dimensions.width / 2 - projection([selectedIsland.longitude, selectedIsland.latitude])![0] * zoomFactor) + panOffset.x
-    : 0;
+    : (introFinished ? 0 : introX);
   const targetY = selectedIsland 
     ? (dimensions.height / 2 - projection([selectedIsland.longitude, selectedIsland.latitude])![1] * zoomFactor) + panOffset.y
-    : 0;
+    : (introFinished ? 0 : introY);
 
   return (
     <div className="fixed inset-0 bg-[#020617] overflow-hidden select-none">
@@ -182,7 +197,7 @@ export default function GlobalMap() {
           <motion.div 
             key="loading-screen"
             exit={{ opacity: 0 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.8 }}
             className="fixed inset-0 bg-[#020617] flex items-center justify-center z-[100]"
           >
             <div className="text-amber-500/50 animate-pulse text-sm font-light tracking-[0.2em] uppercase">
@@ -199,18 +214,18 @@ export default function GlobalMap() {
       {/* Map Engine */}
       <motion.div 
         className="w-full h-full cursor-grab active:cursor-grabbing"
-        initial={{ scale: 0.15, x: 0, y: 0 }}
         animate={{
           scale: zoomFactor,
           x: targetX,
           y: targetY,
         }}
         transition={{ 
-          scale: { type: 'spring', damping: 30, stiffness: 25, restDelta: 0.001 },
-          x: { type: 'spring', damping: 25, stiffness: 60 },
-          y: { type: 'spring', damping: 25, stiffness: 60 }
+          type: 'spring', 
+          damping: 25, 
+          stiffness: introFinished ? 60 : 30, // Softer stiffness during intro
+          restDelta: 0.001 
         }}
-        style={{ transformOrigin: '50% 50%' }}
+        style={{ transformOrigin: '0 0' }}
       >
         <svg 
           viewBox={`0 0 ${dimensions.width} ${dimensions.height}`} 
