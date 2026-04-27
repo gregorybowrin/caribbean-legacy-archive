@@ -171,24 +171,30 @@ export default function GlobalMap() {
     setSelectedIsland(null);
     setIslandFigures([]);
     setPanOffset({ x: 0, y: 0 });
+    setIsHoveringFlyout(false); // Fix for stuck interaction
   };
 
   if (loading) {
     return (
       <div className="fixed inset-0 bg-[#020617] flex items-center justify-center">
         <div className="text-amber-500/50 animate-pulse text-sm font-light tracking-[0.2em] uppercase">
-          Initializing Archive Map v0.0-original...
+          Initializing Archive Map v3.0-final...
         </div>
       </div>
     );
   }
 
   // Calculate transformation logic
-  const zoomFactor = selectedIsland ? 5 : 1;
+  const zoomFactor = selectedIsland ? 6 : 1;
   
-  // The "Camera" position
+  // The "Camera" position - Account for sidebar on desktop
+  const sidebarWidth = 400;
+  const horizontalCenter = (selectedIsland && !isMobile) 
+    ? (dimensions.width - sidebarWidth) / 2 
+    : dimensions.width / 2;
+
   const targetX = selectedIsland 
-    ? (dimensions.width / 2 - projection([selectedIsland.longitude, selectedIsland.latitude])![0] * zoomFactor) + panOffset.x
+    ? (horizontalCenter - projection([selectedIsland.longitude, selectedIsland.latitude])![0] * zoomFactor) + panOffset.x
     : panOffset.x;
     
   const targetY = selectedIsland 
