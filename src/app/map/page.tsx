@@ -112,18 +112,13 @@ export default function GlobalMap() {
     return () => window.removeEventListener('wheel', handleWheel);
   }, [selectedIsland, isHoveringFlyout]);
 
-  // Fixed World Space Coordinates (Independent of window size)
-  const VIRTUAL_WIDTH = 2000;
-  const VIRTUAL_HEIGHT = 1000;
-
-  // Map Projection (Stable in Virtual Space)
-  const projection = React.useMemo(() => geoMercator()
+  // Map Projection
+  const projection = geoMercator()
     .center([-75, 18]) // Centered on the Caribbean
-    .scale(2500)
-    .translate([VIRTUAL_WIDTH / 2, VIRTUAL_HEIGHT / 2]),
-  []);
+    .scale(1500)
+    .translate([dimensions.width / 2, dimensions.height / 2]);
 
-  const pathGenerator = React.useMemo(() => geoPath().projection(projection), [projection]);
+  const pathGenerator = geoPath().projection(projection);
 
   useEffect(() => {
     async function fetchData() {
@@ -176,34 +171,28 @@ export default function GlobalMap() {
     setSelectedIsland(null);
     setIslandFigures([]);
     setPanOffset({ x: 0, y: 0 });
-    setIsHoveringFlyout(false);
   };
 
   if (loading) {
     return (
       <div className="fixed inset-0 bg-[#020617] flex items-center justify-center">
         <div className="text-amber-500/50 animate-pulse text-sm font-light tracking-[0.2em] uppercase">
-          Initializing Archive Map v2.0-stable...
+          Initializing Archive Map v0.0-original...
         </div>
       </div>
     );
   }
 
-  // Calculate transformation logic (Virtual Space)
-  const zoomFactor = selectedIsland ? 8 : 1;
+  // Calculate transformation logic
+  const zoomFactor = selectedIsland ? 5 : 1;
   
-  // Center in virtual space, accounting for sidebar on desktop
-  const sidebarOffset = (selectedIsland && !isMobile) ? 350 : 0;
-  const horizontalCenter = (VIRTUAL_WIDTH / 2) - sidebarOffset;
-
-  const islandPos = selectedIsland ? projection([selectedIsland.longitude, selectedIsland.latitude]) : null;
-
-  const targetX = (selectedIsland && islandPos) 
-    ? (horizontalCenter - islandPos[0] * zoomFactor) + panOffset.x
+  // The "Camera" position
+  const targetX = selectedIsland 
+    ? (dimensions.width / 2 - projection([selectedIsland.longitude, selectedIsland.latitude])![0] * zoomFactor) + panOffset.x
     : panOffset.x;
     
-  const targetY = (selectedIsland && islandPos) 
-    ? (VIRTUAL_HEIGHT / 2 - islandPos[1] * zoomFactor) + panOffset.y
+  const targetY = selectedIsland 
+    ? (dimensions.height / 2 - projection([selectedIsland.longitude, selectedIsland.latitude])![1] * zoomFactor) + panOffset.y
     : panOffset.y;
 
   return (
@@ -215,11 +204,10 @@ export default function GlobalMap() {
       {/* Map Engine - Static Container */}
       <div className="w-full h-full cursor-grab active:cursor-grabbing">
         <motion.svg 
-          viewBox={`0 0 ${VIRTUAL_WIDTH} ${VIRTUAL_HEIGHT}`} 
-          preserveAspectRatio="xMidYMid slice"
-          className="w-full h-full touch-none overflow-visible"
+          viewBox={`0 0 ${dimensions.width} ${dimensions.height}`} 
+          className="w-full h-full touch-none"
           onPan={(e, info) => {
-            if (isHoveringFlyout && selectedIsland) return;
+            if (isHoveringFlyout) return;
             setPanOffset(prev => ({
               x: prev.x + info.delta.x,
               y: prev.y + info.delta.y
@@ -236,7 +224,7 @@ export default function GlobalMap() {
               x: targetX,
               y: targetY,
             }}
-            transition={{ type: 'spring', damping: 22, stiffness: 70 }}
+            transition={{ type: 'spring', damping: 25, stiffness: 60 }}
             style={{ transformOrigin: '0 0' }}
           >
             <path
@@ -322,37 +310,6 @@ export default function GlobalMap() {
                 strokeWidth="2"
               />
             )}
-          {/* Floating Island Label (Inside SVG Group) */}
-          <AnimatePresence>
-            {hoveredIsland && (
-              <motion.g
-                key={`label-${hoveredIsland.id}`}
-                initial={{ opacity: 0, scale: 0.3 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.3 }}
-                transition={{ duration: 0.2 }}
-              >
-                <foreignObject
-                  x={projection([hoveredIsland.longitude, hoveredIsland.latitude])![0] - 100}
-                  y={projection([hoveredIsland.longitude, hoveredIsland.latitude])![1] - 80}
-                  width="200"
-                  height="120"
-                  style={{ pointerEvents: 'none', overflow: 'visible' }}
-                >
-                  <div className="flex flex-col items-center gap-1">
-                    <div className="bg-slate-950/90 backdrop-blur-md border border-amber-500/40 px-5 py-3 rounded-xl shadow-2xl">
-                      <div className="text-[#fbbf24] font-serif text-base text-center whitespace-nowrap tracking-wide">
-                        {hoveredIsland.name}
-                      </div>
-                      <div className="text-[9px] text-white font-medium uppercase tracking-[0.2em] text-center mt-1.5 opacity-90">
-                        {hoveredIsland.figures?.[0]?.count || 0} Profiles Documented
-                      </div>
-                    </div>
-                    <div className="w-2.5 h-2.5 bg-slate-950 border-r border-b border-amber-500/40 rotate-45 -mt-1.5" />
-                  </div>
-                </foreignObject>
-              </motion.g>
-            )}
           </AnimatePresence>
           </motion.g>
         </motion.svg>
@@ -412,6 +369,39 @@ export default function GlobalMap() {
         )}
       </AnimatePresence>
 
+      {/* Floating Island Label */}
+      <AnimatePresence>
+        {hoveredIsland && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.3, y: 0 }}
+            animate={{ 
+              opacity: 1, 
+              scale: 1, 
+              y: -55, // Rise in place
+            }}
+            exit={{ opacity: 0, scale: 0.3, y: 0 }}
+            style={{ 
+              position: 'absolute',
+              top: (projection([hoveredIsland.longitude, hoveredIsland.latitude])![1] * zoomFactor) + targetY,
+              left: (projection([hoveredIsland.longitude, hoveredIsland.latitude])![0] * zoomFactor) + targetX,
+              x: '-50%',
+              pointerEvents: 'none'
+            }}
+            className="w-[200px] flex flex-col items-center gap-1 z-50"
+          >
+            <div className="bg-slate-950/90 backdrop-blur-md border border-amber-500/40 px-5 py-3 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+              <div className="text-[#fbbf24] font-serif text-base text-center whitespace-nowrap tracking-wide">
+                {hoveredIsland.name}
+              </div>
+              <div className="text-[9px] text-white font-medium uppercase tracking-[0.2em] text-center mt-1.5 opacity-90">
+                {hoveredIsland.figures?.[0]?.count || 0} Profiles Documented
+              </div>
+            </div>
+            {/* Tooltip Arrow */}
+            <div className="w-2.5 h-2.5 bg-slate-950 border-r border-b border-amber-500/40 rotate-45 -mt-1.5" />
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Island Detail Fly-out / Bottom Sheet */}
       <AnimatePresence mode="wait">
