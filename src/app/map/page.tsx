@@ -81,8 +81,8 @@ export default function GlobalMap() {
   const [loading, setLoading] = useState(true);
   const [dimensions, setDimensions] = useState({ width: 1200, height: 800 });
   const [panOffset, setPanOffset] = useState({ x: 0, y: 0 });
-  const [mapCenter, setMapCenter] = useState<[number, number]>([11, 0]); // Global center (approx Prime Meridian)
-  const [mapScale, setMapScale] = useState(180); // Global scale
+  const [mapCenter, setMapCenter] = useState<[number, number]>([11, 30]); // Further north to crop Antarctica
+  const [mapScale, setMapScale] = useState(240); // Larger scale to fill screen better
   const [introFinished, setIntroFinished] = useState(false);
   const flyoutRef = useRef<HTMLDivElement>(null);
 
@@ -148,9 +148,9 @@ export default function GlobalMap() {
     if (!loading && !introFinished) {
       const timer = setTimeout(() => {
         // Smoothly animate the projection parameters
-        const startCenter: [number, number] = [11, 0];
+        const startCenter: [number, number] = [11, 30];
         const endCenter: [number, number] = [-75, 18];
-        const startScale = 180;
+        const startScale = 240;
         const endScale = 1500;
         
         animate(0, 1, {
@@ -257,7 +257,7 @@ export default function GlobalMap() {
             onClick={resetView}
           />
 
-          {islands.map((island) => {
+          {islands.filter(i => i.longitude !== null && i.latitude !== null).map((island) => {
             const [x, y] = projection([island.longitude, island.latitude]) || [0, 0];
             const isSelected = selectedIsland?.id === island.id;
             const isHovered = hoveredIsland?.id === island.id;
