@@ -85,22 +85,13 @@ export default function GlobalMap() {
     }
   }, []);
 
-  // Handle Trackpad Panning
+  // Handle Wheel Panning (Keep for mouse wheel users, but make it optional/simpler)
   useEffect(() => {
     const handleWheel = (e: WheelEvent) => {
-      if (selectedIsland) {
-        // If hovering inside the flyout, let it scroll normally and don't pan the map
-        if (isHoveringFlyout) {
-          return;
-        }
-
-        e.preventDefault();
-        setPanOffset(prev => ({
-          x: prev.x - e.deltaX,
-          y: prev.y - e.deltaY
-        }));
-      } else {
-        // Allow panning even when zoomed out
+      if (isHoveringFlyout) return;
+      
+      // Only allow wheel panning if not zoomed in, or if we want to allow nudging
+      if (!selectedIsland) {
         setPanOffset(prev => ({
           x: prev.x - e.deltaX,
           y: prev.y - e.deltaY
@@ -108,7 +99,7 @@ export default function GlobalMap() {
       }
     };
 
-    window.addEventListener('wheel', handleWheel, { passive: false });
+    window.addEventListener('wheel', handleWheel, { passive: true });
     return () => window.removeEventListener('wheel', handleWheel);
   }, [selectedIsland, isHoveringFlyout]);
 
@@ -189,11 +180,11 @@ export default function GlobalMap() {
   
   // The "Camera" position
   const targetX = selectedIsland 
-    ? (dimensions.width / 2 - projection([selectedIsland.longitude, selectedIsland.latitude])![0] * zoomFactor) + panOffset.x
+    ? (dimensions.width / 2 - projection([selectedIsland.longitude, selectedIsland.latitude])![0] * zoomFactor)
     : panOffset.x;
     
   const targetY = selectedIsland 
-    ? (dimensions.height / 2 - projection([selectedIsland.longitude, selectedIsland.latitude])![1] * zoomFactor) + panOffset.y
+    ? (dimensions.height / 2 - projection([selectedIsland.longitude, selectedIsland.latitude])![1] * zoomFactor)
     : panOffset.y;
 
   return (
@@ -206,14 +197,7 @@ export default function GlobalMap() {
       <div className="w-full h-full cursor-grab active:cursor-grabbing">
         <motion.svg 
           viewBox={`0 0 ${dimensions.width} ${dimensions.height}`} 
-          className="w-full h-full touch-none"
-          onPan={(e, info) => {
-            if (isHoveringFlyout && selectedIsland) return;
-            setPanOffset(prev => ({
-              x: prev.x + info.delta.x,
-              y: prev.y + info.delta.y
-            }));
-          }}
+          className="w-full h-full touch-none overflow-visible"
           onClick={(e) => {
             if (e.target === e.currentTarget) resetView();
           }}
@@ -224,6 +208,16 @@ export default function GlobalMap() {
               scale: zoomFactor,
               x: targetX,
               y: targetY,
+            }}
+            drag={!selectedIsland}
+            dragConstraints={{ left: -dimensions.width, right: dimensions.width, top: -dimensions.height, bottom: dimensions.height }}
+            dragElastic={0.05}
+            dragMomentum={true}
+            onDragEnd={(e, info) => {
+              setPanOffset(prev => ({
+                x: prev.x + info.offset.x,
+                y: prev.y + info.offset.y
+              }));
             }}
             transition={{ type: 'spring', damping: 25, stiffness: 60 }}
             style={{ transformOrigin: '0 0' }}
