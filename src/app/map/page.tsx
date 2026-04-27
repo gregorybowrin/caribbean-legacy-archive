@@ -13,6 +13,33 @@ const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
 );
 
+const ISLAND_FLAGS: Record<string, string> = {
+  'anguilla': 'ai',
+  'antigua-barbuda': 'ag',
+  'aruba': 'aw',
+  'bahamas': 'bs',
+  'barbados': 'bb',
+  'british-virgin-islands': 'vg',
+  'cayman-islands': 'ky',
+  'cuba': 'cu',
+  'curacao': 'cw',
+  'dominica': 'dm',
+  'dominican-republic': 'do',
+  'grenada': 'gd',
+  'guadeloupe': 'gp',
+  'haiti': 'ht',
+  'jamaica': 'jm',
+  'martinique': 'mq',
+  'montserrat': 'ms',
+  'puerto-rico': 'pr',
+  'saint-kitts-nevis': 'kn',
+  'saint-lucia': 'lc',
+  'saint-vincent-grenadines': 'vc',
+  'trinidad-tobago': 'tt',
+  'turks-caicos': 'tc',
+  'us-virgin-islands': 'vi'
+};
+
 export default function GlobalMap() {
   const [islands, setIslands] = useState<any[]>([]);
   const [selectedIsland, setSelectedIsland] = useState<any>(null);
@@ -117,7 +144,7 @@ export default function GlobalMap() {
     return (
       <div className="fixed inset-0 bg-[#020617] flex items-center justify-center">
         <div className="text-amber-500/50 animate-pulse text-sm font-light tracking-[0.2em] uppercase">
-          Initializing Archive Map v0.1-pre-flags...
+          Initializing Archive Map v0.2-flags...
         </div>
       </div>
     );
@@ -338,7 +365,16 @@ export default function GlobalMap() {
               <span>Zoom Out</span>
             </button>
 
-            <h2 className="text-4xl font-serif text-white mb-4 leading-tight">{selectedIsland.name}</h2>
+            <div className="flex items-center gap-4 mb-4">
+              {ISLAND_FLAGS[selectedIsland.slug] && (
+                <img 
+                  src={`https://flagcdn.com/w80/${ISLAND_FLAGS[selectedIsland.slug]}.png`}
+                  alt={`${selectedIsland.name} Flag`}
+                  className="w-10 h-auto rounded shadow-sm border border-white/10"
+                />
+              )}
+              <h2 className="text-4xl font-serif text-white leading-tight">{selectedIsland.name}</h2>
+            </div>
             <p className="text-white/50 text-sm font-light leading-relaxed mb-12">
               {selectedIsland.description}
             </p>
