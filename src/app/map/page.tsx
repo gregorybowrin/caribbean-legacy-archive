@@ -322,6 +322,37 @@ export default function GlobalMap() {
                 strokeWidth="2"
               />
             )}
+          {/* Floating Island Label (Inside SVG Group) */}
+          <AnimatePresence>
+            {hoveredIsland && (
+              <motion.g
+                key={`label-${hoveredIsland.id}`}
+                initial={{ opacity: 0, scale: 0.3 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.3 }}
+                transition={{ duration: 0.2 }}
+              >
+                <foreignObject
+                  x={projection([hoveredIsland.longitude, hoveredIsland.latitude])![0] - 100}
+                  y={projection([hoveredIsland.longitude, hoveredIsland.latitude])![1] - 80}
+                  width="200"
+                  height="120"
+                  style={{ pointerEvents: 'none', overflow: 'visible' }}
+                >
+                  <div className="flex flex-col items-center gap-1">
+                    <div className="bg-slate-950/90 backdrop-blur-md border border-amber-500/40 px-5 py-3 rounded-xl shadow-2xl">
+                      <div className="text-[#fbbf24] font-serif text-base text-center whitespace-nowrap tracking-wide">
+                        {hoveredIsland.name}
+                      </div>
+                      <div className="text-[9px] text-white font-medium uppercase tracking-[0.2em] text-center mt-1.5 opacity-90">
+                        {hoveredIsland.figures?.[0]?.count || 0} Profiles Documented
+                      </div>
+                    </div>
+                    <div className="w-2.5 h-2.5 bg-slate-950 border-r border-b border-amber-500/40 rotate-45 -mt-1.5" />
+                  </div>
+                </foreignObject>
+              </motion.g>
+            )}
           </AnimatePresence>
           </motion.g>
         </motion.svg>
@@ -381,37 +412,6 @@ export default function GlobalMap() {
         )}
       </AnimatePresence>
 
-          {/* Floating Island Label (Inside SVG Group) */}
-          <AnimatePresence>
-            {hoveredIsland && (
-              <motion.g
-                initial={{ opacity: 0, scale: 0.3 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.3 }}
-                transition={{ duration: 0.2 }}
-              >
-                <foreignObject
-                  x={projection([hoveredIsland.longitude, hoveredIsland.latitude])![0] - 100}
-                  y={projection([hoveredIsland.longitude, hoveredIsland.latitude])![1] - 80}
-                  width="200"
-                  height="80"
-                  style={{ pointerEvents: 'none', overflow: 'visible' }}
-                >
-                  <div className="flex flex-col items-center gap-1">
-                    <div className="bg-slate-950/90 backdrop-blur-md border border-amber-500/40 px-5 py-3 rounded-xl shadow-2xl">
-                      <div className="text-[#fbbf24] font-serif text-base text-center whitespace-nowrap tracking-wide">
-                        {hoveredIsland.name}
-                      </div>
-                      <div className="text-[9px] text-white font-medium uppercase tracking-[0.2em] text-center mt-1.5 opacity-90">
-                        {hoveredIsland.figures?.[0]?.count || 0} Profiles Documented
-                      </div>
-                    </div>
-                    <div className="w-2.5 h-2.5 bg-slate-950 border-r border-b border-amber-500/40 rotate-45 -mt-1.5" />
-                  </div>
-                </foreignObject>
-              </motion.g>
-            )}
-          </AnimatePresence>
 
       {/* Island Detail Fly-out / Bottom Sheet */}
       <AnimatePresence mode="wait">
