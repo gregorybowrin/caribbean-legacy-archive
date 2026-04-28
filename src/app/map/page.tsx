@@ -135,13 +135,17 @@ export default function GlobalMap() {
           if (i.name === 'Saint Vincent & the Grenadines' && (!i.latitude || !i.longitude)) {
             return { ...i, latitude: 13.2528, longitude: -61.1970 };
           }
+          // Ensure northernmost Bahamas islands have correct interactive coordinates
+          if (i.name === 'Grand Bahama') return { ...i, latitude: 26.65, longitude: -78.5 };
+          if (i.name === 'Abaco') return { ...i, latitude: 26.3833, longitude: -77.1667 };
+          if (i.name === 'Eleuthera') return { ...i, latitude: 25.1, longitude: -76.2 };
           return i;
         });
         
         // Filter out northern territories (Bermuda, SPM) globally
-        // Keep Bahamas (up to 29.5) and ensure St Lucia/Vincent are included
+        // Extension to 30.5 ensures all Bahamas are included
         setIslands(enrichedIslands.filter(i => 
-          i.latitude !== null && i.latitude < 29.5
+          i.latitude !== null && i.latitude < 30.5
         ));
       }
 
@@ -292,7 +296,7 @@ export default function GlobalMap() {
                 <circle
                   cx={x}
                   cy={y}
-                  r={selectedIsland ? 8 : 12} // Reduced from 20 to prevent overlap
+                  r={selectedIsland ? 12 : 25} // Increased to 25 for easier interaction
                   fill="transparent"
                 />
 
