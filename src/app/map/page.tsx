@@ -530,9 +530,9 @@ export default function GlobalMap() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
-            className="absolute top-36 right-12 z-40 max-w-[320px] text-left pointer-events-none"
+            className="absolute top-36 right-12 z-40 max-w-[400px] text-left pointer-events-none"
           >
-            <p className="text-white/90 text-[13px] leading-relaxed font-light drop-shadow-2xl tracking-wide">
+            <p className="text-white/90 text-base leading-relaxed font-light drop-shadow-2xl tracking-wide">
               Select a territory to view profiles, or <br />
               use the map search bar to search profiles by island.
             </p>
