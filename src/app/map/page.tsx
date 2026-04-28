@@ -139,9 +139,9 @@ export default function GlobalMap() {
         });
         
         // Filter out northern territories (Bermuda, SPM) globally
-        // Keep Bahamas (up to 28.5) and ensure St Lucia/Vincent are included
+        // Keep Bahamas (up to 29.5) and ensure St Lucia/Vincent are included
         setIslands(enrichedIslands.filter(i => 
-          i.latitude !== null && i.latitude < 28.5
+          i.latitude !== null && i.latitude < 29.5
         ));
       }
 
