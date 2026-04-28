@@ -437,12 +437,12 @@ export default function GlobalMap() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
-            className="absolute bottom-8 left-0 right-0 pointer-events-none flex justify-center"
+            className="absolute bottom-12 left-0 right-0 pointer-events-none flex justify-center"
           >
             <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 flex justify-start">
               <button
                 onClick={resetView}
-                className="bg-amber-500 text-slate-950 px-6 py-3 rounded-full flex items-center gap-3 shadow-2xl hover:bg-amber-400 transition-all group pointer-events-auto mb-[320px]"
+                className="bg-amber-500 text-slate-950 px-6 py-3 rounded-full flex items-center gap-3 shadow-2xl hover:bg-amber-400 transition-all group pointer-events-auto"
               >
                 <Minimize2 size={18} className="group-hover:scale-110 transition-transform" />
                 <span className="text-[10px] uppercase tracking-[0.2em] font-bold">Zoom Out</span>
