@@ -143,9 +143,9 @@ export default function GlobalMap() {
         });
         
         // Filter out northern territories (Bermuda, SPM) globally
-        // Extension to 30.5 ensures all Bahamas are included
+        // Extension to 32.5 ensures all Bahamas are included
         setIslands(enrichedIslands.filter(i => 
-          i.latitude !== null && i.latitude < 30.5
+          i.latitude !== null && i.latitude < 32.5
         ));
       }
 
@@ -296,7 +296,7 @@ export default function GlobalMap() {
                 <circle
                   cx={x}
                   cy={y}
-                  r={selectedIsland ? 12 : 25} // Increased to 25 for easier interaction
+                  r={selectedIsland ? 12 : 35} // Increased to 35 for maximum ease of interaction
                   fill="transparent"
                 />
 
