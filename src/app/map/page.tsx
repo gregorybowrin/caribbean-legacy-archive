@@ -143,9 +143,9 @@ export default function GlobalMap() {
         });
         
         // Filter out northern territories (Bermuda, SPM) globally
-        // Extension to 32.5 ensures all Bahamas are included
+        // Extension to 30.5 ensures all Bahamas are included while hiding Bermuda (32.3)
         setIslands(enrichedIslands.filter(i => 
-          i.latitude !== null && i.latitude < 32.5
+          i.latitude !== null && i.latitude < 30.5
         ));
       }
 
@@ -169,7 +169,7 @@ export default function GlobalMap() {
       const timer = setTimeout(() => {
         // Smoothly animate the projection parameters
         const startCenter: [number, number] = [11, 30];
-        const endCenter: [number, number] = [-75, 18];
+        const endCenter: [number, number] = [-75, 21];
         const startScale = 240;
         const endScale = 1500;
         
