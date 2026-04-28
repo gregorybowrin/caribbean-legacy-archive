@@ -128,8 +128,11 @@ export default function GlobalMap() {
         `);
       
       if (islandsData) {
-        // Filter out northern territories (Bermuda, SPM) globally, but keep Bahamas
-        setIslands(islandsData.filter(i => i.latitude !== null && i.latitude < 28));
+        // Filter out northern territories (Bermuda, SPM) globally
+        // Keep Bahamas and ensure St Lucia/Vincent are included
+        setIslands(islandsData.filter(i => 
+          i.latitude !== null && i.latitude < 28.5
+        ));
       }
 
       try {
