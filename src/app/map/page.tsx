@@ -5,7 +5,7 @@ import { createClient } from '@supabase/supabase-js';
 import { motion, AnimatePresence, animate } from 'framer-motion';
 import { geoMercator, geoPath } from 'd3-geo';
 import { feature } from 'topojson-client';
-import { Maximize2, Minimize2, ArrowLeft, Users, Globe } from 'lucide-react';
+import { Maximize2, Minimize2, ArrowLeft, Users, Globe, X } from 'lucide-react';
 import Link from 'next/link';
 
 const supabase = createClient(
@@ -128,7 +128,7 @@ export default function GlobalMap() {
         `);
       
       if (islandsData) {
-        // Filter out northern territories (Bermuda, SPM) globally
+        // Filter out northern territories (Bermuda, SPM) globally, but keep Bahamas
         setIslands(islandsData.filter(i => i.latitude !== null && i.latitude < 28));
       }
 
@@ -382,10 +382,24 @@ export default function GlobalMap() {
                   }}
                   className="bg-transparent border-none outline-none text-[11px] text-white placeholder:text-white/30 uppercase tracking-widest w-full"
                 />
+                {searchQuery && (
+                  <button 
+                    onClick={() => {
+                      setSearchQuery('');
+                      setIsSearchOpen(false);
+                    }}
+                    className="text-white/30 hover:text-white transition-colors"
+                  >
+                    <X size={14} />
+                  </button>
+                )}
               </div>
 
               <AnimatePresence>
-                {isSearchOpen && searchQuery.length > 0 && (
+                {isSearchOpen && searchQuery.length > 0 && islands.some(i => {
+                  const query = searchQuery.toLowerCase().replace(/\bst\.?\s*/g, 'saint ').trim();
+                  return i.name.toLowerCase().includes(query) || i.name.toLowerCase().includes(searchQuery.toLowerCase());
+                }) && (
                   <motion.div
                     initial={{ opacity: 0, y: 10, scale: 0.95 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -412,15 +426,6 @@ export default function GlobalMap() {
                           <ArrowLeft size={12} className="rotate-180 text-amber-500 opacity-0 group-hover:opacity-100 transition-all" />
                         </button>
                       ))}
-                    {islands.filter(i => {
-                      const query = searchQuery.toLowerCase().replace(/\bst\.?\s*/g, 'saint ').trim();
-                      return i.name.toLowerCase().includes(query) || 
-                             i.name.toLowerCase().includes(searchQuery.toLowerCase());
-                    }).length === 0 && (
-                      <div className="px-4 py-8 text-center text-white/20 text-[10px] uppercase tracking-widest font-light">
-                        No territories found
-                      </div>
-                    )}
                   </motion.div>
                 )}
               </AnimatePresence>
