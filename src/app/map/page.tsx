@@ -84,6 +84,7 @@ export default function GlobalMap() {
   const [mapCenter, setMapCenter] = useState<[number, number]>([11, 30]); // Further north to crop Antarctica
   const [mapScale, setMapScale] = useState(240); // Larger scale to fill screen better
   const [introFinished, setIntroFinished] = useState(false);
+  const [showHint, setShowHint] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const flyoutRef = useRef<HTMLDivElement>(null);
@@ -183,12 +184,25 @@ export default function GlobalMap() {
             ]);
             setMapScale(startScale + (endScale - startScale) * latest);
           },
-          onComplete: () => setIntroFinished(true)
+          onComplete: () => {
+            setIntroFinished(true);
+            setShowHint(true);
+          }
         });
       }, 1000); // 1s pause at the global view
       return () => clearTimeout(timer);
     }
   }, [loading, introFinished]);
+
+  // Handle Hint Fade Out
+  useEffect(() => {
+    if (showHint) {
+      const timer = setTimeout(() => {
+        setShowHint(false);
+      }, 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [showHint]);
 
   const handleIslandClick = async (island: any) => {
     if (selectedIsland?.id === island.id) {
@@ -504,6 +518,24 @@ export default function GlobalMap() {
             </div>
             {/* Tooltip Arrow */}
             <div className="w-2.5 h-2.5 bg-slate-950 border-r border-b border-amber-500/40 rotate-45 -mt-1.5" />
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Map Hint Message - Top Right */}
+      <AnimatePresence>
+        {showHint && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
+            className="absolute top-12 right-12 z-40 max-w-[280px] text-right pointer-events-none"
+          >
+            <p className="text-amber-500/80 text-[11px] uppercase tracking-[0.2em] leading-relaxed font-light drop-shadow-2xl">
+              Select a territory to view profiles, or <br />
+              use the map search bar to search profiles by island.
+            </p>
           </motion.div>
         )}
       </AnimatePresence>
