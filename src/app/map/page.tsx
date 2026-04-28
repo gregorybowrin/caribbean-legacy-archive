@@ -340,89 +340,91 @@ export default function GlobalMap() {
       </motion.div>
 
       {/* Map Identity & Controls - Top Left */}
-      <div className="absolute top-12 left-12 z-20 pointer-events-none">
-        <Link href="/" className="group flex items-center gap-3 text-white/50 hover:text-white transition-colors mb-12 pointer-events-auto">
-          <ArrowLeft size={18} />
-          <span className="text-xs uppercase tracking-[0.2em] font-light">Exit Map</span>
-        </Link>
+      <div className="absolute top-12 left-0 right-0 z-20 pointer-events-none">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Link href="/" className="group inline-flex items-center gap-3 text-white/50 hover:text-white transition-colors mb-12 pointer-events-auto">
+            <ArrowLeft size={18} />
+            <span className="text-xs uppercase tracking-[0.2em] font-light">Exit Map</span>
+          </Link>
 
-        <div className="flex flex-col gap-4 pointer-events-auto items-start -ml-[7px]">
-          <h1 className="text-4xl font-serif text-white/90">Caribbean Legacy Map</h1>
-          <div className="flex items-center gap-2 text-amber-500/70 text-[10px] uppercase tracking-[0.3em] mb-4">
-            <Globe size={12} />
-            <span>{islands.length} Territories Documented</span>
-          </div>
-
-          <div className="relative group pointer-events-auto">
-            <div className={`flex items-center gap-3 bg-white/5 backdrop-blur-md border-2 border-amber-500 rounded-full px-4 py-2.5 transition-all duration-300 ${isSearchOpen || searchQuery ? 'w-[320px] bg-white/10' : 'w-[200px]'}`}>
-              <Globe size={14} className="text-amber-500/50" />
-              <input 
-                type="text"
-                placeholder="Find Territory..."
-                value={searchQuery}
-                onChange={(e) => {
-                  setSearchQuery(e.target.value);
-                  setIsSearchOpen(true);
-                }}
-                onFocus={() => setIsSearchOpen(true)}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter') {
-                    const query = searchQuery.toLowerCase().replace(/\bst\.?\s*/g, 'saint ').trim();
-                    const filtered = islands.filter(i => 
-                      i.name.toLowerCase().includes(query) || 
-                      i.name.toLowerCase().includes(searchQuery.toLowerCase())
-                    );
-                    if (filtered.length > 0) {
-                      handleIslandClick(filtered[0]);
-                      setSearchQuery('');
-                      setIsSearchOpen(false);
-                    }
-                  }
-                }}
-                className="bg-transparent border-none outline-none text-[11px] text-white placeholder:text-white/30 uppercase tracking-widest w-full"
-              />
+          <div className="flex flex-col gap-4 pointer-events-auto items-start">
+            <h1 className="text-2xl font-serif text-white/90">Caribbean Legacy Map</h1>
+            <div className="flex items-center gap-2 text-amber-500/70 text-[10px] uppercase tracking-[0.3em] mb-4">
+              <Globe size={12} />
+              <span>{islands.length} Territories Documented</span>
             </div>
 
-            <AnimatePresence>
-              {isSearchOpen && searchQuery.length > 0 && (
-                <motion.div
-                  initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                  className="absolute top-full mt-2 left-0 w-[320px] max-h-[300px] overflow-y-auto bg-slate-900/95 backdrop-blur-2xl border border-white/10 rounded-2xl shadow-2xl z-40 p-1.5"
-                >
-                  {islands
-                    .filter(i => {
+            <div className="relative group pointer-events-auto">
+              <div className={`flex items-center gap-3 bg-white/5 backdrop-blur-md border-2 border-amber-500 rounded-full px-4 py-2.5 transition-all duration-300 ${isSearchOpen || searchQuery ? 'w-[320px] bg-white/10' : 'w-[200px]'}`}>
+                <Globe size={14} className="text-amber-500/50" />
+                <input 
+                  type="text"
+                  placeholder="Find Territory..."
+                  value={searchQuery}
+                  onChange={(e) => {
+                    setSearchQuery(e.target.value);
+                    setIsSearchOpen(true);
+                  }}
+                  onFocus={() => setIsSearchOpen(true)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter') {
+                      const query = searchQuery.toLowerCase().replace(/\bst\.?\s*/g, 'saint ').trim();
+                      const filtered = islands.filter(i => 
+                        i.name.toLowerCase().includes(query) || 
+                        i.name.toLowerCase().includes(searchQuery.toLowerCase())
+                      );
+                      if (filtered.length > 0) {
+                        handleIslandClick(filtered[0]);
+                        setSearchQuery('');
+                        setIsSearchOpen(false);
+                      }
+                    }
+                  }}
+                  className="bg-transparent border-none outline-none text-[11px] text-white placeholder:text-white/30 uppercase tracking-widest w-full"
+                />
+              </div>
+
+              <AnimatePresence>
+                {isSearchOpen && searchQuery.length > 0 && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                    className="absolute top-full mt-2 left-0 w-[320px] max-h-[300px] overflow-y-auto bg-slate-900/95 backdrop-blur-2xl border border-white/10 rounded-2xl shadow-2xl z-40 p-1.5"
+                  >
+                    {islands
+                      .filter(i => {
+                        const query = searchQuery.toLowerCase().replace(/\bst\.?\s*/g, 'saint ').trim();
+                        return i.name.toLowerCase().includes(query) || 
+                               i.name.toLowerCase().includes(searchQuery.toLowerCase());
+                      })
+                      .map(island => (
+                        <button
+                          key={island.id}
+                          onClick={() => {
+                            handleIslandClick(island);
+                            setSearchQuery('');
+                            setIsSearchOpen(false);
+                          }}
+                          className="w-full text-left px-4 py-3 hover:bg-white/5 rounded-xl transition-colors group flex items-center justify-between"
+                        >
+                          <span className="text-[11px] text-white/60 group-hover:text-white transition-colors uppercase tracking-wider">{island.name}</span>
+                          <ArrowLeft size={12} className="rotate-180 text-amber-500 opacity-0 group-hover:opacity-100 transition-all" />
+                        </button>
+                      ))}
+                    {islands.filter(i => {
                       const query = searchQuery.toLowerCase().replace(/\bst\.?\s*/g, 'saint ').trim();
                       return i.name.toLowerCase().includes(query) || 
                              i.name.toLowerCase().includes(searchQuery.toLowerCase());
-                    })
-                    .map(island => (
-                      <button
-                        key={island.id}
-                        onClick={() => {
-                          handleIslandClick(island);
-                          setSearchQuery('');
-                          setIsSearchOpen(false);
-                        }}
-                        className="w-full text-left px-4 py-3 hover:bg-white/5 rounded-xl transition-colors group flex items-center justify-between"
-                      >
-                        <span className="text-[11px] text-white/60 group-hover:text-white transition-colors uppercase tracking-wider">{island.name}</span>
-                        <ArrowLeft size={12} className="rotate-180 text-amber-500 opacity-0 group-hover:opacity-100 transition-all" />
-                      </button>
-                    ))}
-                  {islands.filter(i => {
-                    const query = searchQuery.toLowerCase().replace(/\bst\.?\s*/g, 'saint ').trim();
-                    return i.name.toLowerCase().includes(query) || 
-                           i.name.toLowerCase().includes(searchQuery.toLowerCase());
-                  }).length === 0 && (
-                    <div className="px-4 py-8 text-center text-white/20 text-[10px] uppercase tracking-widest font-light">
-                      No territories found
-                    </div>
-                  )}
-                </motion.div>
-              )}
-            </AnimatePresence>
+                    }).length === 0 && (
+                      <div className="px-4 py-8 text-center text-white/20 text-[10px] uppercase tracking-widest font-light">
+                        No territories found
+                      </div>
+                    )}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
           </div>
         </div>
       </div>
