@@ -445,7 +445,7 @@ export default function GlobalMap() {
                 className="bg-amber-500 text-slate-950 px-6 py-3 rounded-full flex items-center gap-3 shadow-2xl hover:bg-amber-400 transition-all group pointer-events-auto mb-[320px]"
               >
                 <Minimize2 size={18} className="group-hover:scale-110 transition-transform" />
-                <span className="text-[10px] uppercase tracking-[0.2em] font-bold">Return to Global View</span>
+                <span className="text-[10px] uppercase tracking-[0.2em] font-bold">Zoom Out</span>
               </button>
             </div>
           </motion.div>
