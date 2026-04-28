@@ -128,9 +128,19 @@ export default function GlobalMap() {
         `);
       
       if (islandsData) {
+        const enrichedIslands = islandsData.map(i => {
+          if (i.name === 'Saint Lucia' && (!i.latitude || !i.longitude)) {
+            return { ...i, latitude: 13.9094, longitude: -60.9789 };
+          }
+          if (i.name === 'Saint Vincent & the Grenadines' && (!i.latitude || !i.longitude)) {
+            return { ...i, latitude: 13.2528, longitude: -61.1970 };
+          }
+          return i;
+        });
+        
         // Filter out northern territories (Bermuda, SPM) globally
-        // Keep Bahamas and ensure St Lucia/Vincent are included
-        setIslands(islandsData.filter(i => 
+        // Keep Bahamas (up to 28.5) and ensure St Lucia/Vincent are included
+        setIslands(enrichedIslands.filter(i => 
           i.latitude !== null && i.latitude < 28.5
         ));
       }
