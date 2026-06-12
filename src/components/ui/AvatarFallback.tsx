@@ -21,6 +21,19 @@ const islandGradients: Record<string, string> = {
   'St. Vincent and the Grenadines': 'from-blue-500 via-yellow-400 to-green-500',
   'Guyana': 'from-green-500 via-yellow-400 to-red-500',
   'Belize': 'from-blue-700 via-white to-red-600',
+  'Saba': 'from-red-600 via-white to-blue-600', // Saba flag colors
+  'Sint Eustatius': 'from-blue-600 via-red-600 to-yellow-400',
+  'Sint Maarten': 'from-red-600 via-white to-blue-600',
+  'Anguilla': 'from-orange-500 via-white to-blue-700',
+  'Montserrat': 'from-blue-800 via-white to-green-600',
+  'British Virgin Islands': 'from-green-600 via-yellow-400 to-blue-800',
+  'Cayman Islands': 'from-blue-800 via-white to-red-600',
+  'Turks and Caicos': 'from-blue-700 via-yellow-400 to-white',
+  'Bermuda': 'from-red-700 via-white to-blue-800',
+  'Haiti': 'from-blue-700 to-red-600',
+  'Dominican Republic': 'from-blue-700 via-white to-red-600',
+  'Cuba': 'from-blue-600 via-white to-red-600',
+  'Puerto Rico': 'from-red-500 via-white to-blue-500'
 };
 
 // Fallback if island isn't matched
@@ -36,9 +49,12 @@ interface AvatarFallbackProps {
 export function AvatarFallback({ name, island, className, size = 'md' }: AvatarFallbackProps) {
   // Extract up to 2 initials (e.g., "Robert L. Bradshaw" -> "RB")
   const getInitials = (fullName: string) => {
-    // Remove periods and split
-    const cleanName = fullName.replace(/\./g, '');
-    const parts = cleanName.trim().split(/[\s-]+/);
+    // Remove periods and titles
+    const titlesToRemove = /^(Captain|Dr|Sir|Lord|Lady|Hon|Rev|Father|Dame)\b/i;
+    let cleanName = fullName.replace(/\./g, '').trim();
+    cleanName = cleanName.replace(titlesToRemove, '').trim();
+    
+    const parts = cleanName.split(/[\s-]+/);
     if (parts.length === 0) return '?';
     if (parts.length === 1) return parts[0].substring(0, 2).toUpperCase();
     return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
