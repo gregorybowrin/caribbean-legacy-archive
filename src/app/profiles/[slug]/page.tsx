@@ -2,6 +2,7 @@ import { getFigures, getFigureBySlug } from '@/lib/api';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { Calendar, MapPin, Link as LinkIcon, BookOpen, Quote } from 'lucide-react';
+import { AvatarFallback } from '@/components/ui/AvatarFallback';
 
 import ShareButtons from '@/components/ui/ShareButtons';
 
@@ -43,12 +44,23 @@ export default async function ProfileDetailPage({ params }: { params: { slug: st
           
           {/* Sidebar / Image */}
           <div className="lg:col-span-4 space-y-8">
-            <div className="relative border-4 border-white shadow-2xl overflow-hidden aspect-[4/5]">
-              <img 
-                src={figure.image_url} 
-                alt={figure.name} 
-                className="w-full h-full object-cover"
-              />
+            <div className="relative border-4 border-white shadow-2xl overflow-hidden aspect-[4/5] bg-sand/10">
+              {figure.image_url ? (
+                <img 
+                  src={figure.image_url} 
+                  alt={figure.name} 
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                <div className="w-full h-full">
+                  <AvatarFallback 
+                    name={figure.name} 
+                    island={figure.islands?.name} 
+                    className="w-full h-full rounded-none" 
+                    size="xl" 
+                  />
+                </div>
+              )}
               <div className="absolute inset-0 border border-gold/20 pointer-events-none"></div>
             </div>
 
@@ -162,7 +174,11 @@ export default async function ProfileDetailPage({ params }: { params: { slug: st
                     className="flex bg-white border border-gold/10 overflow-hidden hover:shadow-lg transition-all"
                   >
                     <div className="w-24 h-24 flex-shrink-0 grayscale hover:grayscale-0 transition-all">
-                      <img src={related.image_url} alt={related.name} className="w-full h-full object-cover" />
+                      {related.image_url ? (
+                        <img src={related.image_url} alt={related.name} className="w-full h-full object-cover" />
+                      ) : (
+                        <AvatarFallback name={related.name} island={related.islands?.name} className="w-full h-full rounded-none" size="md" />
+                      )}
                     </div>
                     <div className="p-4">
                       <h4 className="font-serif text-lg text-navy line-clamp-1">{related.name}</h4>
