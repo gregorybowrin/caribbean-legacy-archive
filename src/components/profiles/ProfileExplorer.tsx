@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { Search, Filter, X } from 'lucide-react';
+import { AvatarFallback } from '../ui/AvatarFallback';
 
 interface ProfileExplorerProps {
   initialFigures: any[];
@@ -142,9 +143,16 @@ export default function ProfileExplorer({ initialFigures, islands, areas }: Prof
                         className="object-cover w-full h-full grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                       />
                     ) : (
-                      <div className="w-full h-full flex flex-col items-center justify-center bg-sand/20 group-hover:bg-sand/30 transition-colors">
-                        <span className="font-serif text-gold/30 text-5xl italic">{figure.name.charAt(0)}</span>
-                        <span className="text-[10px] uppercase tracking-widest text-gold/40 mt-4">Portrait Pending</span>
+                      <div className="w-full h-full">
+                        <AvatarFallback 
+                          name={figure.name} 
+                          island={figure.islands?.name} 
+                          className="w-full h-full rounded-none" 
+                          size="xl" 
+                        />
+                        <div className="absolute bottom-4 left-0 right-0 text-center z-10">
+                           <span className="text-[10px] bg-black/40 px-2 py-1 rounded text-white/80 uppercase tracking-widest backdrop-blur-sm">Portrait Pending</span>
+                        </div>
                       </div>
                     )}
                     <div className="absolute inset-0 bg-navy/10 group-hover:bg-transparent transition-all"></div>
