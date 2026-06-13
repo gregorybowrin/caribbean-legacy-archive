@@ -6,8 +6,6 @@ import { AvatarFallback } from '@/components/ui/AvatarFallback';
 
 import ShareButtons from '@/components/ui/ShareButtons';
 
-export const revalidate = 0;
-
 export async function generateStaticParams() {
   const figures = await getFigures();
   return figures.map((figure) => ({

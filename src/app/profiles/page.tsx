@@ -2,8 +2,6 @@ import ProfileExplorer from '@/components/profiles/ProfileExplorer';
 import { Suspense } from 'react';
 import { getFigures, getIslands, getAreas } from '@/lib/api';
 
-export const revalidate = 0;
-
 export default async function ProfilesPage() {
   const [figures, islands, areas] = await Promise.all([
     getFigures(),
