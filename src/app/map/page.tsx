@@ -121,12 +121,16 @@ export default function GlobalMap() {
 
   useEffect(() => {
     async function fetchData() {
-      const { data: islandsData } = await supabase
+      const { data: islandsData, error: supabaseError } = await supabase
         .from('islands')
         .select(`
           *,
           figures:figures(count)
         `);
+      
+      if (supabaseError) {
+        console.error('Error fetching islands from Supabase:', supabaseError);
+      }
       
       if (islandsData) {
         const enrichedIslands = islandsData.map(i => {

@@ -3,6 +3,8 @@ import { Search, Landmark, Globe } from 'lucide-react';
 import { getFigures, getIslands, getAreas } from '@/lib/api';
 import HomeSearch from '@/components/home/HomeSearch';
 
+export const revalidate = 0;
+
 export default async function Home() {
   const [figures, islands, areas] = await Promise.all([
     getFigures(),
