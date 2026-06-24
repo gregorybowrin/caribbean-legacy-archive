@@ -65,7 +65,7 @@ export default async function ProfileDetailPage({ params }: { params: { slug: st
             </div>
 
             {figure.image_credit && (
-              <div className="text-[9px] text-navy/40 px-2 italic text-center">
+              <div className="text-[10px] text-black px-2 italic text-center font-['Times_New_Roman',_Times,_serif] mt-2">
                 {figure.image_credit}
               </div>
             )}
