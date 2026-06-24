@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { Calendar, MapPin, Link as LinkIcon, BookOpen, Quote } from 'lucide-react';
 import { AvatarFallback } from '@/components/ui/AvatarFallback';
+import { getIslandFlag } from '@/lib/flags';
 
 import ShareButtons from '@/components/ui/ShareButtons';
 
@@ -77,7 +78,8 @@ export default async function ProfileDetailPage({ params }: { params: { slug: st
                   <MapPin className="h-4 w-4 text-tropical-green mr-3 mt-1" />
                   <div>
                     <span className="text-[10px] uppercase tracking-widest text-navy/40 block">Origin</span>
-                    <Link href={`/islands/${figure.islands?.slug}`} className="text-sm font-semibold hover:text-gold transition-colors">
+                    <Link href={`/islands/${figure.islands?.slug}`} className="text-sm font-semibold hover:text-gold transition-colors flex items-center gap-2">
+                      <span>{getIslandFlag(figure.islands?.name)}</span>
                       {figure.islands?.name}
                     </Link>
                   </div>
