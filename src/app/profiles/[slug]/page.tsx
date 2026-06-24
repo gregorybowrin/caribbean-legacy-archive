@@ -64,6 +64,12 @@ export default async function ProfileDetailPage({ params }: { params: { slug: st
               <div className="absolute inset-0 border border-gold/20 pointer-events-none"></div>
             </div>
 
+            {figure.image_credit && (
+              <div className="text-[9px] text-navy/40 px-2 italic text-center">
+                {figure.image_credit}
+              </div>
+            )}
+
             <div className="bg-white border border-gold/20 p-8 shadow-sm">
               <h3 className="font-serif text-xl text-navy mb-6 border-b border-gold/20 pb-4">Biographical Details</h3>
               <div className="space-y-4">

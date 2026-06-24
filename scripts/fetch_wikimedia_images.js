@@ -6,29 +6,79 @@ const supabase = createClient(
   process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 );
 
-// We define DRY_RUN as true initially so it only logs out what it would do.
 const DRY_RUN = process.argv.includes('--execute') ? false : true;
 
-async function fetchWikimediaImage(name) {
+async function fetchWikimediaImageAndMetadata(name) {
   try {
-    // We use the Wikipedia API to search for the page and get its primary image (thumbnail)
-    // The query format searches for the exact page name and requests pageimages.
     const options = { headers: { 'User-Agent': 'CaribbeanLegacyArchive/1.0 (contact@caribbeanlegacyarchive.com)' } };
     
-    const url = `https://en.wikipedia.org/w/api.php?action=query&titles=${encodeURIComponent(name)}&prop=pageimages&piprop=original&format=json`;
+    // Step 1: Find the original image file associated with the article
+    const url = `https://en.wikipedia.org/w/api.php?action=query&titles=${encodeURIComponent(name)}&prop=pageimages&piprop=original|name&format=json`;
     const response = await fetch(url, options);
     const data = await response.json();
     
-    if (data.query && data.query.pages) {
-      const pages = data.query.pages;
-      const pageId = Object.keys(pages)[0];
+    if (!data.query || !data.query.pages) return null;
+    
+    const pages = data.query.pages;
+    const pageId = Object.keys(pages)[0];
+    
+    if (pageId === '-1' || !pages[pageId].original) return null;
+    
+    const originalUrl = pages[pageId].original.source;
+    const filename = pages[pageId].pageimage;
+    
+    if (!filename) {
+      return { imageUrl: originalUrl };
+    }
+
+    // Step 2: Fetch the license metadata for that file
+    const fileInfoUrl = `https://en.wikipedia.org/w/api.php?action=query&titles=File:${encodeURIComponent(filename)}&prop=imageinfo&iiprop=extmetadata|url&format=json`;
+    const fileResponse = await fetch(fileInfoUrl, options);
+    const fileData = await fileResponse.json();
+    
+    let creator = null;
+    let license = null;
+    let sourceUrl = null;
+    let creditLine = null;
+
+    if (fileData.query && fileData.query.pages) {
+      const fPages = fileData.query.pages;
+      const fPageId = Object.keys(fPages)[0];
       
-      if (pageId !== '-1' && pages[pageId].original) {
-        return pages[pageId].original.source;
+      if (fPageId !== '-1' && fPages[fPageId].imageinfo && fPages[fPageId].imageinfo.length > 0) {
+        const info = fPages[fPageId].imageinfo[0];
+        sourceUrl = info.descriptionurl;
+        
+        const ext = info.extmetadata;
+        if (ext) {
+          if (ext.Artist) {
+            // Remove HTML tags from Artist
+            creator = ext.Artist.value.replace(/<[^>]*>?/gm, '').trim();
+          }
+          if (ext.LicenseShortName) {
+            license = ext.LicenseShortName.value;
+            // Normalize "public domain" or similar
+            if (license.toLowerCase().includes('pd') || license.toLowerCase().includes('public domain')) {
+              license = 'Public Domain';
+            }
+          }
+        }
       }
     }
 
-    return null;
+    // Generate credit line
+    if (license) {
+      creditLine = `Image: ${name}, ${license}, via Wikimedia Commons.`;
+    }
+
+    return {
+      imageUrl: originalUrl,
+      sourceUrl,
+      creator,
+      license,
+      creditLine
+    };
+    
   } catch (error) {
     console.error(`Error fetching for ${name}:`, error.message);
     return null;
@@ -38,36 +88,46 @@ async function fetchWikimediaImage(name) {
 async function run() {
   console.log(`Starting Wikimedia Image Fetch Script in ${DRY_RUN ? 'DRY RUN' : 'PRODUCTION'} mode...`);
 
-  // 1. Fetch figures without images
+  // We fetch figures that either have no image_url, OR have no image_credit (so we can backfill metadata for the 115 we already matched)
   const { data: figures, error } = await supabase
     .from('figures')
-    .select('id, name')
-    .is('image_url', null);
+    .select('id, name, image_url, image_credit')
+    .or('image_url.is.null,image_credit.is.null');
 
   if (error) {
     console.error('Error fetching figures:', error);
     return;
   }
 
-  console.log(`Found ${figures.length} figures without an image_url.`);
+  console.log(`Found ${figures.length} figures needing an image or metadata.`);
   
   let matchCount = 0;
 
   for (const figure of figures) {
-    // Sleep briefly to avoid hitting rate limits
     await new Promise(r => setTimeout(r, 500));
 
     console.log(`\nSearching for: ${figure.name}...`);
-    const imageUrl = await fetchWikimediaImage(figure.name);
+    const result = await fetchWikimediaImageAndMetadata(figure.name);
 
-    if (imageUrl) {
+    if (result && result.imageUrl) {
       matchCount++;
-      console.log(`✅ FOUND IMAGE: ${imageUrl}`);
+      console.log(`✅ FOUND IMAGE: ${result.imageUrl}`);
+      if (result.creditLine) {
+        console.log(`📝 CREDIT: ${result.creditLine}`);
+      }
       
       if (!DRY_RUN) {
+        const updateData = {
+          image_url: result.imageUrl,
+          image_source_url: result.sourceUrl,
+          image_creator: result.creator,
+          image_license: result.license,
+          image_credit: result.creditLine
+        };
+
         const { error: updateError } = await supabase
           .from('figures')
-          .update({ image_url: imageUrl })
+          .update(updateData)
           .eq('id', figure.id);
           
         if (updateError) {
@@ -77,13 +137,13 @@ async function run() {
         }
       }
     } else {
-      console.log(`❌ No image found.`);
+      console.log(`❌ No image/metadata found.`);
     }
   }
 
   console.log(`\n=== SUMMARY ===`);
   console.log(`Processed ${figures.length} figures.`);
-  console.log(`Found images for ${matchCount} figures.`);
+  console.log(`Found images/metadata for ${matchCount} figures.`);
   if (DRY_RUN) {
     console.log('This was a DRY RUN. No database updates were made. Run with --execute to apply changes.');
   }

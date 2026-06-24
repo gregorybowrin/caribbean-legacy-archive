@@ -21,6 +21,10 @@ export interface Figure {
   bio: string;
   contributions: string;
   image_url: string;
+  image_source_url?: string;
+  image_creator?: string;
+  image_license?: string;
+  image_credit?: string;
   birth_date?: string;
   death_date?: string;
   islands?: Island;

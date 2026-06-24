@@ -39,6 +39,7 @@ export default function Footer() {
         <div className="mt-12 pt-8 border-t border-gold/10 flex flex-col md:flex-row justify-between items-center text-xs text-ivory/40">
           <p>© {new Date().getFullYear()} Caribbean Legacy Archive. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
+            <Link href="/credits" className="hover:text-ivory transition-colors">Image Credits</Link>
             <Link href="/privacy" className="hover:text-ivory transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-ivory transition-colors">Terms of Use</Link>
           </div>
