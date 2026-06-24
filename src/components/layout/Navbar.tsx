@@ -1,11 +1,23 @@
 'use client';
 
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { Search, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
+  
+  const handleSearch = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      const query = e.currentTarget.value;
+      if (query.trim()) {
+        router.push(`/profiles?q=${encodeURIComponent(query.trim())}`);
+        setIsOpen(false); // Close mobile menu if open
+      }
+    }
+  };
 
   return (
     <nav className="bg-navy text-ivory sticky top-0 z-50 border-b border-gold/20 shadow-xl">
@@ -30,6 +42,7 @@ export default function Navbar() {
               <input 
                 type="text" 
                 placeholder="Search figures..." 
+                onKeyDown={handleSearch}
                 className="bg-navy-light border border-gold/30 text-ivory text-xs py-2 px-4 pl-10 focus:outline-none focus:ring-1 focus:ring-gold rounded-sm w-48 transition-all focus:w-64"
               />
               <Search className="absolute left-3 top-2.5 h-3.5 w-3.5 text-gold/60" />
@@ -58,6 +71,7 @@ export default function Navbar() {
             <input 
               type="text" 
               placeholder="Search..." 
+              onKeyDown={handleSearch}
               className="w-full bg-navy border border-gold/30 text-ivory py-3 px-10 focus:outline-none focus:ring-1 focus:ring-gold rounded-sm"
             />
             <Search className="absolute left-3 top-3.5 h-4 w-4 text-gold/60" />

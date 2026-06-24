@@ -45,7 +45,7 @@ async function fetchWikimediaImageAndMetadata(name) {
       const fPages = fileData.query.pages;
       const fPageId = Object.keys(fPages)[0];
       
-      if (fPageId !== '-1' && fPages[fPageId].imageinfo && fPages[fPageId].imageinfo.length > 0) {
+      if (fPages[fPageId] && fPages[fPageId].imageinfo && fPages[fPageId].imageinfo.length > 0) {
         const info = fPages[fPageId].imageinfo[0];
         sourceUrl = info.descriptionurl;
         
