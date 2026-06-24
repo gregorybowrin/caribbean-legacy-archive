@@ -79,7 +79,7 @@ export default async function ProfileDetailPage({ params }: { params: { slug: st
                   <div>
                     <span className="text-[10px] uppercase tracking-widest text-navy/40 block">Origin</span>
                     <Link href={`/islands/${figure.islands?.slug}`} className="text-sm font-semibold hover:text-gold transition-colors flex items-center gap-2">
-                      <span>{getIslandFlag(figure.islands?.name)}</span>
+                      <span className="text-xl leading-none">{getIslandFlag(figure.islands?.name)}</span>
                       {figure.islands?.name}
                     </Link>
                   </div>
