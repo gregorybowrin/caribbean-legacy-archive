@@ -71,15 +71,17 @@ export default async function ProfileDetailPage({ params }: { params: { slug: st
               </div>
             )}
 
-            <div className="bg-white border border-gold/20 p-8 shadow-sm">
-              <h3 className="font-serif text-xl text-navy mb-6 border-b border-gold/20 pb-4">Biographical Details</h3>
+            <div className="bg-white border border-gold/20 p-8 shadow-sm relative">
+              <div className="absolute top-6 right-6 text-5xl drop-shadow-sm pointer-events-none select-none">
+                {getIslandFlag(figure.islands?.name)}
+              </div>
+              <h3 className="font-serif text-xl text-navy mb-6 border-b border-gold/20 pb-4 pr-16">Biographical Details</h3>
               <div className="space-y-4">
                 <div className="flex items-start">
                   <MapPin className="h-4 w-4 text-tropical-green mr-3 mt-1" />
                   <div>
                     <span className="text-[10px] uppercase tracking-widest text-navy/40 block">Origin</span>
-                    <Link href={`/islands/${figure.islands?.slug}`} className="text-sm font-semibold hover:text-gold transition-colors flex items-center gap-2">
-                      <span className="text-xl leading-none">{getIslandFlag(figure.islands?.name)}</span>
+                    <Link href={`/islands/${figure.islands?.slug}`} className="text-sm font-semibold hover:text-gold transition-colors">
                       {figure.islands?.name}
                     </Link>
                   </div>
