@@ -20,10 +20,9 @@ export default function ProfileExplorer({ initialFigures, islands, areas }: Prof
   const [selectedArea, setSelectedArea] = useState('All Areas');
   const [filteredFigures, setFilteredFigures] = useState(initialFigures);
 
-  // Initialize search from URL if present
   useEffect(() => {
     const q = searchParams.get('q');
-    if (q) setSearchQuery(q);
+    setSearchQuery(q || '');
   }, [searchParams]);
 
   // Filter Logic
