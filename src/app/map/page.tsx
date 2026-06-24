@@ -7,6 +7,7 @@ import { geoMercator, geoPath } from 'd3-geo';
 import { feature } from 'topojson-client';
 import { Maximize2, Minimize2, ArrowLeft, Users, Globe, X } from 'lucide-react';
 import Link from 'next/link';
+import { AvatarFallback } from '@/components/ui/AvatarFallback';
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -590,16 +591,25 @@ export default function GlobalMap() {
                   <Link 
                     key={figure.id} 
                     href={`/profiles/${figure.slug}`}
-                    className="block group"
+                    className="flex items-center gap-4 group mb-6"
                   >
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-lg text-white/80 group-hover:text-amber-500 transition-colors">
-                        {figure.name}
-                      </span>
-                      <ArrowLeft size={14} className="rotate-180 text-amber-500/0 group-hover:text-amber-500 transition-all" />
+                    <div className="w-12 h-12 flex-shrink-0 bg-white/5 rounded-full overflow-hidden border border-white/10 group-hover:border-amber-500/50 transition-colors">
+                      {figure.image_url ? (
+                        <img src={figure.image_url} alt={figure.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" />
+                      ) : (
+                        <AvatarFallback name={figure.name} island={selectedIsland.name} size="sm" className="w-full h-full rounded-none" />
+                      )}
                     </div>
-                    <div className="text-[10px] text-white/30 uppercase tracking-widest">
-                      {figure.areas?.join(' • ') || 'Historical Figure'}
+                    <div className="flex-grow">
+                      <div className="flex items-center justify-between mb-1">
+                        <span className="text-lg text-white/80 group-hover:text-amber-500 transition-colors line-clamp-1">
+                          {figure.name}
+                        </span>
+                        <ArrowLeft size={14} className="rotate-180 text-amber-500/0 group-hover:text-amber-500 transition-all flex-shrink-0 ml-2" />
+                      </div>
+                      <div className="text-[10px] text-white/30 uppercase tracking-widest line-clamp-1">
+                        {figure.areas?.join(' • ') || 'Historical Figure'}
+                      </div>
                     </div>
                   </Link>
                 ))}
