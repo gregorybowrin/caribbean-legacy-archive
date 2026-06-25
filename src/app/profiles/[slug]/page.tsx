@@ -178,7 +178,12 @@ export default async function ProfileDetailPage({ params }: { params: { slug: st
                                 prose-img:rounded-md prose-img:shadow-md prose-img:mx-auto prose-img:border prose-img:border-gold/20
                                 prose-blockquote:border-l-4 prose-blockquote:border-gold prose-blockquote:pl-6 
                                 prose-blockquote:italic prose-blockquote:text-navy/60 prose-blockquote:font-serif prose-blockquote:text-xl">
-                  <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                  <ReactMarkdown 
+                    remarkPlugins={[remarkGfm]}
+                    components={{
+                      a: ({node, ...props}) => <a target="_blank" rel="noopener noreferrer" {...props} />
+                    }}
+                  >
                     {figure.bio}
                   </ReactMarkdown>
                 </div>
