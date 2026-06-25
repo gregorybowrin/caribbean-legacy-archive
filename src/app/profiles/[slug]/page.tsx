@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { Calendar, MapPin, Link as LinkIcon, BookOpen, Quote } from 'lucide-react';
 import { AvatarFallback } from '@/components/ui/AvatarFallback';
 import { getIslandFlag } from '@/lib/flags';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 import ShareButtons from '@/components/ui/ShareButtons';
 
@@ -169,10 +171,16 @@ export default async function ProfileDetailPage({ params }: { params: { slug: st
               <div className="relative mb-12">
                 <Quote className="absolute -left-8 -top-8 h-16 w-16 text-gold/10 pointer-events-none" />
                 <h2 className="font-serif text-3xl text-navy mb-6">Biography</h2>
-                <div className="text-navy/80 text-lg leading-relaxed space-y-6">
-                  {figure.bio.split('\n').map((para, i) => (
-                    <p key={i}>{para}</p>
-                  ))}
+                <div className="text-navy/80 text-lg leading-relaxed prose prose-navy max-w-none 
+                                prose-headings:font-serif prose-headings:text-navy 
+                                prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4
+                                prose-a:text-gold hover:prose-a:text-navy prose-a:transition-colors
+                                prose-img:rounded-md prose-img:shadow-md prose-img:mx-auto prose-img:border prose-img:border-gold/20
+                                prose-blockquote:border-l-4 prose-blockquote:border-gold prose-blockquote:pl-6 
+                                prose-blockquote:italic prose-blockquote:text-navy/60 prose-blockquote:font-serif prose-blockquote:text-xl">
+                  <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                    {figure.bio}
+                  </ReactMarkdown>
                 </div>
               </div>
 
