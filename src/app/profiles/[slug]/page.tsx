@@ -7,11 +7,51 @@ import { getIslandFlag } from '@/lib/flags';
 
 import ShareButtons from '@/components/ui/ShareButtons';
 
+import type { Metadata } from 'next';
+
 export async function generateStaticParams() {
   const figures = await getFigures();
   return figures.map((figure) => ({
     slug: figure.slug,
   }));
+}
+
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const { slug } = await params;
+  const figure = await getFigureBySlug(slug);
+
+  if (!figure) return {};
+
+  const defaultImage = 'https://caribbeanlegacyarchive.com/og-image.jpg'; // Or a logo
+  const imageUrl = figure.image_url || defaultImage;
+  const description = figure.bio ? (figure.bio.length > 150 ? figure.bio.substring(0, 147) + '...' : figure.bio) : 'Learn about their legacy.';
+
+  return {
+    title: `${figure.name} | Caribbean Legacy Archive`,
+    description: description,
+    openGraph: {
+      title: figure.name,
+      description: description,
+      url: `https://caribbeanlegacyarchive.com/profiles/${figure.slug}`,
+      siteName: 'Caribbean Legacy Archive',
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: figure.name,
+        },
+      ],
+      locale: 'en_US',
+      type: 'profile',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: figure.name,
+      description: description,
+      images: [imageUrl],
+    },
+  };
 }
 
 export default async function ProfileDetailPage({ params }: { params: { slug: string } }) {
