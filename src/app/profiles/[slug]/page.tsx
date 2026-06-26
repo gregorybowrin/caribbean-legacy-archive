@@ -87,31 +87,37 @@ export default async function ProfileDetailPage({ params }: { params: { slug: st
           
           {/* Sidebar / Image */}
           <div className="lg:col-span-4 space-y-8 lg:sticky lg:top-24 lg:self-start">
-            <div className="relative border-4 border-white shadow-2xl overflow-hidden aspect-[4/5] bg-sand/10">
-              {figure.image_url ? (
-                <img 
-                  src={figure.image_url} 
-                  alt={figure.name} 
-                  className="w-full h-full object-cover"
-                />
-              ) : (
-                <div className="w-full h-full">
-                  <AvatarFallback 
-                    name={figure.name} 
-                    island={figure.islands?.name} 
-                    className="w-full h-full rounded-none" 
-                    size="xl" 
+            <div className="flex flex-col items-center">
+              <div className="w-full relative border-4 border-white shadow-2xl overflow-hidden aspect-[4/5] bg-sand/10">
+                {figure.image_url ? (
+                  <img 
+                    src={figure.image_url} 
+                    alt={figure.name} 
+                    className="w-full h-full object-cover"
                   />
+                ) : (
+                  <div className="w-full h-full">
+                    <AvatarFallback 
+                      name={figure.name} 
+                      island={figure.islands?.name} 
+                      className="w-full h-full rounded-none" 
+                      size="xl" 
+                    />
+                  </div>
+                )}
+                <div className="absolute inset-0 border border-gold/20 pointer-events-none"></div>
+              </div>
+
+              <div className="mt-4 text-center px-2">
+                <h2 className="font-serif font-bold text-xl text-navy leading-tight">{figure.name}</h2>
+              </div>
+
+              {figure.image_credit && (
+                <div className="text-[11px] text-black px-2 italic text-center font-['Times_New_Roman',_Times,_serif] mt-1.5">
+                  Photo credit: {figure.image_credit}
                 </div>
               )}
-              <div className="absolute inset-0 border border-gold/20 pointer-events-none"></div>
             </div>
-
-            {figure.image_credit && (
-              <div className="text-[11px] text-black px-2 italic text-center font-['Times_New_Roman',_Times,_serif] mt-2">
-                Photo credit: {figure.image_credit}
-              </div>
-            )}
 
             <div className="bg-white border border-gold/20 p-8 shadow-sm relative">
               <div className="absolute top-6 right-6 text-5xl drop-shadow-sm pointer-events-none select-none">
