@@ -47,11 +47,11 @@ export default function ProfileHoverCard({ slug, href, children }: ProfileHoverC
       
       <HoverCard.Portal>
         <HoverCard.Content 
-          asChild
           sideOffset={8}
+          className="w-80 bg-white border border-gold/20 shadow-xl rounded-sm overflow-hidden p-0 animate-in fade-in zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out data-[state=closed]:zoom-out-95 z-50"
         >
           <Link href={href} passHref legacyBehavior>
-            <a className="w-80 bg-white border border-gold/20 shadow-xl rounded-sm overflow-hidden p-0 animate-in fade-in zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out data-[state=closed]:zoom-out-95 z-50 block group hover:border-gold/50 hover:shadow-2xl transition-all cursor-pointer">
+            <a className="block w-full h-full group hover:bg-sand/5 transition-all cursor-pointer outline-none">
               {loading && !data && (
                 <div className="p-4 flex items-center justify-center h-24">
                   <div className="w-5 h-5 border-2 border-gold border-t-transparent rounded-full animate-spin"></div>
