@@ -38,8 +38,10 @@ export default function ProfileHoverCard({ slug, href, children }: ProfileHoverC
       if (open) fetchPreview();
     }}>
       <HoverCard.Trigger asChild>
-        <Link href={href} className="font-semibold text-navy/90 hover:text-gold border-b border-gold/30 hover:border-gold transition-colors">
-          {children}
+        <Link href={href} passHref legacyBehavior>
+          <a className="font-semibold text-navy/90 hover:text-gold border-b border-gold/30 hover:border-gold transition-colors">
+            {children}
+          </a>
         </Link>
       </HoverCard.Trigger>
       
@@ -51,6 +53,12 @@ export default function ProfileHoverCard({ slug, href, children }: ProfileHoverC
           {loading && !data && (
             <div className="p-4 flex items-center justify-center h-24">
               <div className="w-5 h-5 border-2 border-gold border-t-transparent rounded-full animate-spin"></div>
+            </div>
+          )}
+
+          {!loading && !data && hasFetched && (
+            <div className="p-4 flex flex-col items-center justify-center h-24 bg-sand/10 text-center">
+              <p className="text-xs text-navy/60 italic font-serif">Profile preview not available.</p>
             </div>
           )}
           
