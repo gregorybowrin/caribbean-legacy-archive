@@ -171,7 +171,7 @@ export default async function ProfileDetailPage({ params }: { params: { slug: st
           {/* Main Content */}
           <div className="lg:col-span-8">
             <header className="mb-12">
-              <h1 className="font-serif font-bold text-5xl md:text-6xl text-navy mb-4 leading-tight">{figure.name}</h1>
+              <h1 className="font-serif text-5xl md:text-6xl text-navy mb-4 leading-tight">{figure.name}</h1>
               <div className="w-24 h-1 bg-gold"></div>
             </header>
 
