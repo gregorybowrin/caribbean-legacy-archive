@@ -37,13 +37,13 @@ export default function ProfileHoverCard({ slug, href, children }: ProfileHoverC
     <HoverCard.Root openDelay={300} closeDelay={150} onOpenChange={(open) => {
       if (open) fetchPreview();
     }}>
-      <HoverCard.Trigger asChild>
-        <Link href={href} passHref legacyBehavior>
+      <Link href={href} passHref legacyBehavior>
+        <HoverCard.Trigger asChild>
           <a className="font-semibold text-navy/90 hover:text-gold border-b border-gold/30 hover:border-gold transition-colors">
             {children}
           </a>
-        </Link>
-      </HoverCard.Trigger>
+        </HoverCard.Trigger>
+      </Link>
       
       <HoverCard.Portal>
         <HoverCard.Content 
