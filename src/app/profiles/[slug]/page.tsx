@@ -176,8 +176,10 @@ export default async function ProfileDetailPage({ params }: { params: { slug: st
                                 prose-h3:text-3xl prose-h3:mt-10 prose-h3:mb-4
                                 prose-a:text-gold hover:prose-a:text-navy prose-a:transition-colors
                                 prose-img:rounded-md prose-img:shadow-md prose-img:mx-auto prose-img:border prose-img:border-gold/20
-                                prose-blockquote:border-l-4 prose-blockquote:border-gold prose-blockquote:pl-6 
-                                prose-blockquote:italic prose-blockquote:text-navy/60 prose-blockquote:font-serif prose-blockquote:text-xl">
+                                prose-blockquote:border-l-4 prose-blockquote:border-gold prose-blockquote:pl-8 
+                                prose-blockquote:italic prose-blockquote:text-navy/80 prose-blockquote:font-serif prose-blockquote:text-2xl
+                                prose-blockquote:ml-8 prose-blockquote:my-10
+                                [&_blockquote_p::before]:hidden [&_blockquote_p::after]:hidden">
                   <ReactMarkdown 
                     remarkPlugins={[remarkGfm]}
                     components={{
