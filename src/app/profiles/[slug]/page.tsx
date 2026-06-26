@@ -86,7 +86,7 @@ export default async function ProfileDetailPage({ params }: { params: { slug: st
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
           
           {/* Sidebar / Image */}
-          <div className="lg:col-span-4 space-y-8 sticky top-24 self-start">
+          <div className="lg:col-span-4 space-y-8 lg:sticky lg:top-24 lg:self-start">
             <div className="relative border-4 border-white shadow-2xl overflow-hidden aspect-[4/5] bg-sand/10">
               {figure.image_url ? (
                 <img 
@@ -173,7 +173,7 @@ export default async function ProfileDetailPage({ params }: { params: { slug: st
                 <h2 className="font-serif text-3xl text-navy mb-6">Biography</h2>
                 <div className="text-navy/80 text-lg leading-relaxed prose prose-navy max-w-none 
                                 prose-headings:font-serif prose-headings:text-navy 
-                                prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4
+                                prose-h3:text-3xl prose-h3:mt-10 prose-h3:mb-4
                                 prose-a:text-gold hover:prose-a:text-navy prose-a:transition-colors
                                 prose-img:rounded-md prose-img:shadow-md prose-img:mx-auto prose-img:border prose-img:border-gold/20
                                 prose-blockquote:border-l-4 prose-blockquote:border-gold prose-blockquote:pl-6 
