@@ -8,6 +8,8 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
 import ShareButtons from '@/components/ui/ShareButtons';
+import ProfileHoverCard from '@/components/ui/ProfileHoverCard';
+
 
 import type { Metadata } from 'next';
 
@@ -189,7 +191,13 @@ export default async function ProfileDetailPage({ params }: { params: { slug: st
                   <ReactMarkdown 
                     remarkPlugins={[remarkGfm]}
                     components={{
-                      a: ({node, ...props}) => <a target="_blank" rel="noopener noreferrer" {...props} />
+                      a: ({node, href, children, ...props}) => {
+                        if (href?.startsWith('/profiles/')) {
+                          const linkSlug = href.replace('/profiles/', '').split('#')[0];
+                          return <ProfileHoverCard slug={linkSlug} href={href}>{children}</ProfileHoverCard>;
+                        }
+                        return <a href={href} target="_blank" rel="noopener noreferrer" {...props}>{children}</a>;
+                      }
                     }}
                   >
                     {figure.bio}

@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@radix-ui/react-hover-card": "^1.1.17",
     "@supabase/supabase-js": "^2.104.1",
     "@tailwindcss/typography": "^0.5.20",
     "@types/topojson-client": "^3.1.5",
