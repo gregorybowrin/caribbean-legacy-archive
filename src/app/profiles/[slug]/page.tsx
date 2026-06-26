@@ -117,7 +117,7 @@ export default async function ProfileDetailPage({ params }: { params: { slug: st
               <div className="absolute top-6 right-6 text-5xl drop-shadow-sm pointer-events-none select-none">
                 {getIslandFlag(figure.islands?.name)}
               </div>
-              <h3 className="font-serif text-xl text-navy mb-6 border-b border-gold/20 pb-4 pr-16">Biographical Details</h3>
+              <h3 className="font-serif font-bold text-xl text-navy mb-6 border-b border-gold/20 pb-4 pr-16">Biographical Details</h3>
               <div className="space-y-4">
                 <div className="flex items-start">
                   <MapPin className="h-4 w-4 text-tropical-green mr-3 mt-1" />
@@ -163,16 +163,16 @@ export default async function ProfileDetailPage({ params }: { params: { slug: st
           {/* Main Content */}
           <div className="lg:col-span-8">
             <header className="mb-12">
-              <h1 className="font-serif text-5xl md:text-6xl text-navy mb-4 leading-tight">{figure.name}</h1>
+              <h1 className="font-serif font-bold text-5xl md:text-6xl text-navy mb-4 leading-tight">{figure.name}</h1>
               <div className="w-24 h-1 bg-gold"></div>
             </header>
 
             <section className="prose prose-navy max-w-none">
               <div className="relative mb-12">
                 <Quote className="absolute -left-8 -top-8 h-16 w-16 text-gold/10 pointer-events-none" />
-                <h2 className="font-serif text-3xl text-navy mb-6">Biography</h2>
+                <h2 className="font-serif font-bold text-3xl text-navy mb-6">Biography</h2>
                 <div className="text-navy/80 text-lg leading-relaxed prose prose-navy max-w-none 
-                                prose-headings:font-serif prose-headings:text-navy 
+                                prose-headings:font-serif prose-headings:font-bold prose-headings:text-navy 
                                 prose-h3:text-3xl prose-h3:mt-10 prose-h3:mb-4
                                 prose-a:text-gold hover:prose-a:text-navy prose-a:transition-colors
                                 prose-img:rounded-md prose-img:shadow-md prose-img:mx-auto prose-img:border prose-img:border-gold/20
@@ -197,7 +197,7 @@ export default async function ProfileDetailPage({ params }: { params: { slug: st
               />
 
               <div className="mb-12 pt-12 border-t border-gold/10">
-                <h2 className="font-serif text-3xl text-navy mb-6">Major Contributions</h2>
+                <h2 className="font-serif font-bold text-3xl text-navy mb-6">Major Contributions</h2>
                 <div className="text-navy/80 text-lg leading-relaxed bg-white p-8 border-l-4 border-tropical-green shadow-sm">
                   {figure.contributions}
                 </div>
@@ -205,7 +205,7 @@ export default async function ProfileDetailPage({ params }: { params: { slug: st
 
               {figure.sources && figure.sources.length > 0 && (
                 <div className="mb-12 pt-12 border-t border-gold/10">
-                  <h2 className="font-serif text-2xl text-navy mb-6">Verified Sources</h2>
+                  <h2 className="font-serif font-bold text-2xl text-navy mb-6">Verified Sources</h2>
                   <ul className="space-y-4">
                     {figure.sources.map((source) => (
                       <li key={source.id}>
@@ -230,7 +230,7 @@ export default async function ProfileDetailPage({ params }: { params: { slug: st
 
             {/* Related Profiles Placeholder */}
             <section className="pt-12 border-t border-gold/10">
-              <h2 className="font-serif text-2xl text-navy mb-8">Related Figures</h2>
+              <h2 className="font-serif font-bold text-2xl text-navy mb-8">Related Figures</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {relatedFigures.map(related => (
                   <Link 
