@@ -86,7 +86,7 @@ export default async function ProfileDetailPage({ params }: { params: { slug: st
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
           
           {/* Sidebar / Image */}
-          <div className="lg:col-span-4 space-y-8 sticky top-8 self-start">
+          <div className="lg:col-span-4 space-y-8 sticky top-24 self-start">
             <div className="relative border-4 border-white shadow-2xl overflow-hidden aspect-[4/5] bg-sand/10">
               {figure.image_url ? (
                 <img 
