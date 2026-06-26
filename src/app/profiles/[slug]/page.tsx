@@ -177,7 +177,7 @@ export default async function ProfileDetailPage({ params }: { params: { slug: st
               <div className="relative mb-12">
                 <Quote className="absolute -left-8 -top-8 h-16 w-16 text-gold/10 pointer-events-none" />
                 <h2 className="font-serif font-bold text-3xl text-navy mb-6">Biography</h2>
-                <div className="text-navy/80 text-lg leading-relaxed prose prose-navy max-w-none 
+                <div className="text-navy/80 text-xl leading-relaxed prose prose-navy max-w-none 
                                 prose-headings:font-serif prose-headings:font-bold prose-headings:text-navy 
                                 prose-h3:text-3xl prose-h3:mt-10 prose-h3:mb-4
                                 prose-a:text-gold hover:prose-a:text-navy prose-a:transition-colors
@@ -204,7 +204,7 @@ export default async function ProfileDetailPage({ params }: { params: { slug: st
 
               <div className="mb-12 pt-12 border-t border-gold/10">
                 <h2 className="font-serif font-bold text-3xl text-navy mb-6">Major Contributions</h2>
-                <div className="text-navy/80 text-lg leading-relaxed bg-white p-8 border-l-4 border-tropical-green shadow-sm">
+                <div className="text-navy/80 text-xl leading-relaxed bg-white p-8 border-l-4 border-tropical-green shadow-sm">
                   {figure.contributions}
                 </div>
               </div>
