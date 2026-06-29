@@ -5,4 +5,4 @@
 :HL["https://flagcdn.com/w1280/vc.png","image"]
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Louis_George_and_Athneal_Ollivierre_(Whaler_of_Bequia,_1960s).jpg","image"]
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/James_F._Mitchell_1986_(cropped).jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"grenadines","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"SbAezIeONIMAiNt9s63LQ"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"grenadines","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"8nNeNbazdQjw36oRHdyGd"}

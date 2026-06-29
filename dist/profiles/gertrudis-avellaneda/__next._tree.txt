@@ -5,4 +5,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/c/c8/FEDERICO_DE_MADRAZO_-Gertrudis_G%C3%B3mez_de_Avellaneda_%28Museo_L%C3%A1zaro_Galdiano%2C_1857%29.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/f/f6/Gertrudis_G%C3%B3mez_de_Avellaneda.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/a/a2/Gertrudis_G%C3%B3mez_de_Avellaneda.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"gertrudis-avellaneda","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"SbAezIeONIMAiNt9s63LQ"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"gertrudis-avellaneda","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"8nNeNbazdQjw36oRHdyGd"}

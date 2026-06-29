@@ -5,4 +5,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/en/9/92/Joseph_Nathaniel_France.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/St_Kitts_sugar_cane_workers.jpg/800px-St_Kitts_sugar_cane_workers.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Basseterre_St_Kitts.jpg/800px-Basseterre_St_Kitts.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"joseph-n-france","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"SbAezIeONIMAiNt9s63LQ"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"joseph-n-france","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"8nNeNbazdQjw36oRHdyGd"}
