@@ -1,8 +1,13 @@
-:HL["/_next/static/chunks/3vp5-j659_xrb.css","style"]
+:HL["/_next/static/chunks/4008trazigl2d.css","style"]
 :HL["/_next/static/media/2a65768255d6b625-s.p.3u4lli0-axodc.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/797e433ab948586e-s.p.0r6juujl39pe6.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/caa3a2e1cccd8315-s.p.0wgildi0cnwt9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["https://images.unsplash.com/photo-1594391649241-15c26b8969f6?q=80&w=1000&auto=format&fit=crop","image"]
+:HL["https://flagcdn.com/w1280/tt.png","image"]
+:HL["https://commons.wikimedia.org/wiki/Special:FilePath/CLR-James-in-1946.jpg","image"]
+:HL["https://upload.wikimedia.org/wikipedia/commons/e/ee/Eric_Williams_%28cropped%29.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/c/c2/Hasely_Crawford_1975.jpg","image"]
+:HL["https://commons.wikimedia.org/wiki/Special:FilePath/1945_-_Lord_Kitchener.jpg","image"]
+:HL["https://commons.wikimedia.org/wiki/Special:FilePath/Sir_Ellis_Clarke.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/3/3a/TnT_Fyzabad_Uriah_Butler_Statue_%28cropped%29.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"trinidad-tobago","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"1vnbaGAcctu1AE4ec12zb"}
+:HL["https://commons.wikimedia.org/wiki/Special:FilePath/VS_Naipaul_2016_Dhaka.jpg","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"trinidad-tobago","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"SbAezIeONIMAiNt9s63LQ"}

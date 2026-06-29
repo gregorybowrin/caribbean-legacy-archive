@@ -1,7 +1,8 @@
-:HL["/_next/static/chunks/3vp5-j659_xrb.css","style"]
+:HL["/_next/static/chunks/4008trazigl2d.css","style"]
 :HL["/_next/static/media/2a65768255d6b625-s.p.3u4lli0-axodc.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/797e433ab948586e-s.p.0r6juujl39pe6.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/caa3a2e1cccd8315-s.p.0wgildi0cnwt9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=1000&auto=format&fit=crop","image"]
+:HL["https://flagcdn.com/w1280/bl.png","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/d/d9/Bruno_Magras_%28cropped%29.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"st-barths","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"1vnbaGAcctu1AE4ec12zb"}
+:HL["https://upload.wikimedia.org/wikipedia/commons/6/6d/Gustav_III_of_Sweden_1.jpg","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"st-barths","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"SbAezIeONIMAiNt9s63LQ"}

@@ -1,7 +1,12 @@
-:HL["/_next/static/chunks/3vp5-j659_xrb.css","style"]
+:HL["/_next/static/chunks/4008trazigl2d.css","style"]
 :HL["/_next/static/media/2a65768255d6b625-s.p.3u4lli0-axodc.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/797e433ab948586e-s.p.0r6juujl39pe6.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/caa3a2e1cccd8315-s.p.0wgildi0cnwt9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=1000&auto=format&fit=crop","image"]
+:HL["https://flagcdn.com/w1280/jm.png","image"]
+:HL["https://upload.wikimedia.org/wikipedia/commons/7/72/HoratioNelson1.jpg","image"]
+:HL["https://commons.wikimedia.org/wiki/Special:FilePath/Admiral_Sir_Henry_Morgan_(1635%E2%80%931688),_Lieutenant_Governor_of_Jamaica.jpg","image"]
+:HL["https://upload.wikimedia.org/wikipedia/commons/6/65/Cuthbert_Collingwood%2C_Baron_Collingwood_by_Henry_Howard.jpg","image"]
+:HL["https://upload.wikimedia.org/wikipedia/commons/3/36/Hans_Sloane.jpg","image"]
+:HL["https://upload.wikimedia.org/wikipedia/commons/4/4a/Edwardlowepicture.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/7/7d/Sarah_Bennett_%28cropped%29.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"port-royal","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"1vnbaGAcctu1AE4ec12zb"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"port-royal","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"SbAezIeONIMAiNt9s63LQ"}

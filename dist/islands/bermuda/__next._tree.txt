@@ -1,9 +1,10 @@
-:HL["/_next/static/chunks/3vp5-j659_xrb.css","style"]
+:HL["/_next/static/chunks/4008trazigl2d.css","style"]
 :HL["/_next/static/media/2a65768255d6b625-s.p.3u4lli0-axodc.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/797e433ab948586e-s.p.0r6juujl39pe6.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/caa3a2e1cccd8315-s.p.0wgildi0cnwt9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["https://images.unsplash.com/photo-1590373503339-df07172a0c56?q=80&w=1000&auto=format&fit=crop","image"]
+:HL["https://flagcdn.com/w1280/bm.png","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/5/53/Ex-West_Ham_United_footballer_Clyde_Best%2C_Boleyn_Ground_Aug_2012.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/5/51/Earlp8_%28cropped%29.jpg","image"]
+:HL["https://upload.wikimedia.org/wikipedia/commons/e/ec/1930s_Gladys_Misick_Morrell_%26_Sergt_Henderson_%26_table_at_Cavello_Hill%2C_Bermuda.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/c/cc/The_History_of_A_West_Indian_Slave%2C_Mary_Prince_Front_Cover.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"bermuda","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"1vnbaGAcctu1AE4ec12zb"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"bermuda","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"SbAezIeONIMAiNt9s63LQ"}

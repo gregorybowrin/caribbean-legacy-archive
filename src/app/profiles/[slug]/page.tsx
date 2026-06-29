@@ -88,7 +88,7 @@ export default async function ProfileDetailPage({ params }: { params: { slug: st
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
           
           {/* Sidebar / Image */}
-          <div className="lg:col-span-4 space-y-8 lg:sticky lg:top-24 lg:self-start">
+          <div className="lg:col-span-4 space-y-8 lg:sticky lg:top-24 lg:self-start lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
             <div className="flex flex-col items-center">
               <div className="w-full relative border-4 border-white shadow-2xl overflow-hidden aspect-[4/5] bg-sand/10">
                 {figure.image_url ? (
@@ -171,8 +171,8 @@ export default async function ProfileDetailPage({ params }: { params: { slug: st
           {/* Main Content */}
           <div className="lg:col-span-8">
             <header className="mb-12">
-              <h1 className="font-serif text-5xl md:text-6xl text-navy mb-4 leading-tight">{figure.name}</h1>
-              <div className="w-24 h-1 bg-gold"></div>
+              <h1 className="font-serif font-light text-5xl md:text-6xl text-navy mb-4 leading-tight">{figure.name}</h1>
+              <div className="w-24 h-[2px] bg-gold"></div>
             </header>
 
             <section className="prose prose-navy max-w-none">
