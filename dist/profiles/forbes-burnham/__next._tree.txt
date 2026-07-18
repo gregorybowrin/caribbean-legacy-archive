@@ -6,4 +6,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/e/ec/Queens_College_Guyana.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/b/b8/Sir_Richard_Luyt_in_Georgetwon.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/2/29/Tomb_of_President_Forbes_Burnham_%2813919830762%29.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"forbes-burnham","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"8nNeNbazdQjw36oRHdyGd"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"forbes-burnham","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"2ggQ_7h4JQOhgxKSYEVLR"}

@@ -5,4 +5,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/a/a7/Juan_pablo_duarte_diez.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/9/9f/Flag_of_the_Dominican_Republic.svg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/8/8c/Dominican_Republic_location_map.svg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"juan-pablo-duarte","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"8nNeNbazdQjw36oRHdyGd"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"juan-pablo-duarte","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"2ggQ_7h4JQOhgxKSYEVLR"}

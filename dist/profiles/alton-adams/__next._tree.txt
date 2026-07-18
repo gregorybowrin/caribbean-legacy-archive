@@ -5,4 +5,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/b/b3/AltonAdamsPortrait1922.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/AltonAdamsPortrait1922.jpg/440px-AltonAdamsPortrait1922.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/US_Navy_Band_Director%27s_baton.jpg/800px-US_Navy_Band_Director%27s_baton.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"alton-adams","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"8nNeNbazdQjw36oRHdyGd"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"alton-adams","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"2ggQ_7h4JQOhgxKSYEVLR"}

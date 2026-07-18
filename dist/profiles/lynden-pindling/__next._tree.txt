@@ -5,4 +5,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/0/0e/Lynden_Pindling_headshot_1971.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/7/7a/Bahamas_location_map.svg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/e/e0/Lynden_Pindling_headshot_1971.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"lynden-pindling","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"8nNeNbazdQjw36oRHdyGd"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"lynden-pindling","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"2ggQ_7h4JQOhgxKSYEVLR"}

@@ -5,4 +5,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/7/73/Alicia_Alonso_1955.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Alicia_Alonso.jpg/479px-Alicia_Alonso.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Gran_Teatro_de_La_Habana_%28Alicia_Alonso%29.jpg/800px-Gran_Teatro_de_La_Habana_%28Alicia_Alonso%29.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"alicia-alonso","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"8nNeNbazdQjw36oRHdyGd"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"alicia-alonso","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"2ggQ_7h4JQOhgxKSYEVLR"}
