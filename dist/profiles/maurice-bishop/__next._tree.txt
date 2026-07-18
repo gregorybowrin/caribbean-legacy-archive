@@ -5,4 +5,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/d/dc/Maurice_Bishop_%28AP%29.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Grenada.svg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/b/b3/Grenada-locator.png","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"maurice-bishop","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"vQokFMO9HLvmazmQvM9fb"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"maurice-bishop","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"RMwCYqpX_sg0qFRhIMOw0"}

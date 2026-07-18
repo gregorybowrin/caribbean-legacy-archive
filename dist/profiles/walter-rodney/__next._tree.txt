@@ -5,4 +5,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/0/0e/Walter_Rodney_ZOMACHI.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/e/ec/Queens_College_Guyana.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/e/e0/Guyana_map.png","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"walter-rodney","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"vQokFMO9HLvmazmQvM9fb"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"walter-rodney","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"RMwCYqpX_sg0qFRhIMOw0"}
