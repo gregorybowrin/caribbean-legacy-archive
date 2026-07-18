@@ -5,4 +5,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/5/53/Ex-West_Ham_United_footballer_Clyde_Best%2C_Boleyn_Ground_Aug_2012.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Royal_Naval_Dockyard%2C_Bermuda.jpg/800px-Royal_Naval_Dockyard%2C_Bermuda.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Clyde_Best_1978.jpg/800px-Clyde_Best_1978.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"clyde-best","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"2ggQ_7h4JQOhgxKSYEVLR"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"clyde-best","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"vQokFMO9HLvmazmQvM9fb"}

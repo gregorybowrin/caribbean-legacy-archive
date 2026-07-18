@@ -33,4 +33,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/7/7a/Bundesarchiv_Bild_183-B1107-0043-016%2C_Bahamas%2C_Stafford_Sands_und_Dr._Hjalmar_Schacht.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/e/e0/Trefossa.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/5/56/William_Wilson_Harris_2008_%28cropped%29.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"areas","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"culture","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"2ggQ_7h4JQOhgxKSYEVLR"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"areas","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"culture","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"vQokFMO9HLvmazmQvM9fb"}

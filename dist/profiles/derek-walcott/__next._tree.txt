@@ -5,4 +5,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/e/e0/Derek_Walcott.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/e/e1/Vigie_Beach_beside_Castries_airport%2C_St._Lucia_-_panoramio.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/9/9f/Flag_of_Saint_Lucia.svg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"derek-walcott","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"2ggQ_7h4JQOhgxKSYEVLR"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"derek-walcott","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"vQokFMO9HLvmazmQvM9fb"}

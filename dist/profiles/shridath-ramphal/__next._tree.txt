@@ -5,4 +5,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/e/e0/Shridath_Ramphal.JPG","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/2/23/British_Guiana_-_1908_-_WDL.png","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/e/ea/St._Georges_Cathedral_Georgetown%2C_Guyana.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"shridath-ramphal","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"2ggQ_7h4JQOhgxKSYEVLR"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"shridath-ramphal","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"vQokFMO9HLvmazmQvM9fb"}

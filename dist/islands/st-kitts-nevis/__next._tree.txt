@@ -6,8 +6,9 @@
 :HL["https://upload.wikimedia.org/wikipedia/en/6/65/Paul_Southwell.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/en/9/92/Joseph_Nathaniel_France.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/4/4d/Kim_Collins_Berlin_2009.jpg","image"]
+:HL["https://timescaribbeanonline.com/wp-content/uploads/2026/07/ChatGPT-Image-Jul-17-2026-06_36_07-PM.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/en/e/e2/Robert_Llewellyn_Bradshaw.jpg","image"]
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Kennedy_Simmonds.png","image"]
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Tapley_Seaton_2018.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/4/4d/Dr._the_Hon_Simeon_Daniel%2C_first_Premier_of_Nevis.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"st-kitts-nevis","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"2ggQ_7h4JQOhgxKSYEVLR"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"st-kitts-nevis","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"vQokFMO9HLvmazmQvM9fb"}

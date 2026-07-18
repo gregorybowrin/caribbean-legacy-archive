@@ -5,4 +5,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/e/ec/Cola_Debrot%2C_datum_onbekend%2C_Nationaal_Archief%2C_2.24.10.02.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/e/e0/Cola_Debrot.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/b/b1/Flag_of_the_Netherlands_Antilles_%281986%E2%80%932010%29.svg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"cola-debrot-bon","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"2ggQ_7h4JQOhgxKSYEVLR"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"cola-debrot-bon","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"vQokFMO9HLvmazmQvM9fb"}
