@@ -6,4 +6,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/2/29/Janet_Jagan.png","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/e/e7/Young_Janet_Jagan.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/John_R._Neill%2C_noted_illustrator.jpg/960px-John_R._Neill%2C_noted_illustrator.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"janet-jagan","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"cCOvlygIbqPd62JOzS_U5"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"janet-jagan","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"1SxQckCIcCn3ijfYFCHxf"}
