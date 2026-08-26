@@ -8,4 +8,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/0/06/West_India_Regiment%2C_1874.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/6/6c/Philip_Goldson_1965_%28cropped%29.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/2/23/Zee_edgell_250.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"belize","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"7AZM-rFD0WW-gGGg2UgxV"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"belize","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"cCOvlygIbqPd62JOzS_U5"}
