@@ -10,4 +10,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/1/10/Saint-John_Perse_1960.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/e/e0/Simone_Schwarz-Bart_-_Claire_Gaudriot.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Pyle_pirate_marooned.jpg/960px-Pyle_pirate_marooned.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"guadeloupe","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"MfmGEyHBC2Epif5NtTgia"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"guadeloupe","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"ZP1BTmQA0na7uedcwqKB1"}
