@@ -1,4 +1,4 @@
-:HL["/_next/static/chunks/4008trazigl2d.css","style"]
+:HL["/_next/static/chunks/2cl2p3q-_92xr.css","style"]
 :HL["/_next/static/media/2a65768255d6b625-s.p.3u4lli0-axodc.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/797e433ab948586e-s.p.0r6juujl39pe6.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/caa3a2e1cccd8315-s.p.0wgildi0cnwt9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
@@ -13,4 +13,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/1/16/Albert_Helman_%28Lou_Lichtveld%29.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/6/64/Upper_Suriname_River%2C_Suriname_%2812078266544%29.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/e/e0/Trefossa.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"suriname","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"FG1L24t7QafPMeXKif0XC"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"suriname","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"sufehZ-lJxNxmRDqyEWUS"}
