@@ -8,4 +8,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/2/26/Sells_Floto_Circus_Princess_Victoria.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled","image"]
 :HL["https://upload.wikimedia.org/wikipedia/en/3/3a/Rosita_Beatrice_Missick-Butterfield.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/9/95/Premier_Washington_Misick_in_Belize_%28cropped%29.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"tci","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"vKrj6aF5uNMIrMMZ0EPnM"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"tci","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"7AZM-rFD0WW-gGGg2UgxV"}
