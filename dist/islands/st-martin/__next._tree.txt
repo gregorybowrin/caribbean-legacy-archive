@@ -3,7 +3,9 @@
 :HL["/_next/static/media/797e433ab948586e-s.p.0r6juujl39pe6.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/caa3a2e1cccd8315-s.p.0wgildi0cnwt9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["https://flagcdn.com/w1280/mf.png","image"]
+:HL["https://upload.wikimedia.org/wikipedia/en/thumb/e/e1/Grave_of_James_Clarence_Mangan.jpg/960px-Grave_of_James_Clarence_Mangan.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/e/e9/Claude_Wathey_%281984%29.jpg","image"]
+:HL["https://upload.wikimedia.org/wikipedia/commons/c/c5/FC_Basel.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/9/94/Lasana_M_Sekou.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/9/99/Statue_of_freedom_fighter_One-Tete_Lohkay_Sint_Maarten_Dutch_Caribbean.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"st-martin","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"RMwCYqpX_sg0qFRhIMOw0"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"st-martin","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"FG1L24t7QafPMeXKif0XC"}

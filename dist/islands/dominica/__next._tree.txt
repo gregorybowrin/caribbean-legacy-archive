@@ -3,7 +3,8 @@
 :HL["/_next/static/media/797e433ab948586e-s.p.0r6juujl39pe6.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/caa3a2e1cccd8315-s.p.0wgildi0cnwt9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["https://flagcdn.com/w1280/dm.png","image"]
+:HL["https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/C%C3%B3l-lee%2C_a_Band_Chief_Cherokee_by_George_Catlin_%281985.66.285%29_Smithsonian.jpg/960px-C%C3%B3l-lee%2C_a_Band_Chief_Cherokee_by_George_Catlin_%281985.66.285%29_Smithsonian.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/8/87/Eugenia_Charles.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/b/bb/Jean_Rhys_circa_1921.webp","image"]
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Rosie_Douglas_(cropped).jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"dominica","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"RMwCYqpX_sg0qFRhIMOw0"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"dominica","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"FG1L24t7QafPMeXKif0XC"}

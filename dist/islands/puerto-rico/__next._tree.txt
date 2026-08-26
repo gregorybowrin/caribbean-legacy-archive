@@ -3,6 +3,7 @@
 :HL["/_next/static/media/797e433ab948586e-s.p.0r6juujl39pe6.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/caa3a2e1cccd8315-s.p.0wgildi0cnwt9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["https://flagcdn.com/w1280/pr.png","image"]
+:HL["https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Flag_of_the_Puerto_Rican_Nationalist_Party.svg/960px-Flag_of_the_Puerto_Rican_Nationalist_Party.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/3/3a/Retrato_de_EMdeHostos_por_Francisco_Oller.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/en/c/c4/Felia_rincon_de_gautier.JPG","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/d/dd/Puerto_Rico-Francisco_Oller.jpg","image"]
@@ -12,4 +13,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/c/c8/Pedro_Albizu_Campos_in_uniform.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/7/70/Ram%C3%B3n_Betances%2C_c.1860s.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/0/06/Roberto_Clemente.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"puerto-rico","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"RMwCYqpX_sg0qFRhIMOw0"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"puerto-rico","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"FG1L24t7QafPMeXKif0XC"}

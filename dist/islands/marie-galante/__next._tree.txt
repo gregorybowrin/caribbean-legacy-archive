@@ -6,6 +6,7 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/4/4e/Portrait_de_Auguste_Lacour_%28Historien%29.png","image"]
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Statue_de_Joseph_Ignace_Les_Abymes.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/e/e7/Jean_Luc_Raharimanana.jpg","image"]
+:HL["https://upload.wikimedia.org/wikipedia/commons/d/d9/Arabella_mansfield.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/3/3e/Lester_Bird%2C_2014.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/0/0e/Lynden_Pindling_headshot_1971.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"marie-galante","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"RMwCYqpX_sg0qFRhIMOw0"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"marie-galante","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"FG1L24t7QafPMeXKif0XC"}

@@ -2,9 +2,12 @@
 :HL["/_next/static/media/2a65768255d6b625-s.p.3u4lli0-axodc.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/797e433ab948586e-s.p.0r6juujl39pe6.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/caa3a2e1cccd8315-s.p.0wgildi0cnwt9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Anguilla.svg/960px-Flag_of_Anguilla.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
+:HL["https://upload.wikimedia.org/wikipedia/commons/1/12/Leslie_Grossman.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled","image"]
+:HL["https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Osmond%2C_Nebraska_E_side_State_Street_S_from_4th.JPG/960px-Osmond%2C_Nebraska_E_side_State_Street_S_from_4th.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/3/36/Paulette_Nardal.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/6/6c/Philip_Goldson_1965_%28cropped%29.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/5/5c/Rothschild_Francis.png","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/5/58/Arthur_Foulkes_%28cropped%29.jpg","image"]
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Theophilus_Albert_Marryshow.png","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"areas","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"journalism","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"RMwCYqpX_sg0qFRhIMOw0"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"areas","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"journalism","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"FG1L24t7QafPMeXKif0XC"}

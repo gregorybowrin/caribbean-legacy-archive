@@ -4,4 +4,8 @@
 :HL["/_next/static/media/caa3a2e1cccd8315-s.p.0wgildi0cnwt9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["https://flagcdn.com/w1280/um.png","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/f/f5/Charles_Henry_Davis%2C_circa_1860-70.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"navassa","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"RMwCYqpX_sg0qFRhIMOw0"}
+:HL["https://upload.wikimedia.org/wikipedia/commons/e/eb/Adeline_Palmier_Wagoner%2C_Kajiwara_Photo.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled","image"]
+:HL["https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/General_George_Patton_by_Robert_F._Cranston%2C_Lee_Elkins%2C_and_Harry_Warnecke%2C_1945%2C_color_carbro_print%2C_from_the_National_Portrait_Gallery_-_NPG-NPG_95_404Patton-000002.jpg/960px-thumbnail.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
+:HL["https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Serranilla_Bank_ISS008-E-14980.jpg/960px-Serranilla_Bank_ISS008-E-14980.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
+:HL["https://upload.wikimedia.org/wikipedia/commons/b/ba/Peter_duncan_crop.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"navassa","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"FG1L24t7QafPMeXKif0XC"}

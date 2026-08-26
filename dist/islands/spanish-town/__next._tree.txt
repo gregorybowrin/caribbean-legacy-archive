@@ -3,8 +3,13 @@
 :HL["/_next/static/media/797e433ab948586e-s.p.0r6juujl39pe6.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/caa3a2e1cccd8315-s.p.0wgildi0cnwt9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["https://flagcdn.com/w1280/vg.png","image"]
+:HL["https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Enid_Bennett_in_1918_%28SAYRE_5041%29_%28cropped%29.jpg/960px-Enid_Bennett_in_1918_%28SAYRE_5041%29_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
+:HL["https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Pisanello_018.jpg/960px-Pisanello_018.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/3/33/George_William_Gordon_-_photograph_detail.jpg","image"]
+:HL["https://upload.wikimedia.org/wikipedia/commons/0/09/A_coin_of_the_Seal_of_the_Order_of_Canada.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled","image"]
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Sep7_Woman_of_the_Day.png","image"]
+:HL["https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Osmond%2C_Nebraska_E_side_State_Street_S_from_4th.JPG/960px-Osmond%2C_Nebraska_E_side_State_Street_S_from_4th.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/f/f3/Clifford_Campbell.jpg","image"]
+:HL["https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Sir_george_william_1970.jpg/960px-Sir_george_william_1970.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/b/b1/John_Burnet_William_Knibb_John_Scolble.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"spanish-town","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"RMwCYqpX_sg0qFRhIMOw0"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"spanish-town","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"FG1L24t7QafPMeXKif0XC"}
