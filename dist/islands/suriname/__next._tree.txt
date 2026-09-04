@@ -13,4 +13,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/1/16/Albert_Helman_%28Lou_Lichtveld%29.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/6/64/Upper_Suriname_River%2C_Suriname_%2812078266544%29.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/e/e0/Trefossa.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"suriname","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"d2v27GFRMC9PlGSqc0Xyd"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"suriname","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"tqhFIu_KvbdCsdFQKLdJA"}

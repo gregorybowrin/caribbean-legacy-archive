@@ -5,4 +5,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/8/86/PaulBogle-MorantBay.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/2/2c/Paul_Bogle_Monument_Morant_Bay.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/John_R._Neill%2C_noted_illustrator.jpg/960px-John_R._Neill%2C_noted_illustrator.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"paul-bogle","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"d2v27GFRMC9PlGSqc0Xyd"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"paul-bogle","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"tqhFIu_KvbdCsdFQKLdJA"}
