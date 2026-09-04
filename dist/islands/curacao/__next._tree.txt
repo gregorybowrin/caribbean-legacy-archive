@@ -9,4 +9,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/4/40/Manuel_Carlos_Piar_2012_000.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/7/7f/Moises_da_Costa_Gomez%281960%29_%28cropped%29.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/b/bc/Portret_di_Tula_website_up_Wikimedia.JPG","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"curacao","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"8tdI9iK_92XD8LvXCvGIH"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"curacao","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"WppFQMUkXS0Oqk7sgoG8_"}

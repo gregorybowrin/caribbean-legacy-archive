@@ -32,7 +32,6 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/e/ec/1930s_Gladys_Misick_Morrell_%26_Sergt_Henderson_%26_table_at_Cavello_Hill%2C_Bermuda.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/1/1c/Hugh_Mulzac.jpg","image"]
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Statue_de_Joseph_Ignace_Les_Abymes.jpg","image"]
-:HL["https://upload.wikimedia.org/wikipedia/commons/6/66/C_de_Castro_and_I_Fonseca_-_busts.JPG","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/a/ad/Jagernath_Lachmon_1975.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/8/8b/Janet_Jagan.png","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Top_Mission_Street%2C_Codrington%2C_Barbuda.jpg/960px-Top_Mission_Street%2C_Codrington%2C_Barbuda.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
@@ -86,4 +85,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/b/bc/Portret_di_Tula_website_up_Wikimedia.JPG","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/7/7b/William_Henry_Bramble.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/b/b1/John_Burnet_William_Knibb_John_Scolble.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"areas","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"civil-rights","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"8tdI9iK_92XD8LvXCvGIH"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"areas","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"civil-rights","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"WppFQMUkXS0Oqk7sgoG8_"}

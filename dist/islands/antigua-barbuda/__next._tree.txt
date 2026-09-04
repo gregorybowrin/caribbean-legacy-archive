@@ -2,4 +2,13 @@
 :HL["/_next/static/media/2a65768255d6b625-s.p.3u4lli0-axodc.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/797e433ab948586e-s.p.0r6juujl39pe6.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/caa3a2e1cccd8315-s.p.0wgildi0cnwt9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"antigua-barbuda","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"8tdI9iK_92XD8LvXCvGIH"}
+:HL["https://flagcdn.com/w1280/ag.png","image"]
+:HL["https://upload.wikimedia.org/wikipedia/en/c/c4/Dame_Nellie_Robinson.jpg","image"]
+:HL["https://commons.wikimedia.org/wiki/Special:FilePath/Dame_Gwendolyn_Moreen_Tonge_and_Sheila_Roseau.jpg","image"]
+:HL["https://upload.wikimedia.org/wikipedia/commons/f/fb/Jamaica_Kincaid_2019.jpg","image"]
+:HL["https://upload.wikimedia.org/wikipedia/commons/0/08/Prince_Klaas.jpg","image"]
+:HL["https://upload.wikimedia.org/wikipedia/commons/f/f8/Sir_Ernest_Rutherford_LCCN2014716719_-_restoration1.jpg","image"]
+:HL["https://upload.wikimedia.org/wikipedia/commons/7/77/Vere_Bird_1986_%28cropped%29.jpg","image"]
+:HL["https://upload.wikimedia.org/wikipedia/commons/1/1d/Viv_Richards.jpg","image"]
+:HL["https://upload.wikimedia.org/wikipedia/commons/2/23/Wilfred_Jacobs%2C_Governor_of_Antigua.jpg","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"antigua-barbuda","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"WppFQMUkXS0Oqk7sgoG8_"}

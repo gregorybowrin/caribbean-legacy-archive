@@ -11,4 +11,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/4/40/Norman_Manley%2C_The_Miami_Herald_1955_08_04_%28cropped%29.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/8/86/PaulBogle-MorantBay.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Samsharpe.JPG/960px-Samsharpe.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"jamaica","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"8tdI9iK_92XD8LvXCvGIH"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"jamaica","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"WppFQMUkXS0Oqk7sgoG8_"}

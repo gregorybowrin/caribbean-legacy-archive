@@ -8,4 +8,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/0/06/Roberto_Clemente.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/a/a5/Sir_Garry_Sobers_2012.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/1/1d/Viv_Richards.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"areas","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"sports","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"8tdI9iK_92XD8LvXCvGIH"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"areas","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"sports","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"WppFQMUkXS0Oqk7sgoG8_"}
