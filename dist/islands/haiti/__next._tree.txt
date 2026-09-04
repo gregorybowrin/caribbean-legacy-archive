@@ -12,4 +12,4 @@
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Timbre_ha%C3%AFtien_de_50_centimes_de_gourdes.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/2/29/Sanit%C3%A9_Belair_2.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/2/23/Toussaint_Louverture_-_Girardin.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"haiti","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"ZP1BTmQA0na7uedcwqKB1"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"haiti","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"2TA-h3Iw4RR44VzplAW2-"}
