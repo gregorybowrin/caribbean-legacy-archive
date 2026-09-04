@@ -6,4 +6,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/7/77/Hugh_Mulzac.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/4/4b/SS_Booker_T._Washington.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/John_R._Neill%2C_noted_illustrator.jpg/960px-John_R._Neill%2C_noted_illustrator.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"hugh-mulzac","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"kt5WtHE_kST41S1sxSZJv"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"hugh-mulzac","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"d2v27GFRMC9PlGSqc0Xyd"}
