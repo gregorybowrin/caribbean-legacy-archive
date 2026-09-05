@@ -13,4 +13,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/d/dd/Jos%C3%A9_Mart%C3%AD_retrato_m%C3%A1s_conocido_Jamaica_1892.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/5/5f/MaximoGomezBaez2.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/5/5f/Nicol%C3%A1sGuill%C3%A9n-1942.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"cuba","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"GUPywrVZZoGL51J0j2d22"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"cuba","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"gHuTk_6wL5e_ywgHZNohu"}
