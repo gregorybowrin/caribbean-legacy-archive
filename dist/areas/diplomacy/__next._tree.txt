@@ -6,4 +6,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/6/6d/Forbes_Burnham_%281966%29.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/e/e0/Shridath_Ramphal.JPG","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/2/29/Sidney_Poitier_1968.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"areas","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"diplomacy","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"BkfobOlbARpY29aY31LEu"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"areas","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"diplomacy","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"94bN_0YzE79tYcK65e0z7"}
