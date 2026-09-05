@@ -9,4 +9,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/d/dc/Maurice_Bishop_%28AP%29.jpg","image"]
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Eric_Gairy_Profile.jpg","image"]
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Theophilus_Albert_Marryshow.png","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"grenada","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"gHuTk_6wL5e_ywgHZNohu"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"grenada","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"upWmPsO9qBXFT4Bd6SuDi"}
