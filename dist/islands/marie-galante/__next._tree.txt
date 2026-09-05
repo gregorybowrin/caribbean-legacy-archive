@@ -8,4 +8,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/e/e7/Jean_Luc_Raharimanana.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/d/d9/Arabella_mansfield.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/0/0e/Lynden_Pindling_headshot_1971.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"marie-galante","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"IyFnP-bX8i78ypXziYj-I"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"marie-galante","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"RhjoyTDEdPnV0jOf992SN"}
