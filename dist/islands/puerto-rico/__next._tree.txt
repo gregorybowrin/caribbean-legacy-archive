@@ -13,4 +13,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/c/c8/Pedro_Albizu_Campos_in_uniform.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/7/70/Ram%C3%B3n_Betances%2C_c.1860s.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/0/06/Roberto_Clemente.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"puerto-rico","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"94bN_0YzE79tYcK65e0z7"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"puerto-rico","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"VN1zVKM5nkzymcigTHmI_"}

@@ -146,4 +146,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/9/95/Premier_Washington_Misick_in_Belize_%28cropped%29.jpg","image"]
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/WillJohnsonSaba.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/7/7b/William_Henry_Bramble.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"areas","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"politics","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"94bN_0YzE79tYcK65e0z7"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"areas","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"politics","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"VN1zVKM5nkzymcigTHmI_"}
