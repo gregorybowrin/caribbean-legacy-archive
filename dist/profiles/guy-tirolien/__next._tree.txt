@@ -5,4 +5,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/7/74/Guadeloupe_department_relief_location_map.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/c/c9/Map-guadeloupe.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/John_R._Neill%2C_noted_illustrator.jpg/960px-John_R._Neill%2C_noted_illustrator.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"guy-tirolien","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"upWmPsO9qBXFT4Bd6SuDi"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"guy-tirolien","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"wekJMvJifOYP6t4LUe5Pf"}
