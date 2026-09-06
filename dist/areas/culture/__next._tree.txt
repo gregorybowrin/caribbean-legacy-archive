@@ -8,7 +8,6 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/4/49/Andy_Palacio.jpg","image"]
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Louis_George_and_Athneal_Ollivierre_(Whaler_of_Bequia,_1960s).jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/2/21/BankieBanx.jpg","image"]
-:HL["https://upload.wikimedia.org/wikipedia/commons/f/f2/Keith_Benson_with_Oakland_in_2009.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/2/2d/Bob_Marley_1976_press_photo.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/f/fb/Janelle_Sarauw.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Byrnside-Beirne-Johnson_House.jpg/960px-Byrnside-Beirne-Johnson_House.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
@@ -51,4 +50,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/e/e0/Trefossa.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Pavillon_de_Flore_from_Tuileries%2C_Paris_October_2011_001.jpg/960px-Pavillon_de_Flore_from_Tuileries%2C_Paris_October_2011_001.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/5/56/William_Wilson_Harris_2008_%28cropped%29.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"areas","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"culture","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"SHG4AvhmDYRLuzP6NefjV"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"areas","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"culture","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"KwWhWDP0WbVqzv-O3s3QJ"}

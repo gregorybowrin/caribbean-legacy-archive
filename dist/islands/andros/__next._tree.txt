@@ -3,7 +3,6 @@
 :HL["/_next/static/media/797e433ab948586e-s.p.0r6juujl39pe6.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/caa3a2e1cccd8315-s.p.0wgildi0cnwt9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["https://flagcdn.com/w1280/bs.png","image"]
-:HL["https://upload.wikimedia.org/wikipedia/commons/f/f2/Keith_Benson_with_Oakland_in_2009.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled","image"]
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Captain_John_Smith.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Byrnside-Beirne-Johnson_House.jpg/960px-Byrnside-Beirne-Johnson_House.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Ned_Turner_1818.PNG","image"]
@@ -11,4 +10,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/2/25/Carlotta_Walls_LaNier.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Jesse_Jackson%2C_half-length_portrait_of_Jackson_seated_at_a_table%2C_July_1%2C_1983_edit.jpg/960px-Jesse_Jackson%2C_half-length_portrait_of_Jackson_seated_at_a_table%2C_July_1%2C_1983_edit.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/a/a2/Anna_Nicole_Smith.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"andros","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"SHG4AvhmDYRLuzP6NefjV"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"andros","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"KwWhWDP0WbVqzv-O3s3QJ"}

@@ -13,7 +13,6 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/4/4e/Portrait_de_Auguste_Lacour_%28Historien%29.png","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Heraldic_Crown_of_Spanish_Barons.svg/960px-Heraldic_Crown_of_Spanish_Barons.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/1/11/Stuart-Little_logo.PNG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled","image"]
-:HL["https://upload.wikimedia.org/wikipedia/commons/f/f2/Keith_Benson_with_Oakland_in_2009.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/4/4e/Boni_kleur.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/a/a9/Segundo_%28Boy%29_Ecury_%281922-1944%29.jpg","image"]
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Admiral_Sir_Henry_Morgan_(1635%E2%80%931688),_Lieutenant_Governor_of_Jamaica.jpg","image"]
@@ -96,4 +95,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/b/b1/John_Burnet_William_Knibb_John_Scolble.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/8/81/Gilbert_Stuart%2C_William_Thornton%2C_1804%2C_NGA_1119.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Hopetown-lighthouse.jpg/960px-Hopetown-lighthouse.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"areas","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"history","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"SHG4AvhmDYRLuzP6NefjV"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"areas","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"history","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"KwWhWDP0WbVqzv-O3s3QJ"}
