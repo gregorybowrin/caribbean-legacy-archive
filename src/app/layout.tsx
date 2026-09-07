@@ -25,6 +25,7 @@ export const metadata: Metadata = {
 };
 
 import CookieConsent from "@/components/layout/CookieConsent";
+import BackToTop from "@/components/ui/BackToTop";
 import { GoogleAnalytics } from '@next/third-parties/google';
 
 export default function RootLayout({
@@ -43,6 +44,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <CookieConsent />
+        <BackToTop />
         
         {/* Google Analytics */}
         <GoogleAnalytics gaId="G-ZSKBN6Y1GQ" />
