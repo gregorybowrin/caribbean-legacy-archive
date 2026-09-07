@@ -90,9 +90,30 @@ export default async function ProfileDetailPage({ params }: { params: { slug: st
     return ((a.name.charCodeAt(0) * seed) % 10) - ((b.name.charCodeAt(0) * seed) % 10);
   }).slice(0, 2);
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: figure.name,
+    image: figure.image_url || 'https://caribbeanlegacyarchive.com/og-image.jpg',
+    description: figure.bio ? figure.bio.substring(0, 160) + '...' : `Biography of ${figure.name}`,
+    birthDate: figure.birth_date ? new Date(figure.birth_date).toISOString().split('T')[0] : undefined,
+    deathDate: figure.death_date ? new Date(figure.death_date).toISOString().split('T')[0] : undefined,
+    nationality: figure.islands ? {
+      '@type': 'Country',
+      name: figure.islands.name
+    } : undefined,
+    jobTitle: figure.figure_areas?.map(fa => fa.areas?.name).filter(Boolean) || undefined,
+    url: `https://caribbeanlegacyarchive.com/profiles/${figure.slug}`
+  };
+
   return (
-    <div className="bg-ivory min-h-screen">
-      {/* Breadcrumbs */}
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <div className="bg-ivory min-h-screen">
+        {/* Breadcrumbs */}
       <div className="bg-sand/30 border-b border-gold/10 py-3">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="text-[10px] uppercase tracking-widest flex items-center space-x-2 text-navy/40">
@@ -294,5 +315,6 @@ export default async function ProfileDetailPage({ params }: { params: { slug: st
         </div>
       </article>
     </div>
+    </>
   );
 }
