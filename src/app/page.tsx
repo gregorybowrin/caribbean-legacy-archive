@@ -75,7 +75,7 @@ export default async function Home() {
               Discover the pioneers, leaders, and creatives who shaped distinct fields of Caribbean history.
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {areas.map((area) => (
               <Link 
                 key={area.id} 
