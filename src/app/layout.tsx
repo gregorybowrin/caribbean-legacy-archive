@@ -25,6 +25,7 @@ export const metadata: Metadata = {
 };
 
 import CookieConsent from "@/components/layout/CookieConsent";
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 export default function RootLayout({
   children,
@@ -42,6 +43,9 @@ export default function RootLayout({
         </main>
         <Footer />
         <CookieConsent />
+        
+        {/* Google Analytics - Uses env variable or falls back to an empty string to prevent crashes if missing */}
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || ""} />
       </body>
     </html>
   );
