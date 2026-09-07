@@ -105,7 +105,7 @@ export default async function ProfileDetailPage({ params }: { params: { slug: st
         </div>
       </div>
 
-      <article className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-12 lg:py-16">
+      <article className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-2 pb-12 lg:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
           
           {/* Sidebar / Image */}
