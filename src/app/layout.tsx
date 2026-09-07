@@ -25,6 +25,7 @@ export const metadata: Metadata = {
 };
 
 import MaintenanceMode from "@/components/auth/MaintenanceMode";
+import CookieConsent from "@/components/layout/CookieConsent";
 
 export default function RootLayout({
   children,
@@ -42,6 +43,7 @@ export default function RootLayout({
             {children}
           </main>
           <Footer />
+          <CookieConsent />
         </MaintenanceMode>
       </body>
     </html>
