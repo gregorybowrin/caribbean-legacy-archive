@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { Search, Menu, X } from 'lucide-react';
+import { Search, Menu, X, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 
 export default function Navbar() {
@@ -44,6 +44,20 @@ export default function Navbar() {
               Legacy Map
             </Link>
             <Link href="/areas" className="text-sm font-medium hover:text-gold transition-colors">Areas of Influence</Link>
+            
+            {/* About Dropdown */}
+            <div className="relative group cursor-pointer py-6">
+              <span className="text-sm font-medium hover:text-gold transition-colors flex items-center gap-1">
+                About
+                <ChevronDown className="h-3 w-3 transition-transform group-hover:rotate-180" />
+              </span>
+              <div className="absolute left-0 top-[60px] w-48 bg-navy border border-gold/20 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                <Link href="/about" className="block px-4 py-3 text-sm text-ivory hover:bg-gold hover:text-navy transition-colors border-b border-gold/10">About the Archive</Link>
+                <Link href="/about/inclusion-criteria" className="block px-4 py-3 text-sm text-ivory hover:bg-gold hover:text-navy transition-colors border-b border-gold/10">Inclusion Criteria</Link>
+                <Link href="/contact" className="block px-4 py-3 text-sm text-ivory hover:bg-gold hover:text-navy transition-colors">Nominate a Person</Link>
+              </div>
+            </div>
+
             <div className="relative group">
               <input 
                 type="text" 
@@ -80,6 +94,16 @@ export default function Navbar() {
             Legacy Map
           </Link>
           <Link href="/areas" className="block text-lg font-serif text-ivory hover:text-gold">Areas of Influence</Link>
+          
+          <div className="pt-2 pb-2 border-y border-gold/10 my-2">
+            <span className="block text-lg font-serif text-gold mb-2">About</span>
+            <div className="pl-4 space-y-3">
+              <Link href="/about" className="block text-ivory hover:text-gold">About the Archive</Link>
+              <Link href="/about/inclusion-criteria" className="block text-ivory hover:text-gold">Inclusion Criteria</Link>
+              <Link href="/contact" className="block text-ivory hover:text-gold">Nominate a Person</Link>
+            </div>
+          </div>
+
           <div className="relative mt-4">
             <input 
               type="text" 
