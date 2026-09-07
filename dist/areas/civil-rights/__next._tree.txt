@@ -1,12 +1,11 @@
 :HL["/_next/static/chunks/1qagabxxlx80e.css","style"]
-:HL["/_next/static/chunks/16rwmha1oexal.css","style"]
+:HL["/_next/static/chunks/3mv2k-emss3mu.css","style"]
 :HL["/_next/static/media/2a65768255d6b625-s.p.3u4lli0-axodc.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/797e433ab948586e-s.p.0r6juujl39pe6.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/caa3a2e1cccd8315-s.p.0wgildi0cnwt9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["https://upload.wikimedia.org/wikipedia/commons/0/04/Aime_Cesaire_2003.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/f/fa/DeKom1924_%28cropped%2C_altered%29.jpg","image"]
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Antonio_Maceo.jpg","image"]
-:HL["https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Flag_of_the_Puerto_Rican_Nationalist_Party.svg/960px-Flag_of_the_Puerto_Rican_Nationalist_Party.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/4/4e/Boni_kleur.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/a/a9/Segundo_%28Boy%29_Ecury_%281922-1944%29.jpg","image"]
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Bussa_statue.png","image"]
@@ -42,7 +41,6 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/7/71/Julien-Fedon.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/8/8d/Nilda_Garr%C3%A9_2011.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/e/e7/Miguel_Pourier1978_CROP.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled","image"]
-:HL["https://upload.wikimedia.org/wikipedia/commons/1/12/Leslie_Grossman.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/7/78/Lola_Rodriguez_de_Tio.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/0/00/Buste_Louis_Delgr%C3%A8s_%C3%A0_Petit-Bourg.JPG","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/0/06/West_India_Regiment%2C_1874.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled","image"]
@@ -84,4 +82,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/b/bc/Portret_di_Tula_website_up_Wikimedia.JPG","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/7/7b/William_Henry_Bramble.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/b/b1/John_Burnet_William_Knibb_John_Scolble.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"areas","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"civil-rights","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"TZENYpqzRe1ZA9aYQNj3v"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"areas","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"civil-rights","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"MDFTgRC7meriyYz9t-DaE"}

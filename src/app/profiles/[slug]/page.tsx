@@ -130,7 +130,7 @@ export default async function ProfileDetailPage({ params }: { params: { slug: st
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
           
           {/* Sidebar / Image */}
-          <div className="lg:col-span-4 space-y-8 lg:sticky lg:top-24 lg:self-start lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+          <div className="lg:col-span-4 space-y-8 lg:sticky lg:top-24 lg:self-start lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto lg:pr-4 lg:pb-12 custom-scrollbar">
             <div className="flex flex-col items-center">
               <div className="w-full relative border-4 border-white shadow-2xl overflow-hidden aspect-[4/5] bg-sand/10">
                 {figure.image_url ? (

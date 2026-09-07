@@ -1,5 +1,5 @@
 :HL["/_next/static/chunks/1qagabxxlx80e.css","style"]
-:HL["/_next/static/chunks/16rwmha1oexal.css","style"]
+:HL["/_next/static/chunks/3mv2k-emss3mu.css","style"]
 :HL["/_next/static/media/2a65768255d6b625-s.p.3u4lli0-axodc.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/797e433ab948586e-s.p.0r6juujl39pe6.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/caa3a2e1cccd8315-s.p.0wgildi0cnwt9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
@@ -7,4 +7,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Graf_Sophie_Redmond_Marius_Rust.jpg/800px-Graf_Sophie_Redmond_Marius_Rust.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/a/ad/Jagernath_Lachmon_1975.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/5/57/Minister-President_Pengel_profil_1963_%28cropped%29.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"sophie-redmond","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"TZENYpqzRe1ZA9aYQNj3v"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"sophie-redmond","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"MDFTgRC7meriyYz9t-DaE"}

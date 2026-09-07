@@ -33,3 +33,20 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Elegant custom scrollbar for fixed sidebars */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--color-gold);
+  border-radius: 10px;
+  opacity: 0.5;
+}
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-gold) transparent;
+}

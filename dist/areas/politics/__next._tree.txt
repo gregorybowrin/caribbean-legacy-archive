@@ -1,5 +1,5 @@
 :HL["/_next/static/chunks/1qagabxxlx80e.css","style"]
-:HL["/_next/static/chunks/16rwmha1oexal.css","style"]
+:HL["/_next/static/chunks/3mv2k-emss3mu.css","style"]
 :HL["/_next/static/media/2a65768255d6b625-s.p.3u4lli0-axodc.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/797e433ab948586e-s.p.0r6juujl39pe6.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/caa3a2e1cccd8315-s.p.0wgildi0cnwt9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
@@ -12,7 +12,6 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/f/fa/DeKom1924_%28cropped%2C_altered%29.jpg","image"]
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Antonio_Maceo.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Anguilla.svg/960px-Flag_of_Anguilla.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
-:HL["https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Flag_of_the_Puerto_Rican_Nationalist_Party.svg/960px-Flag_of_the_Puerto_Rican_Nationalist_Party.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/d/d9/Bruno_Magras_%28cropped%29.jpg","image"]
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/CLR-James-in-1946.jpg","image"]
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Admiral_Sir_Henry_Morgan_(1635%E2%80%931688),_Lieutenant_Governor_of_Jamaica.jpg","image"]
@@ -91,7 +90,6 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/e/ec/Cola_Debrot%2C_datum_onbekend%2C_Nationaal_Archief%2C_2.24.10.02.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/1/11/Yr_Athro_Noel_Lloyd.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/4/40/Norman_Manley%2C_The_Miami_Herald_1955_08_04_%28cropped%29.jpg","image"]
-:HL["https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Osmond%2C_Nebraska_E_side_State_Street_S_from_4th.JPG/960px-Osmond%2C_Nebraska_E_side_State_Street_S_from_4th.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
 :HL["https://upload.wikimedia.org/wikipedia/en/8/8b/Paul_Adderley%2C_Governor_General.jpeg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/8/86/PaulBogle-MorantBay.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/a/a9/St%C3%A9phane_Lenormand%2C_President_of_the_Territorial_Council_of_Saint-Pierre-et-Miquelon_-_2017_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled","image"]
@@ -103,8 +101,8 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Cessna_208B_Grand_Caravan_AN2096268.jpg/960px-Cessna_208B_Grand_Caravan_AN2096268.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/8/80/Rrmenil.jpg","image"]
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Hon._Reuben_T._Meade.jpg","image"]
-:HL["https://upload.wikimedia.org/wikipedia/commons/6/6e/Dr._Denzil_Douglas%2C_Prime_Minister_of_St._Kitts_and_Nevis_holds_the_Queen%27s_Baton_2010_Delhi_standing_in_front_of_the_monument_of_the_right%2C_Sir_Robert_Llewellyn_Bradshaw%2C_National_Hero_of_St._Kitts_and_Nevis.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/en/e/e2/Robert_Llewellyn_Bradshaw.jpg","image"]
+:HL["https://upload.wikimedia.org/wikipedia/commons/6/6e/Dr._Denzil_Douglas%2C_Prime_Minister_of_St._Kitts_and_Nevis_holds_the_Queen%27s_Baton_2010_Delhi_standing_in_front_of_the_monument_of_the_right%2C_Sir_Robert_Llewellyn_Bradshaw%2C_National_Hero_of_St._Kitts_and_Nevis.jpg","image"]
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Milton_Cato_1982.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/a/ab/RobertRogers.jpeg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled","image"]
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Rosie_Douglas_(cropped).jpg","image"]
@@ -142,4 +140,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/9/95/Premier_Washington_Misick_in_Belize_%28cropped%29.jpg","image"]
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/WillJohnsonSaba.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/7/7b/William_Henry_Bramble.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"areas","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"politics","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"TZENYpqzRe1ZA9aYQNj3v"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"areas","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"politics","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"MDFTgRC7meriyYz9t-DaE"}
