@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Search, Landmark, Globe } from 'lucide-react';
 import { getFigures, getIslands, getAreas } from '@/lib/api';
+import { ISLAND_FLAGS } from '@/lib/flags';
 import HomeSearch from '@/components/home/HomeSearch';
 
 export default async function Home() {
@@ -96,7 +97,16 @@ export default async function Home() {
                     href={`/islands/${island.slug}`}
                     className="p-6 bg-white border border-gold/20 hover:border-gold hover:bg-gold/5 transition-all group"
                   >
-                    <h3 className="font-serif text-lg text-navy group-hover:text-gold transition-colors">{island.name}</h3>
+                    <div className="flex items-center gap-3 mb-2">
+                      {ISLAND_FLAGS[island.slug] && (
+                        <img 
+                          src={`https://flagcdn.com/w40/${ISLAND_FLAGS[island.slug]}.png`}
+                          alt={`${island.name} Flag`}
+                          className="w-6 h-auto rounded-sm shadow-sm border border-navy/10"
+                        />
+                      )}
+                      <h3 className="font-serif text-lg text-navy group-hover:text-gold transition-colors">{island.name}</h3>
+                    </div>
                     <span className="text-[10px] text-navy/40 uppercase tracking-widest">Explore Profiles</span>
                   </Link>
                 ))}

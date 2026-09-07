@@ -1,56 +1,21 @@
-export const getIslandFlag = (islandName: string | undefined): string => {
-  if (!islandName) return '';
-  const map: Record<string, string> = {
-    'Antigua and Barbuda': '🇦🇬',
-    'Saint Lucia': '🇱🇨',
-    'The Bahamas': '🇧🇸',
-    'Saint Vincent & the Grenadines': '🇻🇨',
-    'Jamaica': '🇯🇲',
-    'Trinidad & Tobago': '🇹🇹',
-    'Grenada': '🇬🇩',
-    'Guyana': '🇬🇾',
-    'Saint Kitts and Nevis': '🇰🇳',
-    'Montserrat': '🇲🇸',
-    'Bermuda': '🇧🇲',
-    'Belize': '🇧🇿',
-    'Anguilla': '🇦🇮',
-    'The Cayman Islands': '🇰🇾',
-    'The British Virgin Islands': '🇻🇬',
-    'Turks & Caicos Islands': '🇹🇨',
-    'United States Virgin Islands': '🇻🇮',
-    'Aruba': '🇦🇼',
-    'Haiti': '🇭🇹',
-    'Dominican Republic': '🇩🇴',
-    'Puerto Rico': '🇵🇷',
-    'Cuba': '🇨🇺',
-    'Curaçao': '🇨🇼',
-    'Suriname': '🇸🇷',
-    'Barbados': '🇧🇧',
-    'Dominica': '🇩🇲',
-    'Saint Martin / Sint Maarten': '🇸🇽',
-    'Guadeloupe': '🇬🇵',
-    'Martinique': '🇲🇶',
-    'Bonaire': '🇧🇶',
-    'Saint Barthélemy': '🇧🇱',
-    'Saba': '🇧🇶',
-    'Sint Eustatius': '🇧🇶',
-    'Saint Pierre and Miquelon': '🇵🇲',
-    'The Grenadines': '🇻🇨',
-    'Tortola': '🇻🇬',
-    'Eleuthera': '🇧🇸',
-    'Spanish Town': '🇯🇲',
-    'Carriacou & Petite Martinique': '🇬🇩',
-    'Navassa Island': '🇺🇸',
-    'Andros': '🇧🇸',
-    'Port Royal': '🇯🇲',
-    'The Inagua Islands': '🇧🇸',
-    'Barbuda': '🇦🇬',
-    'Nevis': '🇰🇳',
-    'Grand Bahama': '🇧🇸',
-    'Exuma': '🇧🇸',
-    'Saint Pierre': '🇵🇲',
-    'Marie-Galante': '🇬🇵',
-    'Abaco': '🇧🇸'
-  };
-  return map[islandName] || '';
+export const ISLAND_FLAGS: Record<string, string> = {
+  'anguilla': 'ai', 'antigua-barbuda': 'ag', 'barbuda': 'ag', 'aruba': 'aw',
+  'bahamas': 'bs', 'the-bahamas': 'bs', 'eleuthera': 'bs', 'andros': 'bs',
+  'inagua': 'bs', 'grand-bahama': 'bs', 'exuma': 'bs', 'abaco': 'bs',
+  'barbados': 'bb', 'british-virgin-islands': 'vg', 'bvi': 'vg', 'tortola': 'vg',
+  'spanish-town': 'vg', 'cayman-islands': 'ky', 'cuba': 'cu', 'curacao': 'cw',
+  'dominica': 'dm', 'dominican-republic': 'do', 'grenada': 'gd', 'carriacou-pm': 'gd',
+  'guadeloupe': 'gp', 'marie-galante': 'gp', 'haiti': 'ht', 'jamaica': 'jm',
+  'port-royal': 'jm', 'martinique': 'mq', 'montserrat': 'ms', 'puerto-rico': 'pr',
+  'saint-kitts-nevis': 'kn', 'st-kitts-nevis': 'kn', 'nevis': 'kn', 'saint-lucia': 'lc',
+  'saint-vincent-grenadines': 'vc', 'st-vincent': 'vc', 'grenadines': 'vc',
+  'trinidad-tobago': 'tt', 'turks-caicos': 'tc', 'tci': 'tc', 'us-virgin-islands': 'vi',
+  'usvi': 'vi', 'guyana': 'gy', 'belize': 'bz', 'bermuda': 'bm', 'suriname': 'sr',
+  'st-martin': 'mf', 'st-barths': 'bl', 'bonaire': 'bq', 'saba': 'bq', 'st-eustatius': 'bq',
+  'spm': 'pm', 'saint-pierre': 'pm', 'navassa': 'um'
 };
+
+export function getIslandFlag(slug: string | undefined): string | null {
+  if (!slug || !ISLAND_FLAGS[slug]) return null;
+  return `https://flagcdn.com/w40/${ISLAND_FLAGS[slug]}.png`;
+}
