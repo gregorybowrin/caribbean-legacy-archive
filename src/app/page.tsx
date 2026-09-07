@@ -64,64 +64,69 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Browse By Category */}
-      <section className="py-24 bg-sand/30 border-y border-gold/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            {/* Islands */}
-            <div>
-              <div className="flex items-center mb-8">
-                <Globe className="h-6 w-6 text-tropical-green mr-4" />
-                <h2 className="font-serif text-3xl text-navy">Browse by Island</h2>
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                {islands.map((island) => (
-                  <Link 
-                    key={island.id} 
-                    href={`/islands/${island.slug}`}
-                    className="p-6 bg-white border border-gold/20 hover:border-gold hover:bg-gold/5 transition-all group"
-                  >
-                    <div className="flex items-center gap-3 mb-2">
-                      {ISLAND_FLAGS[island.slug] && (
-                        <img 
-                          src={`https://flagcdn.com/w40/${ISLAND_FLAGS[island.slug]}.png`}
-                          alt={`${island.name} Flag`}
-                          className="w-6 h-auto rounded-sm shadow-sm border border-navy/10"
-                        />
-                      )}
-                      <h3 className="font-serif text-lg text-navy group-hover:text-gold transition-colors">{island.name}</h3>
-                    </div>
-                    <span className="text-[10px] text-navy/40 uppercase tracking-widest">Explore Profiles</span>
-                  </Link>
-                ))}
-                <div className="p-6 border border-dashed border-gold/30 flex items-center justify-center opacity-50">
-                  <span className="text-xs uppercase tracking-widest">More Islands Soon</span>
-                </div>
-              </div>
-            </div>
+      {/* Areas of Influence */}
+      <section className="py-24 bg-navy border-y border-gold/20 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/paper-fibers.png')]"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="flex flex-col items-center text-center mb-16">
+            <Landmark className="h-10 w-10 text-gold mb-6" />
+            <h2 className="font-serif text-4xl text-ivory">Areas of Influence</h2>
+            <p className="text-ivory/70 mt-4 max-w-2xl font-light text-lg">
+              Discover the pioneers, leaders, and creatives who shaped distinct fields of Caribbean history.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {areas.map((area) => (
+              <Link 
+                key={area.id} 
+                href={`/areas/${area.slug}`}
+                className="p-8 bg-white/5 border border-gold/20 hover:border-gold hover:bg-gold/10 transition-all duration-300 group flex flex-col items-center text-center backdrop-blur-sm"
+              >
+                <h3 className="font-serif text-xl text-ivory group-hover:text-gold transition-colors">{area.name}</h3>
+                <div className="mt-4 w-8 h-[1px] bg-gold/50 group-hover:w-16 transition-all duration-300"></div>
+                <span className="text-[10px] text-ivory/50 uppercase tracking-widest mt-4 block">View Figures</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            {/* Areas */}
-            <div>
-              <div className="flex items-center mb-8">
-                <Landmark className="h-6 w-6 text-gold mr-4" />
-                <h2 className="font-serif text-3xl text-navy">Areas of Influence</h2>
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                {areas.map((area) => (
-                  <Link 
-                    key={area.id} 
-                    href={`/areas/${area.slug}`}
-                    className="p-6 bg-white border border-gold/20 hover:border-gold hover:bg-gold/5 transition-all group"
-                  >
-                    <h3 className="font-serif text-lg text-navy group-hover:text-gold transition-colors">{area.name}</h3>
-                    <span className="text-[10px] text-navy/40 uppercase tracking-widest">View Figures</span>
-                  </Link>
-                ))}
-                <div className="p-6 border border-dashed border-gold/30 flex items-center justify-center opacity-50">
-                  <span className="text-xs uppercase tracking-widest">More Categories</span>
-                </div>
-              </div>
-            </div>
+      {/* Browse by Territory */}
+      <section className="py-24 bg-sand/30 border-b border-gold/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col items-center text-center mb-16">
+            <Globe className="h-10 w-10 text-tropical-green mb-6" />
+            <h2 className="font-serif text-4xl text-navy">Browse by Territory</h2>
+            <p className="text-navy/60 mt-4 max-w-2xl font-light text-lg">
+              Explore our vast collection categorized by Caribbean nations and territories.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+            {islands.map((island) => (
+              <Link 
+                key={island.id} 
+                href={`/islands/${island.slug}`}
+                className="p-6 bg-white border border-gold/20 hover:border-gold hover:bg-gold/5 hover:shadow-md transition-all duration-300 group flex flex-col items-center text-center"
+              >
+                {ISLAND_FLAGS[island.slug] ? (
+                  <img 
+                    src={`https://flagcdn.com/w40/${ISLAND_FLAGS[island.slug]}.png`}
+                    alt={`${island.name} Flag`}
+                    className="w-10 h-auto rounded-sm shadow-sm border border-navy/10 mb-4 group-hover:scale-110 transition-transform duration-300"
+                  />
+                ) : (
+                  <div className="w-10 h-7 rounded-sm shadow-sm border border-navy/10 mb-4 bg-navy/5 flex items-center justify-center">
+                    <Globe className="w-4 h-4 text-navy/20" />
+                  </div>
+                )}
+                <h3 className="font-serif text-sm text-navy group-hover:text-gold transition-colors leading-snug mb-3 flex-grow flex items-center justify-center">
+                  {island.name}
+                </h3>
+                <span className="text-[9px] text-navy/40 uppercase tracking-widest block w-full border-t border-navy/5 pt-3 mt-auto">
+                  Explore
+                </span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
