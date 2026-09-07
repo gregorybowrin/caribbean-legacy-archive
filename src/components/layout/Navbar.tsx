@@ -89,10 +89,6 @@ export default function Navbar() {
         <div className="md:hidden bg-navy-light border-b border-gold/20 pb-6 px-4 space-y-4 pt-2">
           <Link href="/profiles" className="block text-lg font-serif text-ivory hover:text-gold">Profiles</Link>
           <Link href="/islands" className="block text-lg font-serif text-ivory hover:text-gold">Islands</Link>
-          <Link href="/map" className="flex items-center gap-2 text-lg font-serif text-gold hover:text-ivory">
-            <span className="w-1.5 h-1.5 bg-gold rounded-full animate-pulse"></span>
-            Legacy Map
-          </Link>
           <Link href="/areas" className="block text-lg font-serif text-ivory hover:text-gold">Areas of Influence</Link>
           
           <div className="pt-2 pb-2 border-y border-gold/10 my-2">
