@@ -45,9 +45,9 @@ export default function ShareButtons({ title, url }: ShareButtonsProps) {
       {/* Spacer for mobile to prevent content from hiding behind the fixed bar */}
       <div className="h-24 md:h-0" aria-hidden="true" />
       
-      <div className="fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-gold/20 p-4 shadow-[0_-4px_20px_-10px_rgba(0,0,0,0.1)] flex items-center justify-between md:static md:bg-transparent md:border-y md:border-x-0 md:border-t-0 md:border-gold/10 md:p-0 md:py-8 md:my-8 md:justify-start md:space-x-6 md:shadow-none">
+      <div className="fixed bottom-0 left-0 right-0 z-40 bg-navy border-t border-gold/20 p-4 shadow-[0_-4px_20px_-10px_rgba(0,0,0,0.3)] flex items-center justify-between md:static md:bg-transparent md:border-y md:border-x-0 md:border-t-0 md:border-gold/10 md:p-0 md:py-8 md:my-8 md:justify-start md:space-x-6 md:shadow-none">
         <div className="flex flex-col">
-          <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-navy font-bold flex items-center mb-1">
+          <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-ivory md:text-navy font-bold flex items-center mb-1">
             <Share2 className="h-3 w-3 mr-2 text-gold" />
             <span className="hidden sm:inline">Share This Legacy</span>
             <span className="sm:hidden">Share</span>
@@ -60,7 +60,7 @@ export default function ShareButtons({ title, url }: ShareButtonsProps) {
             href={shareData.whatsapp} 
             target="_blank" 
             rel="noopener noreferrer"
-            className="p-2.5 md:p-3 bg-ivory/50 md:bg-white border border-gold/20 text-navy hover:text-gold hover:border-gold hover:-translate-y-1 transition-all duration-300 md:shadow-sm"
+            className="p-2.5 md:p-3 bg-white border border-gold/20 text-[#25D366] hover:text-gold hover:border-gold hover:-translate-y-1 transition-all duration-300 shadow-sm flex items-center justify-center"
             title="Share on WhatsApp"
           >
             <MessageCircle className="h-4 w-4" />
@@ -69,7 +69,7 @@ export default function ShareButtons({ title, url }: ShareButtonsProps) {
             href={shareData.facebook} 
             target="_blank" 
             rel="noopener noreferrer"
-            className="p-2.5 md:p-3 bg-ivory/50 md:bg-white border border-gold/20 text-navy hover:text-gold hover:border-gold hover:-translate-y-1 transition-all duration-300 md:shadow-sm flex items-center justify-center"
+            className="p-2.5 md:p-3 bg-white border border-gold/20 text-[#1877F2] hover:text-gold hover:border-gold hover:-translate-y-1 transition-all duration-300 shadow-sm flex items-center justify-center"
             title="Share on Facebook"
           >
             <FacebookIcon />
@@ -78,14 +78,14 @@ export default function ShareButtons({ title, url }: ShareButtonsProps) {
             href={shareData.twitter} 
             target="_blank" 
             rel="noopener noreferrer"
-            className="p-2.5 md:p-3 bg-ivory/50 md:bg-white border border-gold/20 text-navy hover:text-gold hover:border-gold hover:-translate-y-1 transition-all duration-300 md:shadow-sm flex items-center justify-center"
-            title="Share on X"
+            className="p-2.5 md:p-3 bg-white border border-gold/20 text-[#1DA1F2] hover:text-gold hover:border-gold hover:-translate-y-1 transition-all duration-300 shadow-sm flex items-center justify-center"
+            title="Share on X / Twitter"
           >
             <XIcon />
           </a>
           <button 
             onClick={copyToClipboard}
-            className="p-2.5 md:p-3 bg-ivory/50 md:bg-white border border-gold/20 text-navy hover:text-gold hover:border-gold hover:-translate-y-1 transition-all duration-300 md:shadow-sm relative group"
+            className="p-2.5 md:p-3 bg-white border border-gold/20 text-navy hover:text-gold hover:border-gold hover:-translate-y-1 transition-all duration-300 shadow-sm flex items-center justify-center relative group"
             title="Copy Link"
           >
             {copied ? <Check className="h-4 w-4 text-gold" /> : <Link2 className="h-4 w-4" />}
