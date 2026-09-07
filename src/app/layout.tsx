@@ -24,7 +24,6 @@ export const metadata: Metadata = {
   description: "A premium digital archive presenting profiles of historically documented Caribbean figures.",
 };
 
-import MaintenanceMode from "@/components/auth/MaintenanceMode";
 import CookieConsent from "@/components/layout/CookieConsent";
 
 export default function RootLayout({
@@ -37,14 +36,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} antialiased min-h-screen flex flex-col bg-ivory text-navy`}
       >
-        <MaintenanceMode>
-          <Navbar />
-          <main className="flex-grow">
-            {children}
-          </main>
-          <Footer />
-          <CookieConsent />
-        </MaintenanceMode>
+        <Navbar />
+        <main className="flex-grow">
+          {children}
+        </main>
+        <Footer />
+        <CookieConsent />
       </body>
     </html>
   );
