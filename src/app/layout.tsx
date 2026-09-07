@@ -44,8 +44,8 @@ export default function RootLayout({
         <Footer />
         <CookieConsent />
         
-        {/* Google Analytics - Uses env variable or falls back to an empty string to prevent crashes if missing */}
-        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || ""} />
+        {/* Google Analytics */}
+        <GoogleAnalytics gaId="G-ZSKBN6Y1GQ" />
       </body>
     </html>
   );
