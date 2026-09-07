@@ -1,4 +1,5 @@
-:HL["/_next/static/chunks/0y1biguia_cjb.css","style"]
+:HL["/_next/static/chunks/1qagabxxlx80e.css","style"]
+:HL["/_next/static/chunks/3wklpgvwo57ae.css","style"]
 :HL["/_next/static/media/2a65768255d6b625-s.p.3u4lli0-axodc.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/797e433ab948586e-s.p.0r6juujl39pe6.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/caa3a2e1cccd8315-s.p.0wgildi0cnwt9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
@@ -18,7 +19,6 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/f/f4/EllisJuliana_JPG_75dpi.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/3/3a/Retrato_de_EMdeHostos_por_Francisco_Oller.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/d/d0/Photograph_of_Frantz_Fanon_from_Black_Skin_White_Masks_%281967%29_dust_jacket.webp","image"]
-:HL["https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Winair_DHC-6_Twin_Otter_%40_SXM.jpg/960px-Winair_DHC-6_Twin_Otter_%40_SXM.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/c/c8/FEDERICO_DE_MADRAZO_-Gertrudis_G%C3%B3mez_de_Avellaneda_%28Museo_L%C3%A1zaro_Galdiano%2C_1857%29.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/4/45/Jacquess_Roumain.jpeg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/f/fb/Jamaica_Kincaid_2019.jpg","image"]
@@ -50,4 +50,4 @@
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/WillJohnsonSaba.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/5/56/William_Wilson_Harris_2008_%28cropped%29.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/2/23/Zee_edgell_250.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"areas","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"literature","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"dCp4g-CqIxGRBvjKGqB3X"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"areas","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"literature","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"2v1tB0e9sSDd18WAFCp1a"}

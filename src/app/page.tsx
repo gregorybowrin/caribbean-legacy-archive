@@ -49,7 +49,18 @@ export default async function Home() {
             </Link>
           </div>
 
-          <RandomFeaturedProfiles figures={figures} />
+          <RandomFeaturedProfiles 
+            figures={figures
+              .filter(f => f.image_url && f.image_url.trim() !== '')
+              .map(f => ({
+                id: f.id,
+                name: f.name,
+                slug: f.slug,
+                image_url: f.image_url,
+                bio: f.bio ? (f.bio.length > 150 ? f.bio.substring(0, 150) + '...' : f.bio) : '',
+                islands: { name: f.islands?.name }
+              }))} 
+          />
         </div>
       </section>
 

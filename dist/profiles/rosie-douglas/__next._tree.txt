@@ -1,8 +1,9 @@
-:HL["/_next/static/chunks/0y1biguia_cjb.css","style"]
+:HL["/_next/static/chunks/1qagabxxlx80e.css","style"]
+:HL["/_next/static/chunks/3wklpgvwo57ae.css","style"]
 :HL["/_next/static/media/2a65768255d6b625-s.p.3u4lli0-axodc.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/797e433ab948586e-s.p.0r6juujl39pe6.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/caa3a2e1cccd8315-s.p.0wgildi0cnwt9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Rosie_Douglas_(cropped).jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/6/69/Henry_F._Hall_Building_-_Concordia_University.JPG","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/f/f9/Flag_of_Dominica.svg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"rosie-douglas","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"dCp4g-CqIxGRBvjKGqB3X"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"rosie-douglas","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"2v1tB0e9sSDd18WAFCp1a"}
