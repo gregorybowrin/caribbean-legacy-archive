@@ -67,7 +67,28 @@ export default async function ProfileDetailPage({ params }: { params: { slug: st
   }
 
   const figures = await getFigures();
-  const relatedFigures = figures.filter(f => f.slug !== figure.slug).slice(0, 2);
+  
+  // Find truly related figures (same island first, then same area)
+  let relatedFigures = figures.filter(f => 
+    f.slug !== figure.slug && 
+    f.islands?.id === figure.islands?.id
+  );
+
+  if (relatedFigures.length < 2 && figure.figure_areas && figure.figure_areas.length > 0) {
+    const currentAreaIds = figure.figure_areas.map(fa => fa.areas?.id).filter(Boolean);
+    const sameAreaFigures = figures.filter(f => 
+      f.slug !== figure.slug && 
+      !relatedFigures.some(rf => rf.id === f.id) &&
+      f.figure_areas?.some(fa => currentAreaIds.includes(fa.areas?.id))
+    );
+    relatedFigures = [...relatedFigures, ...sameAreaFigures];
+  }
+  
+  // Shuffle deterministically based on figure ID so it's pseudo-random but stable
+  const seed = figure.name.charCodeAt(0) + figure.name.charCodeAt(figure.name.length - 1);
+  relatedFigures = relatedFigures.sort((a, b) => {
+    return ((a.name.charCodeAt(0) * seed) % 10) - ((b.name.charCodeAt(0) * seed) % 10);
+  }).slice(0, 2);
 
   return (
     <div className="bg-ivory min-h-screen">
@@ -243,30 +264,32 @@ export default async function ProfileDetailPage({ params }: { params: { slug: st
             </section>
 
             {/* Related Profiles Placeholder */}
-            <section className="pt-12 border-t border-gold/10">
-              <h2 className="font-serif font-bold text-2xl text-navy mb-8">Related Figures</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {relatedFigures.map(related => (
-                  <Link 
-                    key={related.id} 
-                    href={`/profiles/${related.slug}`}
-                    className="flex bg-white border border-gold/10 overflow-hidden hover:shadow-lg transition-all"
-                  >
-                    <div className="w-24 h-24 flex-shrink-0 grayscale hover:grayscale-0 transition-all">
-                      {related.image_url ? (
-                        <img src={related.image_url} alt={related.name} className="w-full h-full object-cover" />
-                      ) : (
-                        <AvatarFallback name={related.name} island={related.islands?.name} className="w-full h-full rounded-none" size="md" />
-                      )}
-                    </div>
-                    <div className="p-4">
-                      <h4 className="font-serif text-lg text-navy line-clamp-1">{related.name}</h4>
-                      <span className="text-[10px] uppercase tracking-widest text-navy/40">{related.islands?.name}</span>
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            </section>
+            {relatedFigures.length > 0 && (
+              <section className="pt-12 border-t border-gold/10">
+                <h2 className="font-serif font-bold text-2xl text-navy mb-8">Related Figures</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {relatedFigures.map(related => (
+                    <Link 
+                      key={related.id} 
+                      href={`/profiles/${related.slug}`}
+                      className="flex bg-white border border-gold/10 overflow-hidden hover:shadow-lg transition-all"
+                    >
+                      <div className="w-24 h-24 flex-shrink-0 grayscale hover:grayscale-0 transition-all">
+                        {related.image_url ? (
+                          <img src={related.image_url} alt={related.name} className="w-full h-full object-cover" />
+                        ) : (
+                          <AvatarFallback name={related.name} island={related.islands?.name} className="w-full h-full rounded-none" size="md" />
+                        )}
+                      </div>
+                      <div className="p-4 flex flex-col justify-center">
+                        <h4 className="font-serif text-lg text-navy line-clamp-1">{related.name}</h4>
+                        <span className="text-[10px] uppercase tracking-widest text-navy/40">{related.islands?.name}</span>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </section>
+            )}
           </div>
         </div>
       </article>
