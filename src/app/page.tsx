@@ -3,6 +3,7 @@ import { Search, Landmark, Globe } from 'lucide-react';
 import { getFigures, getIslands, getAreas } from '@/lib/api';
 import { ISLAND_FLAGS } from '@/lib/flags';
 import HomeSearch from '@/components/home/HomeSearch';
+import RandomFeaturedProfiles from '@/components/home/RandomFeaturedProfiles';
 
 export default async function Home() {
   const [figures, islands, areas] = await Promise.all([
@@ -11,7 +12,6 @@ export default async function Home() {
     getAreas()
   ]);
 
-  const featuredFigures = figures.slice(0, 8);
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
@@ -28,9 +28,8 @@ export default async function Home() {
             Preserving the Legacy of <br />
             <span className="text-gold italic">Caribbean Figures</span>
           </h1>
-          <p className="text-ivory/70 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-light">
-            A comprehensive digital archive dedicated to the historically documented men and women 
-            who shaped the Caribbean's political, social, and cultural landscape.
+          <p className="text-lg md:text-xl text-ivory/80 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+            A curated digital archive documenting the lives and contributions of those who shaped the Caribbean and the world.
           </p>
           
           <HomeSearch />
@@ -50,33 +49,7 @@ export default async function Home() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {featuredFigures.map((figure) => (
-              <Link 
-                key={figure.id} 
-                href={`/profiles/${figure.slug}`}
-                className="group flex flex-col bg-white border border-navy/5 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500"
-              >
-                <div className="relative aspect-[4/5] overflow-hidden">
-                  <img 
-                    src={figure.image_url} 
-                    alt={figure.name} 
-                    className="object-cover w-full h-full grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
-                  />
-                  <div className="absolute inset-0 bg-navy/20 group-hover:bg-transparent transition-all"></div>
-                </div>
-                <div className="p-6 border-t border-gold/10">
-                  <span className="text-[10px] uppercase tracking-widest text-tropical-green font-bold mb-2 block">
-                    {figure.islands?.name}
-                  </span>
-                  <h3 className="font-serif text-xl text-navy mb-2 group-hover:text-gold transition-colors">{figure.name}</h3>
-                  <p className="text-navy/60 text-xs line-clamp-2 leading-relaxed">
-                    {figure.bio}
-                  </p>
-                </div>
-              </Link>
-            ))}
-          </div>
+          <RandomFeaturedProfiles figures={figures} />
         </div>
       </section>
 
