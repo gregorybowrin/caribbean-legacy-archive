@@ -252,12 +252,25 @@ export default async function ProfileDetailPage({ params }: { params: { slug: st
                 url={`https://caribbeanlegacyarchive.com/profiles/${figure.slug}`} 
               />
 
-              <div className="mb-12 pt-12 border-t border-gold/10">
-                <h2 className="font-serif font-bold text-3xl text-navy mb-6">Major Contributions</h2>
-                <div className="text-navy/80 text-xl leading-relaxed bg-white p-8 border-l-4 border-tropical-green shadow-sm">
-                  {figure.contributions}
+              {figure.contributions && (
+                <div className="mb-12 pt-12 border-t border-gold/10">
+                  <h2 className="font-serif font-bold text-3xl text-navy mb-6">Major Contributions</h2>
+                  <div className="bg-white p-8 border-l-4 border-tropical-green shadow-sm">
+                    <ul className="space-y-5">
+                      {(figure.contributions.match(/[^.!?]+[.!?]+/g) || [figure.contributions]).map((sentence: string, idx: number) => {
+                        const trimmed = sentence.trim();
+                        if (!trimmed) return null;
+                        return (
+                          <li key={idx} className="flex items-start text-navy/80 text-lg leading-relaxed">
+                            <div className="w-1.5 h-1.5 rounded-full bg-gold shrink-0 mt-2.5 mr-4 opacity-80 shadow-[0_0_8px_rgba(212,175,55,0.4)]"></div>
+                            <span>{trimmed}</span>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </div>
                 </div>
-              </div>
+              )}
 
               {figure.sources && figure.sources.length > 0 && (
                 <div className="mb-12 pt-12 border-t border-gold/10">
