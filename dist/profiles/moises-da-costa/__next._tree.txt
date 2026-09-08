@@ -7,4 +7,4 @@
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Moises_da_Costa_Gomez(1960)_(cropped).jpg","image"]
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Statue_of_Moises_Frumencio_da_Costa_Gomez.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/f/f4/EllisJuliana_JPG_75dpi.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"moises-da-costa","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"9glDxREhXOxh4r_fR8jFz"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"moises-da-costa","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"wa8FNKkgksePbzKbIWimR"}

@@ -257,8 +257,8 @@ export default async function ProfileDetailPage({ params }: { params: { slug: st
                   <h2 className="font-serif font-bold text-3xl text-navy mb-6">Major Contributions</h2>
                   <div className="bg-white p-8 border-l-4 border-tropical-green shadow-sm">
                     <ul className="space-y-5">
-                      {(figure.contributions.match(/[^.!?]+[.!?]+/g) || [figure.contributions]).map((sentence: string, idx: number) => {
-                        const trimmed = sentence.trim();
+                      {(figure.contributions.replace(/\b(Dr|Mr|Mrs|Ms|Rev|St|Prof|Hon|Sr|Jr|vs|etc)\.\s+/g, "$1___DOT___ ").match(/[^.!?]+[.!?]+/g) || [figure.contributions]).map((sentence: string, idx: number) => {
+                        const trimmed = sentence.replace(/___DOT___/g, ".").trim();
                         if (!trimmed) return null;
                         return (
                           <li key={idx} className="flex items-start text-navy/80 text-lg leading-relaxed">

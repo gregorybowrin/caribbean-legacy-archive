@@ -8,4 +8,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Alexandre_Petion_pr%C3%A9sident_de_la_R%C3%A9publique_d%27Hayti_BNF_Gallica.jpg/440px-Alexandre_Petion_pr%C3%A9sident_de_la_R%C3%A9publique_d%27Hayti_BNF_Gallica.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/e/ec/Hector_Hyppolite.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/c/cc/Henri_Christophe.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"alexandre-petion","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"9glDxREhXOxh4r_fR8jFz"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"alexandre-petion","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"wa8FNKkgksePbzKbIWimR"}

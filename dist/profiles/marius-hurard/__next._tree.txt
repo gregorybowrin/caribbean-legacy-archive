@@ -7,4 +7,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Ruins_of_Saint-Pierre_Martinique_1902.jpg/640px-Ruins_of_Saint-Pierre_Martinique_1902.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/e/ee/Frank_Alvord_Perret.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/d/d0/Photograph_of_Frantz_Fanon_from_Black_Skin_White_Masks_%281967%29_dust_jacket.webp","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"marius-hurard","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"9glDxREhXOxh4r_fR8jFz"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"marius-hurard","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"wa8FNKkgksePbzKbIWimR"}

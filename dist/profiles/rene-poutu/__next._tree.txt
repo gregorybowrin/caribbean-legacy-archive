@@ -7,4 +7,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/4/4c/PSM_V61_D361_St_pierre_street_in_martinique_before_the_eruption.png","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/e/ee/Frank_Alvord_Perret.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/d/d0/Photograph_of_Frantz_Fanon_from_Black_Skin_White_Masks_%281967%29_dust_jacket.webp","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"rene-poutu","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"9glDxREhXOxh4r_fR8jFz"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"rene-poutu","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"wa8FNKkgksePbzKbIWimR"}

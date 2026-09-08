@@ -7,4 +7,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/e/ea/Monumento_Maceo_Havana.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/d/de/Alejo_Carpentier_c._1955.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/7/73/Alicia_Alonso_1955.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"antonio-maceo","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"9glDxREhXOxh4r_fR8jFz"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"antonio-maceo","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"wa8FNKkgksePbzKbIWimR"}

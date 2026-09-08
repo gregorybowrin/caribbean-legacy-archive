@@ -7,4 +7,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/9/93/Flag_of_the_Bahamas.svg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/4/4e/Lynden_Pindling_1977.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/5/58/Hubert_Ingraham.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"frankie-wilson","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"9glDxREhXOxh4r_fR8jFz"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"frankie-wilson","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"wa8FNKkgksePbzKbIWimR"}

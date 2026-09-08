@@ -6,4 +6,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/2/2c/Habitation_Murat%2C_Marie-Galante.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/7/74/Guadeloupe_department_relief_location_map.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/e/e7/Jean_Luc_Raharimanana.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"ernestine-lambot","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"9glDxREhXOxh4r_fR8jFz"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"ernestine-lambot","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"wa8FNKkgksePbzKbIWimR"}

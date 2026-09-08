@@ -7,4 +7,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/0/0e/Statue_de_Joseph_Ignace_par_Jacky_Poulier_aux_Abymes.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/6/6c/Delgres_Monnereau_Vivre_libres_ou_mourir.png","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/4/4e/Portrait_de_Auguste_Lacour_%28Historien%29.png","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"ignace","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"9glDxREhXOxh4r_fR8jFz"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"ignace","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"wa8FNKkgksePbzKbIWimR"}
