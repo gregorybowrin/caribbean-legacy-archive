@@ -1,5 +1,5 @@
 :HL["/_next/static/chunks/1qagabxxlx80e.css","style"]
-:HL["/_next/static/chunks/3mv2k-emss3mu.css","style"]
+:HL["/_next/static/chunks/1ywlwwrb5-rbs.css","style"]
 :HL["/_next/static/media/2a65768255d6b625-s.p.3u4lli0-axodc.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/797e433ab948586e-s.p.0r6juujl39pe6.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/caa3a2e1cccd8315-s.p.0wgildi0cnwt9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
@@ -68,7 +68,6 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Mrs._Andrew_Carnegie_%28Louise_Whitfield%29.jpg/960px-Mrs._Andrew_Carnegie_%28Louise_Whitfield%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/9/99/Statue_of_freedom_fighter_One-Tete_Lohkay_Sint_Maarten_Dutch_Caribbean.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/b/ba/Peter_duncan_crop.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled","image"]
-:HL["https://upload.wikimedia.org/wikipedia/commons/a/a4/%28Venice%29_Pompey_the_Great%2C_Museo_Archeologico_Nazionale.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/e/e0/Three_Queens_Fountain_St_Thomas.jpg","image"]
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Queen_Mary_Thomas.png","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Luxembourg_-_La_Reine_Mathilde.jpg/960px-Luxembourg_-_La_Reine_Mathilde.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
@@ -89,4 +88,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/b/b1/John_Burnet_William_Knibb_John_Scolble.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/8/81/Gilbert_Stuart%2C_William_Thornton%2C_1804%2C_NGA_1119.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Hopetown-lighthouse.jpg/960px-Hopetown-lighthouse.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"areas","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"history","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"MDFTgRC7meriyYz9t-DaE"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"areas","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"history","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"_9i1IHs0zFVrvKBaH7zTH"}
