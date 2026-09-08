@@ -6,4 +6,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/e/ee/Eric_Williams_%28cropped%29.jpg","image"]
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/CLR-James-in-1946.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/3/3a/TnT_Fyzabad_Uriah_Butler_Statue_%28cropped%29.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"eric-williams","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"BuDnvdk_PDSMSiYL09LPf"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"eric-williams","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"XgK8XzI4XqIntnpq-vnVV"}

@@ -245,7 +245,8 @@ export default async function ProfileDetailPage({ params }: { params: { slug: st
                       }
                     }}
                   >
-                    {figure.bio?.replace(/\[([\d,\s]+)\]/g, '\\[[$1](#sources)\\]')}
+                    {figure.bio?.replace(/!\[.*?\]\(.*?\)/g, '')
+                               .replace(/\[([\d,\s]+)\]/g, '\\[[$1](#sources)\\]')}
                   </ReactMarkdown>
                 </div>
               </div>

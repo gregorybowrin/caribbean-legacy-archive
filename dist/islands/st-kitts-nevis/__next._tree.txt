@@ -19,4 +19,4 @@
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Kennedy_Simmonds.png","image"]
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Tapley_Seaton_2018.jpg","image"]
 :HL["https://www.historicstkitts.kn/images/thomas-manchester.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"st-kitts-nevis","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"BuDnvdk_PDSMSiYL09LPf"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"st-kitts-nevis","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"XgK8XzI4XqIntnpq-vnVV"}
