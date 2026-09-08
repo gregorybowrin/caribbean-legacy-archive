@@ -238,11 +238,14 @@ export default async function ProfileDetailPage({ params }: { params: { slug: st
                           const linkSlug = href.replace('/profiles/', '').split('#')[0];
                           return <ProfileHoverCard slug={linkSlug} href={href}>{children}</ProfileHoverCard>;
                         }
-                        return <a href={href} target="_blank" rel="noopener noreferrer" {...props}>{children}</a>;
+                        if (href?.startsWith('#')) {
+                          return <a href={href} className="text-gold hover:underline" {...props}>{children}</a>;
+                        }
+                        return <a href={href} target="_blank" rel="noopener noreferrer" className="text-gold hover:underline" {...props}>{children}</a>;
                       }
                     }}
                   >
-                    {figure.bio}
+                    {figure.bio?.replace(/\[([\d,\s]+)\]/g, '\\[[$1](#sources)\\]')}
                   </ReactMarkdown>
                 </div>
               </div>
@@ -273,7 +276,7 @@ export default async function ProfileDetailPage({ params }: { params: { slug: st
               )}
 
               {figure.sources && figure.sources.length > 0 && (
-                <div className="mb-12 pt-12 border-t border-gold/10">
+                <div id="sources" className="mb-12 pt-12 border-t border-gold/10 scroll-mt-24">
                   <h2 className="font-serif font-bold text-2xl text-navy mb-6">Verified Sources</h2>
                   <ul className="space-y-4">
                     {figure.sources.map((source) => (
