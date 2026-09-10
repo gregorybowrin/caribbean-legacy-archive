@@ -12,13 +12,32 @@ export default async function Home() {
     getAreas()
   ]);
 
+  const carouselFigures = figures
+    .filter(f => f.image_url && f.image_url.trim() !== '')
+    .slice(0, 15);
+
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
       <section className="relative h-[80vh] flex items-center justify-center bg-navy overflow-hidden">
+        {/* Scrolling Carousel Background */}
+        <div className="absolute inset-0 z-0 flex items-center pointer-events-none opacity-[0.06] mix-blend-screen">
+          <div className="flex animate-marquee w-max">
+            {[...Array(2)].map((_, i) => (
+              <div key={i} className="flex gap-6 px-3">
+                {carouselFigures.map((fig) => (
+                  <div key={fig.id} className="w-48 h-64 md:w-64 md:h-80 rounded-md overflow-hidden grayscale">
+                    <img src={fig.image_url} alt="" className="w-full h-full object-cover" />
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Background Texture/Overlay */}
-        <div className="absolute inset-0 opacity-20 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/paper-fibers.png')]"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-navy/50 via-navy to-navy"></div>
+        <div className="absolute inset-0 z-0 opacity-40 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/paper-fibers.png')]"></div>
+        <div className="absolute inset-0 z-0 bg-gradient-to-b from-navy/60 via-navy/80 to-navy"></div>
         
         <div className="relative z-10 max-w-5xl mx-auto px-4 text-center">
           <div className="inline-block px-3 py-1 border border-gold/30 rounded-full mb-6">

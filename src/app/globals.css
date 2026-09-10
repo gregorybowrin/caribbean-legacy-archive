@@ -19,6 +19,13 @@
   --color-gold: #d4af37;
   --color-gold-muted: #b8860b;
   --color-tropical-green: #2e8b57;
+  
+  --animate-marquee: marquee 90s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
 }
 
 @media (prefers-color-scheme: dark) {
