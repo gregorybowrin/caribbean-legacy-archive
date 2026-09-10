@@ -4,6 +4,7 @@ import { getFigures, getIslands, getAreas } from '@/lib/api';
 import { ISLAND_FLAGS } from '@/lib/flags';
 import HomeSearch from '@/components/home/HomeSearch';
 import RandomFeaturedProfiles from '@/components/home/RandomFeaturedProfiles';
+import HeroCarousel from '@/components/home/HeroCarousel';
 
 export default async function Home() {
   const [figures, islands, areas] = await Promise.all([
@@ -12,28 +13,12 @@ export default async function Home() {
     getAreas()
   ]);
 
-  const carouselFigures = figures
-    .filter(f => f.image_url && f.image_url.trim() !== '')
-    .slice(0, 15);
-
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
       <section className="relative h-[80vh] flex items-center justify-center bg-navy overflow-hidden">
         {/* Scrolling Carousel Background */}
-        <div className="absolute inset-0 z-0 flex items-stretch pointer-events-none opacity-30">
-          <div className="flex animate-marquee w-max h-full">
-            {[...Array(2)].map((_, i) => (
-              <div key={i} className="flex h-full">
-                {carouselFigures.map((fig) => (
-                  <div key={fig.id} className="h-full w-[300px] md:w-[450px] flex-shrink-0 grayscale">
-                    <img src={fig.image_url} alt="" className="w-full h-full object-cover" />
-                  </div>
-                ))}
-              </div>
-            ))}
-          </div>
-        </div>
+        <HeroCarousel figures={figures} />
 
         {/* Background Texture/Overlay */}
         <div className="absolute inset-0 z-0 opacity-40 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/paper-fibers.png')]"></div>
