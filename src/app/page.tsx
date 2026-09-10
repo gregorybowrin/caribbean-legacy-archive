@@ -21,12 +21,12 @@ export default async function Home() {
       {/* Hero Section */}
       <section className="relative h-[80vh] flex items-center justify-center bg-navy overflow-hidden">
         {/* Scrolling Carousel Background */}
-        <div className="absolute inset-0 z-0 flex items-center pointer-events-none opacity-[0.06] mix-blend-screen">
-          <div className="flex animate-marquee w-max">
+        <div className="absolute inset-0 z-0 flex items-stretch pointer-events-none opacity-30">
+          <div className="flex animate-marquee w-max h-full">
             {[...Array(2)].map((_, i) => (
-              <div key={i} className="flex gap-6 px-3">
+              <div key={i} className="flex h-full">
                 {carouselFigures.map((fig) => (
-                  <div key={fig.id} className="w-48 h-64 md:w-64 md:h-80 rounded-md overflow-hidden grayscale">
+                  <div key={fig.id} className="h-full w-[300px] md:w-[450px] flex-shrink-0 grayscale">
                     <img src={fig.image_url} alt="" className="w-full h-full object-cover" />
                   </div>
                 ))}
