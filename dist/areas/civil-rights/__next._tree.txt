@@ -1,5 +1,5 @@
 :HL["/_next/static/chunks/1qagabxxlx80e.css","style"]
-:HL["/_next/static/chunks/30_ybju7yvwt4.css","style"]
+:HL["/_next/static/chunks/13yh8_pmevo-n.css","style"]
 :HL["/_next/static/media/2a65768255d6b625-s.p.3u4lli0-axodc.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/797e433ab948586e-s.p.0r6juujl39pe6.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/caa3a2e1cccd8315-s.p.0wgildi0cnwt9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
@@ -21,9 +21,7 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/d/d0/Photograph_of_Frantz_Fanon_from_Black_Skin_White_Masks_%281967%29_dust_jacket.webp","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/King_George_IV_of_the_United_Kingdom_in_Coronation_Robes_%28by_Thomas_Lawrence%29_-_Royal_Collection_%28RCIN_405918%29.jpg/960px-King_George_IV_of_the_United_Kingdom_in_Coronation_Robes_%28by_Thomas_Lawrence%29_-_Royal_Collection_%28RCIN_405918%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/e/ed/George_Maduro.jpg","image"]
-:HL["https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/General_George_Patton_by_Robert_F._Cranston%2C_Lee_Elkins%2C_and_Harry_Warnecke%2C_1945%2C_color_carbro_print%2C_from_the_National_Portrait_Gallery_-_NPG-NPG_95_404Patton-000002.jpg/960px-thumbnail.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/3/33/George_William_Gordon_-_photograph_detail.jpg","image"]
-:HL["https://upload.wikimedia.org/wikipedia/commons/0/00/LocationSaint-PierreAndMiquelon.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/c/c8/FEDERICO_DE_MADRAZO_-Gertrudis_G%C3%B3mez_de_Avellaneda_%28Museo_L%C3%A1zaro_Galdiano%2C_1857%29.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/a/ad/Gerty_archimede.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Betico_Croes_1982cr.jpg/960px-Betico_Croes_1982cr.jpg","image"]
@@ -42,7 +40,6 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/e/e7/Miguel_Pourier1978_CROP.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/7/78/Lola_Rodriguez_de_Tio.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/0/00/Buste_Louis_Delgr%C3%A8s_%C3%A0_Petit-Bourg.JPG","image"]
-:HL["https://upload.wikimedia.org/wikipedia/commons/0/06/West_India_Regiment%2C_1874.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/5/5d/Marcus_Garvey%2C_%22Provisional_President_of_Africa%22%2C_by_the_Keystone_View_Company.jpg","image"]
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Timbre_ha%C3%AFtien_de_50_centimes_de_gourdes.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/c/cc/The_History_of_A_West_Indian_Slave%2C_Mary_Prince_Front_Cover.jpg","image"]
@@ -60,7 +57,6 @@
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Queen_Mary_Thomas.png","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Luxembourg_-_La_Reine_Mathilde.jpg/960px-Luxembourg_-_La_Reine_Mathilde.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/7/70/Ram%C3%B3n_Betances%2C_c.1860s.jpg","image"]
-:HL["https://upload.wikimedia.org/wikipedia/commons/6/6e/Dr._Denzil_Douglas%2C_Prime_Minister_of_St._Kitts_and_Nevis_holds_the_Queen%27s_Baton_2010_Delhi_standing_in_front_of_the_monument_of_the_right%2C_Sir_Robert_Llewellyn_Bradshaw%2C_National_Hero_of_St._Kitts_and_Nevis.jpg","image"]
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Rosie_Douglas_(cropped).jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/en/3/3a/Rosita_Beatrice_Missick-Butterfield.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/5/5c/Rothschild_Francis.png","image"]
@@ -80,4 +76,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/b/bc/Portret_di_Tula_website_up_Wikimedia.JPG","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/7/7b/William_Henry_Bramble.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/b/b1/John_Burnet_William_Knibb_John_Scolble.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"areas","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"civil-rights","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"vud_oevEEQKc2Yarq0srK"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"areas","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"civil-rights","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"zcgUNC1DJwT888lvxTGVZ"}

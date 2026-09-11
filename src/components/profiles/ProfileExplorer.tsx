@@ -35,7 +35,20 @@ export default function ProfileExplorer({ initialFigures, islands, areas }: Prof
         f.name.toLowerCase().includes(q) || 
         f.bio.toLowerCase().includes(q) ||
         (f.islands?.name && f.islands.name.toLowerCase().includes(q))
-      );
+      ).sort((a, b) => {
+        const aName = a.name.toLowerCase();
+        const bName = b.name.toLowerCase();
+        
+        const getScore = (fig: any, name: string) => {
+          if (name === q) return 5;
+          if (name.startsWith(q)) return 4;
+          if (name.includes(q)) return 3;
+          if (fig.islands?.name && fig.islands.name.toLowerCase().includes(q)) return 2;
+          return 1; // Bio match
+        };
+        
+        return getScore(b, bName) - getScore(a, aName);
+      });
     }
 
     if (selectedIsland !== 'All Islands') {
