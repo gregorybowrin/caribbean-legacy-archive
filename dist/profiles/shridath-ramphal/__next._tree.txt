@@ -6,4 +6,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/e/e0/Shridath_Ramphal.JPG","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/6/6d/Forbes_Burnham_%281966%29.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/1/16/Stephen_Campbell_Moore_at_the_No%C3%ABl_Coward_Theatre_in_Photograph_51.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"shridath-ramphal","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"zcgUNC1DJwT888lvxTGVZ"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"shridath-ramphal","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"PEkzegQDfwvsm8rsi63sy"}

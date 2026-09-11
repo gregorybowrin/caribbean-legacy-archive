@@ -28,7 +28,6 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/9/91/Julia_de_Burgos.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/9/94/Lasana_M_Sekou.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/7/78/Lola_Rodriguez_de_Tio.jpg","image"]
-:HL["https://upload.wikimedia.org/wikipedia/commons/1/16/Albert_Helman_%28Lou_Lichtveld%29.jpg","image"]
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Sep7_Woman_of_the_Day.png","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/c/cc/The_History_of_A_West_Indian_Slave%2C_Mary_Prince_Front_Cover.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/7/7a/MaryseConde2006.jpg","image"]
@@ -48,4 +47,4 @@
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/WillJohnsonSaba.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/5/56/William_Wilson_Harris_2008_%28cropped%29.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/2/23/Zee_edgell_250.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"areas","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"literature","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"zcgUNC1DJwT888lvxTGVZ"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"areas","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"literature","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"PEkzegQDfwvsm8rsi63sy"}

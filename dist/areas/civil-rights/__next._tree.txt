@@ -46,7 +46,6 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/b/b9/Nanny_of_the_Maroons.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/5/5f/Nicol%C3%A1sGuill%C3%A9n-1942.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/1/11/Yr_Athro_Noel_Lloyd.jpg","image"]
-:HL["https://upload.wikimedia.org/wikipedia/commons/9/99/Statue_of_freedom_fighter_One-Tete_Lohkay_Sint_Maarten_Dutch_Caribbean.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/8/86/PaulBogle-MorantBay.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/3/36/Paulette_Nardal.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/c/ce/The_Second_Pan_African_Conference%2C_Brussels%2C_1921.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled","image"]
@@ -76,4 +75,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/b/bc/Portret_di_Tula_website_up_Wikimedia.JPG","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/7/7b/William_Henry_Bramble.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/b/b1/John_Burnet_William_Knibb_John_Scolble.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"areas","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"civil-rights","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"zcgUNC1DJwT888lvxTGVZ"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"areas","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"civil-rights","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"PEkzegQDfwvsm8rsi63sy"}

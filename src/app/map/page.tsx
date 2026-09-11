@@ -93,8 +93,33 @@ export default function GlobalMap() {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       setDimensions({ width: window.innerWidth, height: window.innerHeight });
+      const saved = sessionStorage.getItem('legacyMapState');
+      if (saved) {
+        try {
+          const parsed = JSON.parse(saved);
+          if (parsed.introFinished) setIntroFinished(true);
+          if (parsed.panOffset) setPanOffset(parsed.panOffset);
+          if (parsed.selectedIsland) {
+            setSelectedIsland(parsed.selectedIsland);
+            supabase.from('figures').select('*').eq('island_id', parsed.selectedIsland.id).limit(10).then(({data}) => {
+              if (data) setIslandFigures(data);
+            });
+          }
+        } catch(e) {}
+      }
     }
   }, []);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined' && introFinished) {
+      sessionStorage.setItem('legacyMapState', JSON.stringify({
+        introFinished,
+        panOffset,
+        selectedIsland
+      }));
+    }
+  }, [introFinished, panOffset, selectedIsland]);
+
 
   // Handle Trackpad Panning
   useEffect(() => {

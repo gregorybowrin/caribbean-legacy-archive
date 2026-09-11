@@ -6,4 +6,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Samsharpe.JPG/960px-Samsharpe.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/3/3d/Prime_Minister_of_Jamaica%2C_Sir_Alexander_Bustamante_%2804%29_%28cropped%29.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/8/86/PaulBogle-MorantBay.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"sam-sharpe","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"zcgUNC1DJwT888lvxTGVZ"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"sam-sharpe","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"PEkzegQDfwvsm8rsi63sy"}

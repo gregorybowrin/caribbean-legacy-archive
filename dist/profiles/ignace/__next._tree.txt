@@ -5,4 +5,5 @@
 :HL["/_next/static/media/caa3a2e1cccd8315-s.p.0wgildi0cnwt9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Statue_de_Joseph_Ignace_Les_Abymes.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/4/4e/Portrait_de_Auguste_Lacour_%28Historien%29.png","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"ignace","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"zcgUNC1DJwT888lvxTGVZ"}
+:HL["https://upload.wikimedia.org/wikipedia/commons/0/0e/Lynden_Pindling_headshot_1971.jpg","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"ignace","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"PEkzegQDfwvsm8rsi63sy"}
