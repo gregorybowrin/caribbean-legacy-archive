@@ -6,4 +6,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/c/cf/Juan_Bosch_%281963%29.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/c/c6/Museo_de_Historia_y_Geograf%C3%ADa_-_Retrato_del_General_S%C3%A1nchez.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/9/90/PHU.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"juan-bosch","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"G_OgYjRX3X9aB9S3Ekd0E"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"juan-bosch","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"268l4WWxUQ6T-mJ0fVm3i"}

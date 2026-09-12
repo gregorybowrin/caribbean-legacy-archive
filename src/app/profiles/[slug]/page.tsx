@@ -37,7 +37,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     ogImageUrl = ogImageUrl.replace('/commons/', '/commons/thumb/') + '/600px-' + filename;
   }
   
-  const description = figure.bio ? (figure.bio.length > 150 ? figure.bio.substring(0, 147) + '...' : figure.bio) : 'Learn about their legacy.';
+  // Clean markdown and newlines from the bio for safe metadata parsing
+  const cleanBio = figure.bio ? figure.bio.replace(/[#*`_\[\]\n]/g, ' ').replace(/\s+/g, ' ').trim() : '';
+  const description = cleanBio ? (cleanBio.length > 150 ? cleanBio.substring(0, 147) + '...' : cleanBio) : 'Learn about their legacy.';
 
   return {
     title: `${figure.name} | Caribbean Legacy Archive`,

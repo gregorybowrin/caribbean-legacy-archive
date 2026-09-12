@@ -17,4 +17,4 @@
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Dunstan_St_Omer.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/2/29/Sidney_Poitier_1968.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/6/64/Upper_Suriname_River%2C_Suriname_%2812078266544%29.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"areas","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"arts","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"G_OgYjRX3X9aB9S3Ekd0E"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"areas","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"arts","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"268l4WWxUQ6T-mJ0fVm3i"}

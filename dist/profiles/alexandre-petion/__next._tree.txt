@@ -6,4 +6,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/3/38/Alexandre_Sab%C3%A9s_P%C3%A9tion_Portrait_circa_1807-1818_JCB_%28cropped%29.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/e/ec/Hector_Hyppolite.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/c/cc/Henri_Christophe.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"alexandre-petion","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"G_OgYjRX3X9aB9S3Ekd0E"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"alexandre-petion","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"268l4WWxUQ6T-mJ0fVm3i"}
