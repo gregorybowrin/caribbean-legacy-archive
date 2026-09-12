@@ -28,6 +28,15 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
   const defaultImage = 'https://caribbeanlegacyarchive.com/og-image.jpg'; // Or a logo
   const imageUrl = figure.image_url || defaultImage;
+  
+  // WhatsApp strictly rejects images over 300KB. We must generate a thumbnail for Wikimedia commons links.
+  let ogImageUrl = imageUrl;
+  if (ogImageUrl.includes('upload.wikimedia.org/wikipedia/commons') && !ogImageUrl.includes('/thumb/')) {
+    const parts = ogImageUrl.split('/');
+    const filename = parts[parts.length - 1];
+    ogImageUrl = ogImageUrl.replace('/commons/', '/commons/thumb/') + '/600px-' + filename;
+  }
+  
   const description = figure.bio ? (figure.bio.length > 150 ? figure.bio.substring(0, 147) + '...' : figure.bio) : 'Learn about their legacy.';
 
   return {
@@ -40,7 +49,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       siteName: 'Caribbean Legacy Archive',
       images: [
         {
-          url: imageUrl,
+          url: ogImageUrl,
         },
       ],
       locale: 'en_US',
@@ -50,7 +59,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       card: 'summary_large_image',
       title: figure.name,
       description: description,
-      images: [imageUrl],
+      images: [ogImageUrl],
     },
   };
 }
