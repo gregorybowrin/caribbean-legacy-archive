@@ -41,9 +41,6 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       images: [
         {
           url: imageUrl,
-          width: 1200,
-          height: 630,
-          alt: figure.name,
         },
       ],
       locale: 'en_US',
@@ -216,6 +213,11 @@ export default async function ProfileDetailPage({ params }: { params: { slug: st
               <h1 className="font-serif font-light text-5xl md:text-6xl text-navy mb-4 leading-tight">{figure.name}</h1>
               <div className="w-24 h-[2px] bg-gold"></div>
             </header>
+
+            <ShareButtons 
+              title={`Learn about the legacy of ${figure.name}`} 
+              url={`https://caribbeanlegacyarchive.com/profiles/${figure.slug}`} 
+            />
 
             <section className="prose prose-navy max-w-none">
               <div className="relative mb-12">
