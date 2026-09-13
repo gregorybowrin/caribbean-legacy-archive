@@ -17,8 +17,14 @@ export const ISLAND_FLAGS: Record<string, string> = {
 
 export function getIslandFlag(nameOrSlug: string | undefined): string | null {
   if (!nameOrSlug) return null;
-  // Convert name to slug format (e.g. "Dominican Republic" -> "dominican-republic")
-  const slug = nameOrSlug.toLowerCase().replace(/ & /g, '-').replace(/ and /g, '-').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  // Convert name to slug format and handle accents (e.g. "Curaçao" -> "curacao")
+  const slug = nameOrSlug
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/ & /g, '-')
+    .replace(/ and /g, '-')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
   
   if (!ISLAND_FLAGS[slug]) {
     // Try original just in case

@@ -6,4 +6,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/a/ad/Gerty_archimede.jpg","image"]
 :HL["https://flagcdn.com/w40/gp.png","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/0/00/Buste_Louis_Delgr%C3%A8s_%C3%A0_Petit-Bourg.JPG","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"gerty-archimede","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"JQCymtrfIBHTILTkPZ6Dz"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"gerty-archimede","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"9NZtc6pqLSIeTGcS2UaAW"}

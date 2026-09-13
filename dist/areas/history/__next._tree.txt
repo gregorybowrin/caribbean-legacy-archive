@@ -18,7 +18,6 @@
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Constant_Colmay_c1945.png","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/6/65/Cuthbert_Collingwood%2C_Baron_Collingwood_by_Henry_Howard.jpg","image"]
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Ned_Turner_1818.PNG","image"]
-:HL["https://upload.wikimedia.org/wikipedia/commons/0/0a/Lady_Nelson_-_Project_Gutenberg_eText_16914.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/c/c6/Museo_de_Historia_y_Geograf%C3%ADa_-_Retrato_del_General_S%C3%A1nchez.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/e/ee/Frank_Alvord_Perret.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_the_Dominican_Republic.svg/960px-Flag_of_the_Dominican_Republic.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
@@ -65,4 +64,4 @@
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/WillJohnsonSaba.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Portret_van_William_Oughtred%2C_RP-P-1907-2855.jpg/960px-Portret_van_William_Oughtred%2C_RP-P-1907-2855.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/b/b1/John_Burnet_William_Knibb_John_Scolble.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"areas","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"history","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"JQCymtrfIBHTILTkPZ6Dz"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"areas","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"history","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"9NZtc6pqLSIeTGcS2UaAW"}

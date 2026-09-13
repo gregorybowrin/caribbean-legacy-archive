@@ -19,7 +19,6 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/d/d3/ErciliapepinCiudad54.PNG","image"]
 :HL["https://upload.wikimedia.org/wikipedia/en/c/c4/Felia_rincon_de_gautier.JPG","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/d/d0/Photograph_of_Frantz_Fanon_from_Black_Skin_White_Masks_%281967%29_dust_jacket.webp","image"]
-:HL["https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/King_George_IV_of_the_United_Kingdom_in_Coronation_Robes_%28by_Thomas_Lawrence%29_-_Royal_Collection_%28RCIN_405918%29.jpg/960px-King_George_IV_of_the_United_Kingdom_in_Coronation_Robes_%28by_Thomas_Lawrence%29_-_Royal_Collection_%28RCIN_405918%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/e/ed/George_Maduro.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/3/33/George_William_Gordon_-_photograph_detail.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/c/c8/FEDERICO_DE_MADRAZO_-Gertrudis_G%C3%B3mez_de_Avellaneda_%28Museo_L%C3%A1zaro_Galdiano%2C_1857%29.jpg","image"]
@@ -75,4 +74,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/b/bc/Portret_di_Tula_website_up_Wikimedia.JPG","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/7/7b/William_Henry_Bramble.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/b/b1/John_Burnet_William_Knibb_John_Scolble.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"areas","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"civil-rights","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"JQCymtrfIBHTILTkPZ6Dz"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"areas","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"civil-rights","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"9NZtc6pqLSIeTGcS2UaAW"}

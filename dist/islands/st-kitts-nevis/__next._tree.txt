@@ -6,7 +6,6 @@
 :HL["https://flagcdn.com/w1280/kn.png","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/3/38/Alexander_Hamilton_%28NPG%29.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/en/6/65/Paul_Southwell.jpg","image"]
-:HL["https://upload.wikimedia.org/wikipedia/commons/0/0a/Lady_Nelson_-_Project_Gutenberg_eText_16914.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/en/9/92/Joseph_Nathaniel_France.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/4/4d/Kim_Collins_Berlin_2009.jpg","image"]
 :HL["https://timescaribbeanonline.com/wp-content/uploads/2026/07/ChatGPT-Image-Jul-17-2026-06_36_07-PM.jpg","image"]
@@ -15,4 +14,4 @@
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Kennedy_Simmonds.png","image"]
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Tapley_Seaton_2018.jpg","image"]
 :HL["https://www.historicstkitts.kn/images/thomas-manchester.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"st-kitts-nevis","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"JQCymtrfIBHTILTkPZ6Dz"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"st-kitts-nevis","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"9NZtc6pqLSIeTGcS2UaAW"}

@@ -5,6 +5,6 @@
 :HL["/_next/static/media/caa3a2e1cccd8315-s.p.0wgildi0cnwt9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Tapley_Seaton_2018.jpg","image"]
 :HL["https://flagcdn.com/w40/kn.png","image"]
-:HL["https://upload.wikimedia.org/wikipedia/commons/0/0a/Lady_Nelson_-_Project_Gutenberg_eText_16914.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/en/6/65/Paul_Southwell.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"tapley-seaton","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"JQCymtrfIBHTILTkPZ6Dz"}
+:HL["https://upload.wikimedia.org/wikipedia/en/9/92/Joseph_Nathaniel_France.jpg","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"tapley-seaton","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"9NZtc6pqLSIeTGcS2UaAW"}

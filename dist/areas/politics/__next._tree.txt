@@ -34,7 +34,6 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/c/c6/Museo_de_Historia_y_Geograf%C3%ADa_-_Retrato_del_General_S%C3%A1nchez.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_the_Dominican_Republic.svg/960px-Flag_of_the_Dominican_Republic.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/d/d0/Photograph_of_Frantz_Fanon_from_Black_Skin_White_Masks_%281967%29_dust_jacket.webp","image"]
-:HL["https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/King_George_IV_of_the_United_Kingdom_in_Coronation_Robes_%28by_Thomas_Lawrence%29_-_Royal_Collection_%28RCIN_405918%29.jpg/960px-King_George_IV_of_the_United_Kingdom_in_Coronation_Robes_%28by_Thomas_Lawrence%29_-_Royal_Collection_%28RCIN_405918%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/c/ca/George_brizan.png","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/6/61/George_Cadle_Price.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/3/33/George_William_Gordon_-_photograph_detail.jpg","image"]
@@ -127,4 +126,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/9/95/Premier_Washington_Misick_in_Belize_%28cropped%29.jpg","image"]
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/WillJohnsonSaba.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/7/7b/William_Henry_Bramble.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"areas","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"politics","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"JQCymtrfIBHTILTkPZ6Dz"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"areas","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"politics","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"9NZtc6pqLSIeTGcS2UaAW"}
