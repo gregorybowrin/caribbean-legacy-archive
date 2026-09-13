@@ -7,4 +7,4 @@
 :HL["https://flagcdn.com/w40/cu.png","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/d/de/Alejo_Carpentier_c._1955.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/7/73/Alicia_Alonso_1955.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"nicolas-guillen","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"a94idIh03sqeSuIP58Spb"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"nicolas-guillen","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"_Lols8DKItAibrcoM7FRc"}
