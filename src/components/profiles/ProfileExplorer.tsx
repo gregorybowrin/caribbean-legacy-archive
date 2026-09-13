@@ -172,7 +172,11 @@ export default function ProfileExplorer({ initialFigures, islands, areas }: Prof
                   </div>
                   <div className="p-6">
                     <span className="text-[10px] uppercase tracking-widest text-tropical-green font-bold mb-2 flex items-center gap-2">
-                      <span className="text-xl leading-none">{getIslandFlag(figure.islands?.name)}</span>
+                      <span className="text-xl leading-none flex items-center justify-center w-6 h-4">
+                        {getIslandFlag(figure.islands?.name) ? (
+                          <img src={getIslandFlag(figure.islands?.name)!} alt={`${figure.islands?.name} flag`} className="object-contain w-full h-full" />
+                        ) : null}
+                      </span>
                       {figure.islands?.name || 'Caribbean'}
                     </span>
                     <h3 className="font-serif text-xl text-navy mb-2 group-hover:text-gold transition-colors">{figure.name}</h3>

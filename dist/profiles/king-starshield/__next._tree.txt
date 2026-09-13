@@ -1,9 +1,10 @@
 :HL["/_next/static/chunks/1qagabxxlx80e.css","style"]
-:HL["/_next/static/chunks/3fwlkk0z6784t.css","style"]
+:HL["/_next/static/chunks/2_1pb7uzhoqpk.css","style"]
 :HL["/_next/static/media/2a65768255d6b625-s.p.3u4lli0-axodc.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/797e433ab948586e-s.p.0r6juujl39pe6.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/caa3a2e1cccd8315-s.p.0wgildi0cnwt9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["https://timescaribbeanonline.com/wp-content/uploads/2026/07/ChatGPT-Image-Jul-17-2026-06_36_07-PM.jpg","image"]
+:HL["https://flagcdn.com/w40/kn.png","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/3/38/Alexander_Hamilton_%28NPG%29.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/0/0a/Lady_Nelson_-_Project_Gutenberg_eText_16914.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"king-starshield","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"268l4WWxUQ6T-mJ0fVm3i"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"king-starshield","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"JQCymtrfIBHTILTkPZ6Dz"}

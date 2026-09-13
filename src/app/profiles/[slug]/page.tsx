@@ -173,7 +173,9 @@ export default async function ProfileDetailPage({ params }: { params: { slug: st
 
             <div className="bg-white border border-gold/20 p-8 shadow-sm relative">
               <div className="absolute top-6 right-6 text-5xl drop-shadow-sm pointer-events-none select-none">
-                {getIslandFlag(figure.islands?.name)}
+                {getIslandFlag(figure.islands?.name) ? (
+                  <img src={getIslandFlag(figure.islands?.name)!} alt={`${figure.islands?.name} flag`} className="w-12 h-auto opacity-80" />
+                ) : null}
               </div>
               <h3 className="font-serif font-bold text-xl text-navy mb-6 border-b border-gold/20 pb-4 pr-16">Biographical Details</h3>
               <div className="space-y-4">

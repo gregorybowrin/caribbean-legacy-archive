@@ -15,7 +15,15 @@ export const ISLAND_FLAGS: Record<string, string> = {
   'spm': 'pm', 'saint-pierre': 'pm', 'navassa': 'um'
 };
 
-export function getIslandFlag(slug: string | undefined): string | null {
-  if (!slug || !ISLAND_FLAGS[slug]) return null;
+export function getIslandFlag(nameOrSlug: string | undefined): string | null {
+  if (!nameOrSlug) return null;
+  // Convert name to slug format (e.g. "Dominican Republic" -> "dominican-republic")
+  const slug = nameOrSlug.toLowerCase().replace(/ & /g, '-').replace(/ and /g, '-').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  
+  if (!ISLAND_FLAGS[slug]) {
+    // Try original just in case
+    if (!ISLAND_FLAGS[nameOrSlug]) return null;
+    return `https://flagcdn.com/w40/${ISLAND_FLAGS[nameOrSlug]}.png`;
+  }
   return `https://flagcdn.com/w40/${ISLAND_FLAGS[slug]}.png`;
 }
