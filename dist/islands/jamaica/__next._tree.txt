@@ -6,10 +6,11 @@
 :HL["https://flagcdn.com/w1280/jm.png","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/3/3d/Prime_Minister_of_Jamaica%2C_Sir_Alexander_Bustamante_%2804%29_%28cropped%29.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/2/2d/Bob_Marley_1976_press_photo.jpg","image"]
+:HL["https://upload.wikimedia.org/wikipedia/commons/3/33/George_William_Gordon_-_photograph_detail.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/5/5d/Marcus_Garvey%2C_%22Provisional_President_of_Africa%22%2C_by_the_Keystone_View_Company.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/7/74/Mary_Jane_Seacole.jpeg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/b/b9/Nanny_of_the_Maroons.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/4/40/Norman_Manley%2C_The_Miami_Herald_1955_08_04_%28cropped%29.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/8/86/PaulBogle-MorantBay.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Samsharpe.JPG/960px-Samsharpe.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"jamaica","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"9NZtc6pqLSIeTGcS2UaAW"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"jamaica","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"a94idIh03sqeSuIP58Spb"}

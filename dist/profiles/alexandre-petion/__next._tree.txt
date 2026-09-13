@@ -7,4 +7,4 @@
 :HL["https://flagcdn.com/w40/ht.png","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/e/ec/Hector_Hyppolite.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/c/cc/Henri_Christophe.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"alexandre-petion","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"9NZtc6pqLSIeTGcS2UaAW"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"profiles","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"alexandre-petion","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"a94idIh03sqeSuIP58Spb"}

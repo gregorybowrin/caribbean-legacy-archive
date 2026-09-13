@@ -7,7 +7,6 @@
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Captain_John_Smith.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Byrnside-Beirne-Johnson_House.jpg/960px-Byrnside-Beirne-Johnson_House.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Ned_Turner_1818.PNG","image"]
-:HL["https://upload.wikimedia.org/wikipedia/en/9/91/Richard_Rolle_%28colour%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/2/25/Carlotta_Walls_LaNier.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/a/a2/Anna_Nicole_Smith.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"andros","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"9NZtc6pqLSIeTGcS2UaAW"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"islands","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"andros","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"a94idIh03sqeSuIP58Spb"}
