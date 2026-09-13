@@ -3,7 +3,7 @@ export const ISLAND_FLAGS: Record<string, string> = {
   'bahamas': 'bs', 'the-bahamas': 'bs', 'eleuthera': 'bs', 'andros': 'bs',
   'inagua': 'bs', 'grand-bahama': 'bs', 'exuma': 'bs', 'abaco': 'bs',
   'barbados': 'bb', 'british-virgin-islands': 'vg', 'bvi': 'vg', 'tortola': 'vg',
-  'spanish-town': 'vg', 'cayman-islands': 'ky', 'cuba': 'cu', 'curacao': 'cw',
+  'spanish-town': 'vg', 'cayman-islands': 'ky', 'the-cayman-islands': 'ky', 'cuba': 'cu', 'curacao': 'cw',
   'dominica': 'dm', 'dominican-republic': 'do', 'grenada': 'gd', 'carriacou-pm': 'gd',
   'guadeloupe': 'gp', 'marie-galante': 'gp', 'haiti': 'ht', 'jamaica': 'jm',
   'port-royal': 'jm', 'martinique': 'mq', 'montserrat': 'ms', 'puerto-rico': 'pr',
