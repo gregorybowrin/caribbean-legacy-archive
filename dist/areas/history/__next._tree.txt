@@ -10,13 +10,8 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/4/4e/Boni_kleur.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/a/a9/Segundo_%28Boy%29_Ecury_%281922-1944%29.jpg","image"]
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Captain_John_Smith.jpg","image"]
-:HL["https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Byrnside-Beirne-Johnson_House.jpg/960px-Byrnside-Beirne-Johnson_House.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
-:HL["https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Hume_Freeway_at_Albury_2.JPG/960px-Hume_Freeway_at_Albury_2.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
-:HL["https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/NL%2CZ-H%2CG._Den_Haag%2CScheveningsehaven%2CKustwacht_entering_the_port.jpeg/960px-NL%2CZ-H%2CG._Den_Haag%2CScheveningsehaven%2CKustwacht_entering_the_port.jpeg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/0/07/Cflon.jpg","image"]
-:HL["https://upload.wikimedia.org/wikipedia/commons/f/f5/Charles_Henry_Davis%2C_circa_1860-70.jpg","image"]
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Constant_Colmay_c1945.png","image"]
-:HL["https://upload.wikimedia.org/wikipedia/commons/6/65/Cuthbert_Collingwood%2C_Baron_Collingwood_by_Henry_Howard.jpg","image"]
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Ned_Turner_1818.PNG","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/c/c6/Museo_de_Historia_y_Geograf%C3%ADa_-_Retrato_del_General_S%C3%A1nchez.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/e/ee/Frank_Alvord_Perret.jpg","image"]
@@ -27,8 +22,6 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/1/1c/Hugh_Mulzac.jpg","image"]
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Statue_de_Joseph_Ignace_Les_Abymes.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/e/e7/Jean_Jacques_Dessalines.jpg","image"]
-:HL["https://upload.wikimedia.org/wikipedia/commons/a/a8/Johannes_de_Graeff.jpg","image"]
-:HL["https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Top_Mission_Street%2C_Codrington%2C_Barbuda.jpg/960px-Top_Mission_Street%2C_Codrington%2C_Barbuda.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/0/0e/Statue_de_Joseph_Ignace_par_Jacky_Poulier_aux_Abymes.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Saba1798-Hawks-The_Road.jpg/960px-Saba1798-Hawks-The_Road.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/a/a7/Juan_pablo_duarte_diez.jpg","image"]
@@ -60,4 +53,4 @@
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/WillJohnsonSaba.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Portret_van_William_Oughtred%2C_RP-P-1907-2855.jpg/960px-Portret_van_William_Oughtred%2C_RP-P-1907-2855.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/b/b1/John_Burnet_William_Knibb_John_Scolble.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"areas","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"history","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"4l9iWHI6z7N7Y6JXybmPo"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"areas","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"history","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"wzVGPVXYNWxz993i8hUkH"}

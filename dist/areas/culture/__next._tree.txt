@@ -11,9 +11,6 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/2/21/BankieBanx.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/2/2d/Bob_Marley_1976_press_photo.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/f/fb/Janelle_Sarauw.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled","image"]
-:HL["https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Byrnside-Beirne-Johnson_House.jpg/960px-Byrnside-Beirne-Johnson_House.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
-:HL["https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Hume_Freeway_at_Albury_2.JPG/960px-Hume_Freeway_at_Albury_2.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
-:HL["https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/NL%2CZ-H%2CG._Den_Haag%2CScheveningsehaven%2CKustwacht_entering_the_port.jpeg/960px-NL%2CZ-H%2CG._Den_Haag%2CScheveningsehaven%2CKustwacht_entering_the_port.jpeg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/1/12/Casper_Holstein.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/0/07/Cflon.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/8/89/Celia_Cruz_1957_color.jpg","image"]
@@ -26,7 +23,6 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/d/dd/Puerto_Rico-Francisco_Oller.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/e/ec/Hector_Hyppolite.jpg","image"]
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/Statue_Padu_Lampe.jpg","image"]
-:HL["https://upload.wikimedia.org/wikipedia/commons/8/8d/Karine_Claireaux_2015_%28cropped%29.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/c/c5/FC_Basel.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/9/94/Lasana_M_Sekou.jpg","image"]
 :HL["https://commons.wikimedia.org/wiki/Special:FilePath/L%C3%A9ona_Gabriel_with_the_banjoist_Henri_Boye.jpg","image"]
@@ -43,5 +39,4 @@
 :HL["https://upload.wikimedia.org/wikipedia/commons/7/7a/Bundesarchiv_Bild_183-B1107-0043-016%2C_Bahamas%2C_Stafford_Sands_und_Dr._Hjalmar_Schacht.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/e/e0/Trefossa.jpg","image"]
 :HL["https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Pavillon_de_Flore_from_Tuileries%2C_Paris_October_2011_001.jpg/960px-Pavillon_de_Flore_from_Tuileries%2C_Paris_October_2011_001.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail","image"]
-:HL["https://upload.wikimedia.org/wikipedia/commons/5/56/William_Wilson_Harris_2008_%28cropped%29.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"areas","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"culture","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"4l9iWHI6z7N7Y6JXybmPo"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"areas","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"culture","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"wzVGPVXYNWxz993i8hUkH"}

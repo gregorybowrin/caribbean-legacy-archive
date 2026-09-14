@@ -11,7 +11,7 @@ export const ISLAND_FLAGS: Record<string, string> = {
   'saint-vincent-grenadines': 'vc', 'saint-vincent-the-grenadines': 'vc', 'st-vincent': 'vc', 'grenadines': 'vc',
   'trinidad-tobago': 'tt', 'turks-caicos': 'tc', 'tci': 'tc', 'us-virgin-islands': 'vi',
   'usvi': 'vi', 'guyana': 'gy', 'belize': 'bz', 'bermuda': 'bm', 'suriname': 'sr',
-  'st-martin': 'mf', 'st-barths': 'bl', 'bonaire': 'bq', 'saba': 'bq', 'st-eustatius': 'bq',
+  'st-martin': 'mf', 'saint-martin-sint-maarten': 'sx', 'st-barths': 'bl', 'bonaire': 'bq', 'saba': 'bq', 'st-eustatius': 'bq',
   'spm': 'pm', 'saint-pierre': 'pm', 'navassa': 'um'
 };
 
